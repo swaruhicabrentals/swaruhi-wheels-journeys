@@ -1,0 +1,114 @@
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ShieldCheck, Users, Award, HeartHandshake } from "lucide-react";
+import { SectionHeader, CtaBand, Breadcrumbs } from "@/components/Section";
+import { pageMeta, jsonLdScript, breadcrumbJsonLd } from "@/lib/seo";
+import { SITE } from "@/lib/site";
+import familyImg from "@/assets/family-travel.jpg";
+
+export const Route = createFileRoute("/about")({
+  component: About,
+  head: () => ({
+    meta: pageMeta({
+      title: "About Swaruhi Travels — Trusted Travel Partner in Mumbai & Ahmedabad",
+      description:
+        "Swaruhi Travels is a professional car rental and tour operator serving Mumbai and Ahmedabad. Learn about our mission, drivers, fleet and commitment to safe, premium travel.",
+      path: "/about",
+    }),
+    links: [{ rel: "canonical", href: "/about" }],
+    scripts: [jsonLdScript(breadcrumbJsonLd([
+      { name: "Home", path: "/" }, { name: "About", path: "/about" },
+    ]))],
+  }),
+});
+
+function About() {
+  return (
+    <>
+      <section className="section-navy py-14">
+        <div className="container-x">
+          <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "About Us", path: "/about" }]} />
+          <h1 className="mt-3 font-display text-4xl md:text-5xl text-cream">About Swaruhi Travels</h1>
+          <p className="mt-4 max-w-2xl text-cream/80">
+            A modern travel service built on reliability, safety and warmth. We help families,
+            tourists and companies move confidently across Mumbai, Ahmedabad and beyond.
+          </p>
+        </div>
+      </section>
+
+      <section className="py-16">
+        <div className="container-x grid gap-10 lg:grid-cols-2 items-center">
+          <img
+            src={familyImg}
+            alt="Family preparing for a road trip in a rental SUV"
+            loading="lazy" width={1280} height={800}
+            className="rounded-2xl object-cover shadow-elegant"
+          />
+          <div>
+            <SectionHeader eyebrow="Our Story" title="Built on trust, driven by service" />
+            <div className="mt-5 space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                Swaruhi Travels was founded to solve a simple problem — travellers deserve
+                reliable, safe and premium chauffeur-driven vehicles without inflated pricing.
+                What began as a small local fleet has grown into a trusted travel partner
+                for families, tourists, corporate teams and wedding groups.
+              </p>
+              <p>
+                Today, we operate a curated fleet of hatchbacks, sedans, SUVs and Tempo
+                Travellers, along with hand-crafted tour packages from both Mumbai and
+                Ahmedabad. Every trip is powered by trained drivers, well-kept vehicles
+                and a 24 × 7 support desk.
+              </p>
+              <p>
+                We're proud to be one of the most dependable choices for
+                <Link to="/car-rentals" className="text-gold-deep hover:underline mx-1">car rentals</Link>,
+                <Link to="/tempo-traveller-rentals" className="text-gold-deep hover:underline mx-1">Tempo Traveller rentals</Link>
+                and
+                <Link to="/tour-packages" className="text-gold-deep hover:underline mx-1">tour packages</Link>
+                in our cities.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-muted/50 py-16">
+        <div className="container-x">
+          <SectionHeader eyebrow="What We Stand For" title="Values that shape every ride" align="center" />
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              { icon: ShieldCheck, t: "Safety First", d: "Verified drivers, serviced vehicles, GPS tracking." },
+              { icon: Users, t: "People-Centric", d: "Warm service for families, tourists and corporates." },
+              { icon: Award, t: "Premium Standards", d: "Clean interiors, punctual pickups, courteous drivers." },
+              { icon: HeartHandshake, t: "Transparent Pricing", d: "Itemised quotes, no hidden surcharges." },
+            ].map(({ icon: Icon, t, d }) => (
+              <div key={t} className="card-elegant">
+                <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-navy text-gold">
+                  <Icon size={22} />
+                </span>
+                <h3 className="mt-4 font-display text-lg text-navy-deep">{t}</h3>
+                <p className="mt-2 text-sm text-muted-foreground">{d}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16">
+        <div className="container-x grid gap-8 md:grid-cols-3 text-center">
+          {[
+            { k: "5,000+", v: "Happy travellers" },
+            { k: "50+", v: "Vehicles in operation" },
+            { k: "2", v: "Cities · Mumbai & Ahmedabad" },
+          ].map((s) => (
+            <div key={s.v} className="card-elegant">
+              <div className="font-display text-4xl text-gold-deep">{s.k}</div>
+              <div className="mt-1 text-sm text-muted-foreground">{s.v}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <CtaBand title={`Travel with ${SITE.name} today`} />
+    </>
+  );
+}
