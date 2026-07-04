@@ -9,12 +9,78 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as WhyChooseUsRouteImport } from './routes/why-choose-us'
+import { Route as TourPackagesRouteImport } from './routes/tour-packages'
+import { Route as TempoTravellerRentalsRouteImport } from './routes/tempo-traveller-rentals'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as ServicesRouteImport } from './routes/services'
+import { Route as MumbaiTravelServicesRouteImport } from './routes/mumbai-travel-services'
+import { Route as FleetRouteImport } from './routes/fleet'
+import { Route as FaqRouteImport } from './routes/faq'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as CarRentalsRouteImport } from './routes/car-rentals'
+import { Route as AhmedabadTravelServicesRouteImport } from './routes/ahmedabad-travel-services'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
+const WhyChooseUsRoute = WhyChooseUsRouteImport.update({
+  id: '/why-choose-us',
+  path: '/why-choose-us',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TourPackagesRoute = TourPackagesRouteImport.update({
+  id: '/tour-packages',
+  path: '/tour-packages',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TempoTravellerRentalsRoute = TempoTravellerRentalsRouteImport.update({
+  id: '/tempo-traveller-rentals',
+  path: '/tempo-traveller-rentals',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesRoute = ServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MumbaiTravelServicesRoute = MumbaiTravelServicesRouteImport.update({
+  id: '/mumbai-travel-services',
+  path: '/mumbai-travel-services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FleetRoute = FleetRouteImport.update({
+  id: '/fleet',
+  path: '/fleet',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CarRentalsRoute = CarRentalsRouteImport.update({
+  id: '/car-rentals',
+  path: '/car-rentals',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AhmedabadTravelServicesRoute = AhmedabadTravelServicesRouteImport.update({
+  id: '/ahmedabad-travel-services',
+  path: '/ahmedabad-travel-services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -25,37 +91,198 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/ahmedabad-travel-services': typeof AhmedabadTravelServicesRoute
+  '/car-rentals': typeof CarRentalsRoute
+  '/contact': typeof ContactRoute
+  '/faq': typeof FaqRoute
+  '/fleet': typeof FleetRoute
+  '/mumbai-travel-services': typeof MumbaiTravelServicesRoute
+  '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/tempo-traveller-rentals': typeof TempoTravellerRentalsRoute
+  '/tour-packages': typeof TourPackagesRoute
+  '/why-choose-us': typeof WhyChooseUsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/ahmedabad-travel-services': typeof AhmedabadTravelServicesRoute
+  '/car-rentals': typeof CarRentalsRoute
+  '/contact': typeof ContactRoute
+  '/faq': typeof FaqRoute
+  '/fleet': typeof FleetRoute
+  '/mumbai-travel-services': typeof MumbaiTravelServicesRoute
+  '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/tempo-traveller-rentals': typeof TempoTravellerRentalsRoute
+  '/tour-packages': typeof TourPackagesRoute
+  '/why-choose-us': typeof WhyChooseUsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/ahmedabad-travel-services': typeof AhmedabadTravelServicesRoute
+  '/car-rentals': typeof CarRentalsRoute
+  '/contact': typeof ContactRoute
+  '/faq': typeof FaqRoute
+  '/fleet': typeof FleetRoute
+  '/mumbai-travel-services': typeof MumbaiTravelServicesRoute
+  '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/tempo-traveller-rentals': typeof TempoTravellerRentalsRoute
+  '/tour-packages': typeof TourPackagesRoute
+  '/why-choose-us': typeof WhyChooseUsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/sitemap.xml'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/ahmedabad-travel-services'
+    | '/car-rentals'
+    | '/contact'
+    | '/faq'
+    | '/fleet'
+    | '/mumbai-travel-services'
+    | '/services'
+    | '/sitemap.xml'
+    | '/tempo-traveller-rentals'
+    | '/tour-packages'
+    | '/why-choose-us'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/sitemap.xml'
-  id: '__root__' | '/' | '/sitemap.xml'
+  to:
+    | '/'
+    | '/about'
+    | '/ahmedabad-travel-services'
+    | '/car-rentals'
+    | '/contact'
+    | '/faq'
+    | '/fleet'
+    | '/mumbai-travel-services'
+    | '/services'
+    | '/sitemap.xml'
+    | '/tempo-traveller-rentals'
+    | '/tour-packages'
+    | '/why-choose-us'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/ahmedabad-travel-services'
+    | '/car-rentals'
+    | '/contact'
+    | '/faq'
+    | '/fleet'
+    | '/mumbai-travel-services'
+    | '/services'
+    | '/sitemap.xml'
+    | '/tempo-traveller-rentals'
+    | '/tour-packages'
+    | '/why-choose-us'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  AhmedabadTravelServicesRoute: typeof AhmedabadTravelServicesRoute
+  CarRentalsRoute: typeof CarRentalsRoute
+  ContactRoute: typeof ContactRoute
+  FaqRoute: typeof FaqRoute
+  FleetRoute: typeof FleetRoute
+  MumbaiTravelServicesRoute: typeof MumbaiTravelServicesRoute
+  ServicesRoute: typeof ServicesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  TempoTravellerRentalsRoute: typeof TempoTravellerRentalsRoute
+  TourPackagesRoute: typeof TourPackagesRoute
+  WhyChooseUsRoute: typeof WhyChooseUsRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/why-choose-us': {
+      id: '/why-choose-us'
+      path: '/why-choose-us'
+      fullPath: '/why-choose-us'
+      preLoaderRoute: typeof WhyChooseUsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tour-packages': {
+      id: '/tour-packages'
+      path: '/tour-packages'
+      fullPath: '/tour-packages'
+      preLoaderRoute: typeof TourPackagesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tempo-traveller-rentals': {
+      id: '/tempo-traveller-rentals'
+      path: '/tempo-traveller-rentals'
+      fullPath: '/tempo-traveller-rentals'
+      preLoaderRoute: typeof TempoTravellerRentalsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sitemap.xml': {
       id: '/sitemap.xml'
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services': {
+      id: '/services'
+      path: '/services'
+      fullPath: '/services'
+      preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mumbai-travel-services': {
+      id: '/mumbai-travel-services'
+      path: '/mumbai-travel-services'
+      fullPath: '/mumbai-travel-services'
+      preLoaderRoute: typeof MumbaiTravelServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fleet': {
+      id: '/fleet'
+      path: '/fleet'
+      fullPath: '/fleet'
+      preLoaderRoute: typeof FleetRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/car-rentals': {
+      id: '/car-rentals'
+      path: '/car-rentals'
+      fullPath: '/car-rentals'
+      preLoaderRoute: typeof CarRentalsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ahmedabad-travel-services': {
+      id: '/ahmedabad-travel-services'
+      path: '/ahmedabad-travel-services'
+      fullPath: '/ahmedabad-travel-services'
+      preLoaderRoute: typeof AhmedabadTravelServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -70,7 +297,18 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  AhmedabadTravelServicesRoute: AhmedabadTravelServicesRoute,
+  CarRentalsRoute: CarRentalsRoute,
+  ContactRoute: ContactRoute,
+  FaqRoute: FaqRoute,
+  FleetRoute: FleetRoute,
+  MumbaiTravelServicesRoute: MumbaiTravelServicesRoute,
+  ServicesRoute: ServicesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  TempoTravellerRentalsRoute: TempoTravellerRentalsRoute,
+  TourPackagesRoute: TourPackagesRoute,
+  WhyChooseUsRoute: WhyChooseUsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
