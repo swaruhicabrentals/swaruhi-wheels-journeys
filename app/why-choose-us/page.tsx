@@ -1,22 +1,15 @@
-import { createFileRoute } from "@tanstack/react-router";
+import type { Metadata } from "next";
 import { ShieldCheck, Clock, IndianRupee, Sparkles, Users, Award, HeartHandshake, MapPin } from "lucide-react";
 import { Breadcrumbs, CtaBand, SectionHeader } from "@/components/Section";
-import { pageMeta, jsonLdScript, breadcrumbJsonLd } from "@/lib/seo";
+import { pageMeta, breadcrumbJsonLd } from "@/lib/seo";
 
-export const Route = createFileRoute("/why-choose-us")({
-  component: Why,
-  head: () => ({
-    meta: pageMeta({
-      title: "Why Choose Swaruhi Travels — Safe, Reliable & Premium Travel",
+import { makeMetadata } from "@/lib/metadata";
+
+export const metadata: Metadata = makeMetadata({
+title: "Why Choose Swaruhi Travels — Safe, Reliable & Premium Travel",
       description:
         "Verified drivers, well-maintained vehicles, transparent pricing and 24×7 support — see why families, tourists and corporates in Mumbai and Ahmedabad choose Swaruhi Travels.",
       path: "/why-choose-us",
-    }),
-    links: [{ rel: "canonical", href: "/why-choose-us" }],
-    scripts: [jsonLdScript(breadcrumbJsonLd([
-      { name: "Home", path: "/" }, { name: "Why Choose Us", path: "/why-choose-us" },
-    ]))],
-  }),
 });
 
 const items = [
@@ -30,7 +23,7 @@ const items = [
   { icon: MapPin, t: "Deep local expertise", d: "Native knowledge of Mumbai, Ahmedabad and top routes." },
 ];
 
-function Why() {
+export default function Why() {
   return (
     <>
       <section className="section-navy py-14">

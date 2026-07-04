@@ -1,8 +1,8 @@
-import { createFileRoute } from "@tanstack/react-router";
+import type { Metadata } from "next";
 import { Breadcrumbs, CtaBand, SectionHeader } from "@/components/Section";
 import { FAQList } from "@/components/FAQ";
 import { HOMEPAGE_FAQS } from "@/lib/content";
-import { pageMeta, jsonLdScript, breadcrumbJsonLd, faqJsonLd } from "@/lib/seo";
+import { pageMeta, breadcrumbJsonLd, faqJsonLd } from "@/lib/seo";
 
 const extra = [
   { q: "Do you charge extra for night driving?",
@@ -19,24 +19,16 @@ const extra = [
 
 const ALL = [...HOMEPAGE_FAQS, ...extra];
 
-export const Route = createFileRoute("/faq")({
-  component: FaqPage,
-  head: () => ({
-    meta: pageMeta({
-      title: "FAQs — Car Rental, Tempo Traveller & Tour Package Questions",
+import { makeMetadata } from "@/lib/metadata";
+
+export const metadata: Metadata = makeMetadata({
+title: "FAQs — Car Rental, Tempo Traveller & Tour Package Questions",
       description:
         "Answers to common questions about Swaruhi Travels — pricing, drivers, cancellation, outstation routes, corporate cabs and more for Mumbai and Ahmedabad travellers.",
       path: "/faq",
-    }),
-    links: [{ rel: "canonical", href: "/faq" }],
-    scripts: [
-      jsonLdScript(breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "FAQ", path: "/faq" }])),
-      jsonLdScript(faqJsonLd(ALL)),
-    ],
-  }),
 });
 
-function FaqPage() {
+export default function FaqPage() {
   return (
     <>
       <section className="section-navy py-14">

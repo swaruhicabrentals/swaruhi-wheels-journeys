@@ -1,10 +1,12 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 import { Check } from "lucide-react";
 import { Breadcrumbs, CtaBand, SectionHeader } from "@/components/Section";
 import { InquiryForm } from "@/components/InquiryForm";
 import { FAQList } from "@/components/FAQ";
-import { pageMeta, jsonLdScript, breadcrumbJsonLd, serviceJsonLd, faqJsonLd } from "@/lib/seo";
-import heroCar from "@/assets/hero-car.jpg";
+import { pageMeta, breadcrumbJsonLd, serviceJsonLd, faqJsonLd } from "@/lib/seo";
+const heroCar = "/assets/hero-car.jpg";
 
 const faqs = [
   { q: "What's the difference between local and outstation car rental?",
@@ -17,36 +19,21 @@ const faqs = [
     a: "Yes, subject to vehicle availability. Call or WhatsApp us for the fastest confirmation." },
 ];
 
-export const Route = createFileRoute("/car-rentals")({
-  component: CarRentals,
-  head: () => ({
-    meta: pageMeta({
-      title: "Car Rental in Mumbai & Ahmedabad — Local & Outstation Cabs",
+import { makeMetadata } from "@/lib/metadata";
+
+export const metadata: Metadata = makeMetadata({
+title: "Car Rental in Mumbai & Ahmedabad — Local & Outstation Cabs",
       description:
         "Book chauffeur-driven car rental in Mumbai and Ahmedabad. Hatchback, sedan and SUV options for local, airport, outstation and corporate travel. Transparent pricing, 24×7 support.",
       path: "/car-rentals",
-    }),
-    links: [{ rel: "canonical", href: "/car-rentals" }],
-    scripts: [
-      jsonLdScript(breadcrumbJsonLd([
-        { name: "Home", path: "/" }, { name: "Services", path: "/services" },
-        { name: "Car Rentals", path: "/car-rentals" },
-      ])),
-      jsonLdScript(serviceJsonLd({
-        name: "Car Rental Service",
-        description: "Local and outstation chauffeur-driven car rentals in Mumbai and Ahmedabad.",
-      })),
-      jsonLdScript(faqJsonLd(faqs)),
-    ],
-  }),
 });
 
-function CarRentals() {
+export default function CarRentals() {
   return (
     <>
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 -z-10">
-          <img src={heroCar} alt="Premium sedan on an open highway"
+          <Image src={heroCar} alt="Premium sedan on an open highway"
             width={1920} height={1080} className="h-full w-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/95 to-navy/50" />
         </div>
@@ -107,8 +94,8 @@ function CarRentals() {
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link to="/fleet" className="btn-navy">See fleet</Link>
-              <Link to="/tour-packages" className="btn-outline-gold">Tour packages</Link>
+              <Link href="/fleet" className="btn-navy">See fleet</Link>
+              <Link href="/tour-packages" className="btn-outline-gold">Tour packages</Link>
             </div>
           </div>
 

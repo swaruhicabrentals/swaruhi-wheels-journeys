@@ -1,10 +1,12 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 import { MapPin, Plane, Building2, Landmark } from "lucide-react";
 import { Breadcrumbs, CtaBand, SectionHeader } from "@/components/Section";
 import { InquiryForm } from "@/components/InquiryForm";
 import { FAQList } from "@/components/FAQ";
-import { pageMeta, jsonLdScript, breadcrumbJsonLd, faqJsonLd, serviceJsonLd } from "@/lib/seo";
-import mumbaiImg from "@/assets/mumbai.jpg";
+import { pageMeta, breadcrumbJsonLd, faqJsonLd, serviceJsonLd } from "@/lib/seo";
+const mumbaiImg = "/assets/mumbai.jpg";
 
 const faqs = [
   { q: "Which areas in Mumbai do you cover?",
@@ -17,36 +19,21 @@ const faqs = [
     a: "Yes, subject to availability. Call or WhatsApp us with your pickup location and time — most requests are confirmed within minutes." },
 ];
 
-export const Route = createFileRoute("/mumbai-travel-services")({
-  component: Mumbai,
-  head: () => ({
-    meta: pageMeta({
-      title: "Car Rental & Travel Services in Mumbai — Airport, Outstation, Tours",
+import { makeMetadata } from "@/lib/metadata";
+
+export const metadata: Metadata = makeMetadata({
+title: "Car Rental & Travel Services in Mumbai — Airport, Outstation, Tours",
       description:
         "Swaruhi Travels offers car rental, Tempo Traveller rental, airport transfers and outstation cabs across Mumbai. Serving Andheri, Bandra, South Mumbai, Thane and Navi Mumbai. 24×7 booking.",
       path: "/mumbai-travel-services",
-    }),
-    links: [{ rel: "canonical", href: "/mumbai-travel-services" }],
-    scripts: [
-      jsonLdScript(breadcrumbJsonLd([
-        { name: "Home", path: "/" }, { name: "Mumbai Travel Services", path: "/mumbai-travel-services" },
-      ])),
-      jsonLdScript(serviceJsonLd({
-        name: "Travel Services in Mumbai",
-        description: "Car rental, Tempo Traveller rental and outstation cab service in Mumbai and MMR.",
-        areaServed: ["Mumbai"],
-      })),
-      jsonLdScript(faqJsonLd(faqs)),
-    ],
-  }),
 });
 
-function Mumbai() {
+export default function Mumbai() {
   return (
     <>
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 -z-10">
-          <img src={mumbaiImg} alt="Mumbai Marine Drive skyline at night"
+          <Image src={mumbaiImg} alt="Mumbai Marine Drive skyline at night"
             width={1280} height={720} className="h-full w-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/95 to-navy/60" />
         </div>
@@ -66,9 +53,9 @@ function Mumbai() {
             <SectionHeader eyebrow="Mumbai" title="Your local travel partner in Mumbai" />
             <p className="mt-5 text-muted-foreground leading-relaxed">
               Mumbai runs on time — and so do we. Whether it's an early-morning
-              <Link to="/car-rentals" className="text-gold-deep hover:underline mx-1">car rental in Mumbai</Link>
+              <Link href="/car-rentals" className="text-gold-deep hover:underline mx-1">car rental in Mumbai</Link>
               for a client meeting, a family weekend to Lonavala, or a
-              <Link to="/tempo-traveller-rentals" className="text-gold-deep hover:underline mx-1">Tempo Traveller</Link>
+              <Link href="/tempo-traveller-rentals" className="text-gold-deep hover:underline mx-1">Tempo Traveller</Link>
               for a wedding baraat, our fleet and drivers are ready across the city.
             </p>
 

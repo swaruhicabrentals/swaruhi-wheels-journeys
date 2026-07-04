@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { SITE } from "@/lib/site";
 
@@ -67,7 +67,7 @@ export function Footer() {
             <ul className="mt-4 space-y-2 text-sm">
               {c.links.map((l) => (
                 <li key={l.to}>
-                  <Link to={l.to} className="text-cream/80 hover:text-gold transition-colors">
+                  <Link href={l.to} className="text-cream/80 hover:text-gold transition-colors">
                     {l.label}
                   </Link>
                 </li>

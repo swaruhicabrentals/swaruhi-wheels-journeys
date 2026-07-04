@@ -1,21 +1,23 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 import {
   ArrowRight, Car, Bus, Map, ShieldCheck, Clock, IndianRupee,
   Sparkles, Users, Star, Phone, MapPin,
 } from "lucide-react";
 
-import heroCar from "@/assets/hero-car.jpg";
-import tempoImg from "@/assets/tempo-traveller.jpg";
-import familyImg from "@/assets/family-travel.jpg";
-import interiorImg from "@/assets/interior.jpg";
-import mumbaiImg from "@/assets/mumbai.jpg";
-import ahmedabadImg from "@/assets/ahmedabad.jpg";
-import innovaImg from "@/assets/fleet-innova.jpg";
-import sedanImg from "@/assets/fleet-sedan.jpg";
-import hatchImg from "@/assets/fleet-hatchback.jpg";
-import lonavalaImg from "@/assets/tour-lonavala.jpg";
-import statueImg from "@/assets/tour-statue-unity.jpg";
-import shirdiImg from "@/assets/tour-shirdi.jpg";
+const heroCar = "/assets/hero-car.jpg";
+const tempoImg = "/assets/tempo-traveller.jpg";
+const familyImg = "/assets/family-travel.jpg";
+const interiorImg = "/assets/interior.jpg";
+const mumbaiImg = "/assets/mumbai.jpg";
+const ahmedabadImg = "/assets/ahmedabad.jpg";
+const innovaImg = "/assets/fleet-innova.jpg";
+const sedanImg = "/assets/fleet-sedan.jpg";
+const hatchImg = "/assets/fleet-hatchback.jpg";
+const lonavalaImg = "/assets/tour-lonavala.jpg";
+const statueImg = "/assets/tour-statue-unity.jpg";
+const shirdiImg = "/assets/tour-shirdi.jpg";
 
 import { InquiryForm } from "@/components/InquiryForm";
 import { CtaBand, SectionHeader } from "@/components/Section";
@@ -23,32 +25,19 @@ import { FAQList } from "@/components/FAQ";
 import { HOMEPAGE_FAQS, REVIEWS } from "@/lib/content";
 import { SITE } from "@/lib/site";
 import {
-  breadcrumbJsonLd, faqJsonLd, jsonLdScript, pageMeta, serviceJsonLd,
+  breadcrumbJsonLd, faqJsonLd, pageMeta, serviceJsonLd,
 } from "@/lib/seo";
 
-export const Route = createFileRoute("/")({
-  component: Home,
-  head: () => ({
-    meta: pageMeta({
-      title: `${SITE.name} — Car Rentals, Tempo Traveller & Tour Packages in Mumbai & Ahmedabad`,
+import { makeMetadata } from "@/lib/metadata";
+
+export const metadata: Metadata = makeMetadata({
+title: `${SITE.name} — Car Rentals, Tempo Traveller & Tour Packages in Mumbai & Ahmedabad`,
       description:
         "Book reliable car rentals, Tempo Traveller rentals and curated tour packages in Mumbai and Ahmedabad. Clean vehicles, experienced drivers, transparent pricing. Call or WhatsApp for a quick quote.",
       path: "/",
-    }),
-    links: [{ rel: "canonical", href: "/" }],
-    scripts: [
-      jsonLdScript(faqJsonLd(HOMEPAGE_FAQS)),
-      jsonLdScript(breadcrumbJsonLd([{ name: "Home", path: "/" }])),
-      jsonLdScript(serviceJsonLd({
-        name: "Car Rental, Tempo Traveller & Tour Packages",
-        description:
-          "Chauffeur-driven car rentals, Tempo Traveller rentals and holiday tour packages across Mumbai and Ahmedabad.",
-      })),
-    ],
-  }),
 });
 
-function Home() {
+export default function Home() {
   return (
     <>
       <Hero />
@@ -71,7 +60,7 @@ function Hero() {
   return (
     <section className="relative overflow-hidden">
       <div className="absolute inset-0 -z-10">
-        <img
+        <Image
           src={heroCar}
           alt="Premium sedan on a scenic Indian highway at golden hour"
           width={1920}
@@ -156,7 +145,7 @@ function ServicesOverview() {
         />
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {services.map(({ icon: Icon, title, desc, to }) => (
-            <Link key={title} to={to} className="card-elegant block group">
+            <Link key={title} href={to} className="card-elegant block group">
               <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-gold/15 text-gold-deep">
                 <Icon size={22} />
               </span>
@@ -185,12 +174,12 @@ function FleetShowcase() {
       <div className="container-x">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <SectionHeader eyebrow="Our Fleet" title="Clean, comfortable, well-maintained" />
-          <Link to="/fleet" className="btn-outline-gold text-sm">View full fleet</Link>
+          <Link href="/fleet" className="btn-outline-gold text-sm">View full fleet</Link>
         </div>
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {fleet.map((f) => (
             <article key={f.name} className="card-elegant p-0 overflow-hidden">
-              <img
+              <Image
                 src={f.img}
                 alt={f.alt}
                 loading="lazy"
@@ -223,12 +212,12 @@ function PopularTours() {
       <div className="container-x">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <SectionHeader eyebrow="Popular Tour Packages" title="Handpicked getaways from Mumbai & Ahmedabad" />
-          <Link to="/tour-packages" className="btn-outline-gold text-sm">All packages</Link>
+          <Link href="/tour-packages" className="btn-outline-gold text-sm">All packages</Link>
         </div>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {tours.map((t) => (
             <article key={t.title} className="card-elegant p-0 overflow-hidden">
-              <img
+              <Image
                 src={t.img}
                 alt={t.alt}
                 loading="lazy"
@@ -239,7 +228,7 @@ function PopularTours() {
               <div className="p-6">
                 <p className="text-xs font-semibold uppercase tracking-widest text-gold-deep">{t.duration}</p>
                 <h3 className="mt-2 font-display text-xl text-navy-deep">{t.title}</h3>
-                <Link to={t.to} className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-navy-deep hover:text-gold-deep">
+                <Link href={t.to} className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-navy-deep hover:text-gold-deep">
                   View package <ArrowRight size={14} />
                 </Link>
               </div>
@@ -279,8 +268,8 @@ function CitySections() {
         </div>
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           {cities.map((c) => (
-            <Link key={c.name} to={c.to} className="group relative overflow-hidden rounded-2xl">
-              <img
+            <Link key={c.name} href={c.to} className="group relative overflow-hidden rounded-2xl">
+              <Image
                 src={c.img}
                 alt={c.alt}
                 loading="lazy"
@@ -366,7 +355,7 @@ function SafetyComfort() {
     <section className="py-16 md:py-20">
       <div className="container-x grid gap-10 lg:grid-cols-2 items-center">
         <div className="relative">
-          <img
+          <Image
             src={interiorImg}
             alt="Premium clean interior of an SUV with leather seats and open road view"
             loading="lazy"
@@ -374,7 +363,7 @@ function SafetyComfort() {
             height={800}
             className="rounded-2xl object-cover shadow-elegant"
           />
-          <img
+          <Image
             src={familyImg}
             alt="Family loading luggage for a road trip"
             loading="lazy"
@@ -403,7 +392,7 @@ function SafetyComfort() {
           </ul>
           <div className="mt-6 flex gap-3">
             <a href={SITE.phoneHref} className="btn-navy">Call to book</a>
-            <Link to="/why-choose-us" className="btn-outline-gold">Why Choose Us</Link>
+            <Link href="/why-choose-us" className="btn-outline-gold">Why Choose Us</Link>
           </div>
         </div>
       </div>

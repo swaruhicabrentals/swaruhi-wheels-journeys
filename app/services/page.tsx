@@ -1,22 +1,16 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import type { Metadata } from "next";
+import Link from "next/link";
 import { Car, Bus, Map, Plane, Briefcase, Heart } from "lucide-react";
 import { Breadcrumbs, CtaBand, SectionHeader } from "@/components/Section";
-import { pageMeta, jsonLdScript, breadcrumbJsonLd } from "@/lib/seo";
+import { pageMeta, breadcrumbJsonLd } from "@/lib/seo";
 
-export const Route = createFileRoute("/services")({
-  component: Services,
-  head: () => ({
-    meta: pageMeta({
-      title: "Travel Services — Car & Tempo Rentals, Tours, Airport & Corporate Cabs",
+import { makeMetadata } from "@/lib/metadata";
+
+export const metadata: Metadata = makeMetadata({
+title: "Travel Services — Car & Tempo Rentals, Tours, Airport & Corporate Cabs",
       description:
         "Full-service travel from Swaruhi Travels: local & outstation car rentals, Tempo Traveller rentals, curated tour packages, airport transfers, corporate cabs and wedding fleets in Mumbai and Ahmedabad.",
       path: "/services",
-    }),
-    links: [{ rel: "canonical", href: "/services" }],
-    scripts: [jsonLdScript(breadcrumbJsonLd([
-      { name: "Home", path: "/" }, { name: "Services", path: "/services" },
-    ]))],
-  }),
 });
 
 const services = [
@@ -34,7 +28,7 @@ const services = [
     desc: "Decorated cars, guest transport and multi-vehicle fleets for weddings and events." },
 ];
 
-function Services() {
+export default function Services() {
   return (
     <>
       <section className="section-navy py-14">
@@ -53,7 +47,7 @@ function Services() {
           <SectionHeader eyebrow="What We Offer" title="Six ways we help you travel" />
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {services.map(({ icon: Icon, title, desc, to }) => (
-              <Link key={title} to={to} className="card-elegant group block">
+              <Link key={title} href={to} className="card-elegant group block">
                 <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-gold/15 text-gold-deep">
                   <Icon size={22} />
                 </span>

@@ -1,39 +1,28 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 import { Breadcrumbs, CtaBand, SectionHeader } from "@/components/Section";
 import { TOUR_PACKAGES } from "@/lib/content";
-import { pageMeta, jsonLdScript, breadcrumbJsonLd, serviceJsonLd } from "@/lib/seo";
-import lonavalaImg from "@/assets/tour-lonavala.jpg";
-import shirdiImg from "@/assets/tour-shirdi.jpg";
-import statueImg from "@/assets/tour-statue-unity.jpg";
+import { pageMeta, breadcrumbJsonLd, serviceJsonLd } from "@/lib/seo";
+const lonavalaImg = "/assets/tour-lonavala.jpg";
+const shirdiImg = "/assets/tour-shirdi.jpg";
+const statueImg = "/assets/tour-statue-unity.jpg";
 import { InquiryForm } from "@/components/InquiryForm";
 
 const IMG: Record<string, string> = {
   lonavala: lonavalaImg, shirdi: shirdiImg, "statue-unity": statueImg,
 };
 
-export const Route = createFileRoute("/tour-packages")({
-  component: Tours,
-  head: () => ({
-    meta: pageMeta({
-      title: "Tour Packages from Mumbai & Ahmedabad — Family, Weekend & Pilgrimage Tours",
+import { makeMetadata } from "@/lib/metadata";
+
+export const metadata: Metadata = makeMetadata({
+title: "Tour Packages from Mumbai & Ahmedabad — Family, Weekend & Pilgrimage Tours",
       description:
         "Curated tour packages from Mumbai and Ahmedabad by Swaruhi Travels. Lonavala, Shirdi, Mahabaleshwar, Statue of Unity, Saputara, Dwarka & more — with vehicle, driver and itinerary planning.",
       path: "/tour-packages",
-    }),
-    links: [{ rel: "canonical", href: "/tour-packages" }],
-    scripts: [
-      jsonLdScript(breadcrumbJsonLd([
-        { name: "Home", path: "/" }, { name: "Tour Packages", path: "/tour-packages" },
-      ])),
-      jsonLdScript(serviceJsonLd({
-        name: "Tour Packages",
-        description: "Custom and pre-designed tour packages from Mumbai and Ahmedabad including car and driver.",
-      })),
-    ],
-  }),
 });
 
-function Tours() {
+export default function Tours() {
   const mumbai = TOUR_PACKAGES.filter((t) => t.from === "Mumbai");
   const ahmedabad = TOUR_PACKAGES.filter((t) => t.from === "Ahmedabad");
 
@@ -66,8 +55,8 @@ function Tours() {
               and multi-city Gujarat tours.
             </p>
             <div className="mt-6 flex gap-3">
-              <Link to="/contact" className="btn-navy">Plan my tour</Link>
-              <Link to="/tempo-traveller-rentals" className="btn-outline-gold">Group vehicles</Link>
+              <Link href="/contact" className="btn-navy">Plan my tour</Link>
+              <Link href="/tempo-traveller-rentals" className="btn-outline-gold">Group vehicles</Link>
             </div>
           </div>
           <InquiryForm compact />
@@ -89,7 +78,7 @@ function PackageGroup({
         <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {items.map((t) => (
             <article key={t.slug} className="card-elegant p-0 overflow-hidden">
-              <img
+              <Image
                 src={IMG[t.image] ?? lonavalaImg}
                 alt={t.title}
                 loading="lazy" width={1024} height={704}
@@ -99,7 +88,7 @@ function PackageGroup({
                 <p className="text-xs font-semibold uppercase tracking-widest text-gold-deep">{t.duration}</p>
                 <h3 className="mt-1 font-display text-lg text-navy-deep">{t.title}</h3>
                 <p className="mt-2 text-sm text-muted-foreground">Highlights: {t.highlights}</p>
-                <Link to="/contact" className="mt-4 inline-flex btn-outline-gold text-sm">Get Quote</Link>
+                <Link href="/contact" className="mt-4 inline-flex btn-outline-gold text-sm">Get Quote</Link>
               </div>
             </article>
           ))}

@@ -1,27 +1,22 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 import { ShieldCheck, Users, Award, HeartHandshake } from "lucide-react";
 import { SectionHeader, CtaBand, Breadcrumbs } from "@/components/Section";
-import { pageMeta, jsonLdScript, breadcrumbJsonLd } from "@/lib/seo";
+import { pageMeta, breadcrumbJsonLd } from "@/lib/seo";
 import { SITE } from "@/lib/site";
-import familyImg from "@/assets/family-travel.jpg";
+const familyImg = "/assets/family-travel.jpg";
 
-export const Route = createFileRoute("/about")({
-  component: About,
-  head: () => ({
-    meta: pageMeta({
-      title: "About Swaruhi Travels — Trusted Travel Partner in Mumbai & Ahmedabad",
+import { makeMetadata } from "@/lib/metadata";
+
+export const metadata: Metadata = makeMetadata({
+title: "About Swaruhi Travels — Trusted Travel Partner in Mumbai & Ahmedabad",
       description:
         "Swaruhi Travels is a professional car rental and tour operator serving Mumbai and Ahmedabad. Learn about our mission, drivers, fleet and commitment to safe, premium travel.",
       path: "/about",
-    }),
-    links: [{ rel: "canonical", href: "/about" }],
-    scripts: [jsonLdScript(breadcrumbJsonLd([
-      { name: "Home", path: "/" }, { name: "About", path: "/about" },
-    ]))],
-  }),
 });
 
-function About() {
+export default function About() {
   return (
     <>
       <section className="section-navy py-14">
@@ -37,7 +32,7 @@ function About() {
 
       <section className="py-16">
         <div className="container-x grid gap-10 lg:grid-cols-2 items-center">
-          <img
+          <Image
             src={familyImg}
             alt="Family preparing for a road trip in a rental SUV"
             loading="lazy" width={1280} height={800}
@@ -60,10 +55,10 @@ function About() {
               </p>
               <p>
                 We're proud to be one of the most dependable choices for
-                <Link to="/car-rentals" className="text-gold-deep hover:underline mx-1">car rentals</Link>,
-                <Link to="/tempo-traveller-rentals" className="text-gold-deep hover:underline mx-1">Tempo Traveller rentals</Link>
+                <Link href="/car-rentals" className="text-gold-deep hover:underline mx-1">car rentals</Link>,
+                <Link href="/tempo-traveller-rentals" className="text-gold-deep hover:underline mx-1">Tempo Traveller rentals</Link>
                 and
-                <Link to="/tour-packages" className="text-gold-deep hover:underline mx-1">tour packages</Link>
+                <Link href="/tour-packages" className="text-gold-deep hover:underline mx-1">tour packages</Link>
                 in our cities.
               </p>
             </div>

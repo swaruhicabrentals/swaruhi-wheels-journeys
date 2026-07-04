@@ -1,0 +1,220 @@
+@import "tailwindcss" source(none);
+@source "../app";
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Swaruhi Travels — navy & gold premium travel design system */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-navy: var(--navy);
+  --color-navy-deep: var(--navy-deep);
+  --color-navy-soft: var(--navy-soft);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-gold-deep: var(--gold-deep);
+  --color-cream: var(--cream);
+
+  --font-display: var(--font-playfair), ui-serif, Georgia, serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  --shadow-elegant: 0 20px 60px -20px color-mix(in oklab, var(--navy) 45%, transparent);
+  --shadow-gold: 0 12px 40px -12px color-mix(in oklab, var(--gold) 55%, transparent);
+}
+
+:root {
+  --radius: 0.75rem;
+
+  --navy-deep: oklch(0.18 0.05 265);
+  --navy: oklch(0.24 0.07 265);
+  --navy-soft: oklch(0.32 0.06 265);
+  --gold: oklch(0.82 0.13 85);
+  --gold-soft: oklch(0.88 0.09 88);
+  --gold-deep: oklch(0.72 0.15 78);
+  --cream: oklch(0.98 0.01 85);
+
+  --background: oklch(0.99 0.005 85);
+  --foreground: var(--navy-deep);
+  --card: oklch(1 0 0);
+  --card-foreground: var(--navy-deep);
+  --popover: oklch(1 0 0);
+  --popover-foreground: var(--navy-deep);
+  --primary: var(--navy);
+  --primary-foreground: var(--cream);
+  --secondary: var(--gold);
+  --secondary-foreground: var(--navy-deep);
+  --muted: oklch(0.95 0.01 85);
+  --muted-foreground: oklch(0.45 0.03 265);
+  --accent: var(--gold-soft);
+  --accent-foreground: var(--navy-deep);
+  --destructive: oklch(0.58 0.22 27);
+  --destructive-foreground: oklch(0.99 0 0);
+  --border: oklch(0.9 0.02 85);
+  --input: oklch(0.9 0.02 85);
+  --ring: var(--gold);
+}
+
+.dark {
+  --background: var(--navy-deep);
+  --foreground: var(--cream);
+  --card: var(--navy);
+  --card-foreground: var(--cream);
+  --popover: var(--navy);
+  --popover-foreground: var(--cream);
+  --primary: var(--gold);
+  --primary-foreground: var(--navy-deep);
+  --secondary: var(--navy-soft);
+  --secondary-foreground: var(--cream);
+  --muted: var(--navy-soft);
+  --muted-foreground: oklch(0.75 0.03 85);
+  --accent: var(--navy-soft);
+  --accent-foreground: var(--gold);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: var(--gold);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+}
+
+@utility container-x {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+  max-width: 80rem;
+}
+
+@utility btn-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, var(--gold), var(--gold-deep));
+  color: var(--navy-deep);
+  font-weight: 600;
+  padding: 0.875rem 1.5rem;
+  border-radius: 999px;
+  box-shadow: var(--shadow-gold);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+
+  &:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.05);
+  }
+}
+
+@utility btn-outline-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 1.5px solid var(--gold);
+  color: var(--gold);
+  font-weight: 600;
+  padding: 0.8125rem 1.5rem;
+  border-radius: 999px;
+  background: transparent;
+  transition: background 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    background: var(--gold);
+    color: var(--navy-deep);
+  }
+}
+
+@utility btn-navy {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--navy);
+  color: var(--cream);
+  font-weight: 600;
+  padding: 0.875rem 1.5rem;
+  border-radius: 999px;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: var(--navy-deep);
+  }
+}
+
+@utility section-navy {
+  background: linear-gradient(180deg, var(--navy-deep), var(--navy));
+  color: var(--cream);
+}
+
+@utility gold-underline {
+  position: relative;
+  &::after {
+    content: "";
+    display: block;
+    width: 3rem;
+    height: 3px;
+    margin-top: 0.75rem;
+    background: linear-gradient(90deg, var(--gold), var(--gold-deep));
+    border-radius: 999px;
+  }
+}
+
+@utility card-elegant {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-elegant);
+    border-color: var(--gold);
+  }
+}

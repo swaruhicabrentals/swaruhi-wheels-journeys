@@ -1,27 +1,20 @@
-import { createFileRoute } from "@tanstack/react-router";
+import type { Metadata } from "next";
 import { Phone, MessageCircle, Mail, MapPin, Clock } from "lucide-react";
 import { Breadcrumbs, SectionHeader } from "@/components/Section";
 import { InquiryForm } from "@/components/InquiryForm";
 import { SITE } from "@/lib/site";
-import { pageMeta, jsonLdScript, breadcrumbJsonLd } from "@/lib/seo";
+import { pageMeta, breadcrumbJsonLd } from "@/lib/seo";
 
-export const Route = createFileRoute("/contact")({
-  component: Contact,
-  head: () => ({
-    meta: pageMeta({
-      title: "Contact Swaruhi Travels — Call, WhatsApp or Book Online",
+import { makeMetadata } from "@/lib/metadata";
+
+export const metadata: Metadata = makeMetadata({
+title: "Contact Swaruhi Travels — Call, WhatsApp or Book Online",
       description:
         "Reach Swaruhi Travels for car rental, Tempo Traveller and tour package bookings in Mumbai and Ahmedabad. Call, WhatsApp or fill our quick inquiry form for a fast quote.",
       path: "/contact",
-    }),
-    links: [{ rel: "canonical", href: "/contact" }],
-    scripts: [jsonLdScript(breadcrumbJsonLd([
-      { name: "Home", path: "/" }, { name: "Contact", path: "/contact" },
-    ]))],
-  }),
 });
 
-function Contact() {
+export default function Contact() {
   return (
     <>
       <section className="section-navy py-14">

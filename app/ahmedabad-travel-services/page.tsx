@@ -1,10 +1,12 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 import { MapPin, Plane, Building2, Landmark } from "lucide-react";
 import { Breadcrumbs, CtaBand, SectionHeader } from "@/components/Section";
 import { InquiryForm } from "@/components/InquiryForm";
 import { FAQList } from "@/components/FAQ";
-import { pageMeta, jsonLdScript, breadcrumbJsonLd, faqJsonLd, serviceJsonLd } from "@/lib/seo";
-import ahmedabadImg from "@/assets/ahmedabad.jpg";
+import { pageMeta, breadcrumbJsonLd, faqJsonLd, serviceJsonLd } from "@/lib/seo";
+const ahmedabadImg = "/assets/ahmedabad.jpg";
 
 const faqs = [
   { q: "Which areas in Ahmedabad do you cover?",
@@ -17,36 +19,21 @@ const faqs = [
     a: "Absolutely. Our 12 and 17-seater Tempo Travellers are popular for Somnath-Dwarka circuits, Statue of Unity family trips and wedding transport." },
 ];
 
-export const Route = createFileRoute("/ahmedabad-travel-services")({
-  component: Ahmedabad,
-  head: () => ({
-    meta: pageMeta({
-      title: "Car Rental & Travel Services in Ahmedabad — Airport, Outstation, Tours",
+import { makeMetadata } from "@/lib/metadata";
+
+export const metadata: Metadata = makeMetadata({
+title: "Car Rental & Travel Services in Ahmedabad — Airport, Outstation, Tours",
       description:
         "Swaruhi Travels offers car rental, Tempo Traveller rental, airport transfers and outstation cabs across Ahmedabad. Statue of Unity, Somnath, Dwarka & Saputara tours. 24×7 booking.",
       path: "/ahmedabad-travel-services",
-    }),
-    links: [{ rel: "canonical", href: "/ahmedabad-travel-services" }],
-    scripts: [
-      jsonLdScript(breadcrumbJsonLd([
-        { name: "Home", path: "/" }, { name: "Ahmedabad Travel Services", path: "/ahmedabad-travel-services" },
-      ])),
-      jsonLdScript(serviceJsonLd({
-        name: "Travel Services in Ahmedabad",
-        description: "Car rental, Tempo Traveller rental and outstation cab service in Ahmedabad.",
-        areaServed: ["Ahmedabad"],
-      })),
-      jsonLdScript(faqJsonLd(faqs)),
-    ],
-  }),
 });
 
-function Ahmedabad() {
+export default function Ahmedabad() {
   return (
     <>
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 -z-10">
-          <img src={ahmedabadImg} alt="Ahmedabad Sabarmati riverfront at dusk"
+          <Image src={ahmedabadImg} alt="Ahmedabad Sabarmati riverfront at dusk"
             width={1280} height={720} className="h-full w-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/95 to-navy/60" />
         </div>
@@ -68,11 +55,11 @@ function Ahmedabad() {
             <p className="mt-5 text-muted-foreground leading-relaxed">
               For business travel across SG Highway and Prahlad Nagar, family day-trips
               to the Statue of Unity, or multi-day
-              <Link to="/tour-packages" className="text-gold-deep hover:underline mx-1">Gujarat tour packages</Link>,
+              <Link href="/tour-packages" className="text-gold-deep hover:underline mx-1">Gujarat tour packages</Link>,
               Swaruhi Travels offers a fleet and drivers you can rely on. Book a
-              <Link to="/car-rentals" className="text-gold-deep hover:underline mx-1">car rental in Ahmedabad</Link>
+              <Link href="/car-rentals" className="text-gold-deep hover:underline mx-1">car rental in Ahmedabad</Link>
               or a group
-              <Link to="/tempo-traveller-rentals" className="text-gold-deep hover:underline mx-1">Tempo Traveller</Link>
+              <Link href="/tempo-traveller-rentals" className="text-gold-deep hover:underline mx-1">Tempo Traveller</Link>
               in a few taps.
             </p>
 

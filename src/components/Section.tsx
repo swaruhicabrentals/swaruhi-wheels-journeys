@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 export function SectionHeader({
@@ -31,7 +31,7 @@ export function CtaBand({
           <p className="mt-2 text-cream/75 max-w-xl">{subtitle}</p>
         </div>
         <div className="flex flex-wrap gap-3">
-          <Link to="/contact" className="btn-gold">
+          <Link href="/contact" className="btn-gold">
             Get a Quote <ArrowRight size={16} />
           </Link>
           <a href="tel:+919876543210" className="btn-outline-gold">Call Now</a>
@@ -49,7 +49,7 @@ export function Breadcrumbs({ items }: { items: { name: string; path: string }[]
           <li key={it.path} className="flex items-center gap-1.5">
             {i > 0 && <span aria-hidden>/</span>}
             {i < items.length - 1 ? (
-              <Link to={it.path} className="hover:text-navy-deep">{it.name}</Link>
+              <Link href={it.path} className="hover:text-navy-deep">{it.name}</Link>
             ) : (
               <span className="text-navy-deep">{it.name}</span>
             )}

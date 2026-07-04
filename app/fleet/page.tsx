@@ -1,34 +1,29 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 import { Users } from "lucide-react";
 import { Breadcrumbs, CtaBand, SectionHeader } from "@/components/Section";
 import { FLEET } from "@/lib/content";
-import { pageMeta, jsonLdScript, breadcrumbJsonLd } from "@/lib/seo";
-import innovaImg from "@/assets/fleet-innova.jpg";
-import sedanImg from "@/assets/fleet-sedan.jpg";
-import hatchImg from "@/assets/fleet-hatchback.jpg";
-import tempoImg from "@/assets/tempo-traveller.jpg";
+import { pageMeta, breadcrumbJsonLd } from "@/lib/seo";
+const innovaImg = "/assets/fleet-innova.jpg";
+const sedanImg = "/assets/fleet-sedan.jpg";
+const hatchImg = "/assets/fleet-hatchback.jpg";
+const tempoImg = "/assets/tempo-traveller.jpg";
 
 const IMG: Record<string, string> = {
   hatchback: hatchImg, sedan: sedanImg, innova: innovaImg, tempo: tempoImg,
 };
 
-export const Route = createFileRoute("/fleet")({
-  component: Fleet,
-  head: () => ({
-    meta: pageMeta({
-      title: "Our Fleet — Hatchback, Sedan, SUV & Tempo Traveller Rentals",
+import { makeMetadata } from "@/lib/metadata";
+
+export const metadata: Metadata = makeMetadata({
+title: "Our Fleet — Hatchback, Sedan, SUV & Tempo Traveller Rentals",
       description:
         "Explore Swaruhi Travels' clean, well-maintained fleet: hatchbacks, premium sedans, Innova SUVs and 12/17-seater Tempo Travellers for city, outstation and tour travel.",
       path: "/fleet",
-    }),
-    links: [{ rel: "canonical", href: "/fleet" }],
-    scripts: [jsonLdScript(breadcrumbJsonLd([
-      { name: "Home", path: "/" }, { name: "Fleet", path: "/fleet" },
-    ]))],
-  }),
 });
 
-function Fleet() {
+export default function Fleet() {
   return (
     <>
       <section className="section-navy py-14">
@@ -48,7 +43,7 @@ function Fleet() {
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {FLEET.map((f) => (
               <article key={f.slug} className="card-elegant p-0 overflow-hidden">
-                <img
+                <Image
                   src={IMG[f.image] ?? sedanImg}
                   alt={`${f.name} — ${f.ideal}`}
                   loading="lazy" width={1024} height={704}
@@ -65,7 +60,7 @@ function Fleet() {
                   <p className="mt-1 text-sm text-muted-foreground">
                     <span className="font-medium text-navy-deep">Examples:</span> {f.examples}
                   </p>
-                  <Link to="/contact" className="mt-5 inline-flex btn-outline-gold text-sm">Get Quote</Link>
+                  <Link href="/contact" className="mt-5 inline-flex btn-outline-gold text-sm">Get Quote</Link>
                 </div>
               </article>
             ))}
