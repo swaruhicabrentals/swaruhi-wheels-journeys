@@ -10,6 +10,7 @@ import { localBusinessJsonLd } from "@/lib/seo";
 import { Providers } from "./providers";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE.url),
   title: {
     default: `${SITE.name} - ${SITE.tagline}`,
     template: `%s | ${SITE.name}`,
@@ -20,6 +21,7 @@ export const metadata: Metadata = {
     siteName: SITE.name,
     title: `${SITE.name} - ${SITE.tagline}`,
     description: SITE.description,
+    url: SITE.url,
     type: "website",
   },
   twitter: {

@@ -1,4 +1,4 @@
-﻿# Swaruhi Travels
+# Swaruhi Travels
 
 Premium travel website for Swaruhi Travels, built with Next.js App Router, TypeScript, Tailwind CSS, TanStack Query, and Radix UI components.
 
@@ -101,14 +101,14 @@ app/
   sitemap.xml/route.ts            # Sitemap XML route
   about/page.tsx
   services/page.tsx
-  cab-rentals/page.tsx
-  tempo-traveller-rentals/page.tsx
-  tour-packages/page.tsx
+  services/cab-rentals/page.tsx
+  services/tempo-traveller-rentals/page.tsx
+  services/tour-packages/page.tsx
   fleet/page.tsx
   faq/page.tsx
   contact/page.tsx
-  mumbai-travel-services/page.tsx
-  ahmedabad-travel-services/page.tsx
+  mumbai-cab-rentals/page.tsx
+  ahmedabad-cab-rentals/page.tsx
   why-choose-us/page.tsx
 
 public/

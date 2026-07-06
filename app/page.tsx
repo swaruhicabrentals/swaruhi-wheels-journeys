@@ -31,7 +31,7 @@ import {
 import { makeMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = makeMetadata({
-title: `${SITE.name} — Pan-India Cab Rentals, Tempo Traveller & Tour Packages`,
+title: `${SITE.name} - Pan-India Cab Rentals, Tempo Traveller & Tour Packages`,
       description:
         "Book reliable cab rentals, Tempo Traveller rentals and curated tour packages across India, coordinated from our Mumbai and Ahmedabad offices. Clean vehicles, experienced drivers, transparent pricing.",
       path: "/",
@@ -81,7 +81,7 @@ function Hero() {
           </h1>
           <p className="mt-5 max-w-xl text-base md:text-lg text-cream/85 leading-relaxed">
             Chauffeur-driven journeys across India, coordinated from our Mumbai and Ahmedabad offices. Clean vehicles,
-            experienced drivers, transparent pricing — every single ride.
+            experienced drivers, transparent pricing - every single ride.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
@@ -120,19 +120,19 @@ function ServicesOverview() {
       icon: Car,
       title: "Cab Rentals",
       desc: "Hatchbacks, sedans and SUVs on hourly, daily and outstation packages with a driver.",
-      to: "/cab-rentals",
+      to: "/services/cab-rentals",
     },
     {
       icon: Bus,
       title: "Tempo Traveller Rentals",
       desc: "12- and 17-seater Tempo Travellers for weddings, group tours and corporate travel.",
-      to: "/tempo-traveller-rentals",
+      to: "/services/tempo-traveller-rentals",
     },
     {
       icon: Map,
       title: "Tour Packages",
       desc: "Curated single-day and multi-day packages across India, with strong Mumbai and Ahmedabad coverage.",
-      to: "/tour-packages",
+      to: "/services/tour-packages",
     },
   ];
   return (
@@ -140,7 +140,7 @@ function ServicesOverview() {
       <div className="container-x">
         <SectionHeader
           eyebrow="Our Services"
-          title="Travel your way — city, outstation or full tour"
+          title="Travel your way - city, outstation or full tour"
           description="Three focused services, one dependable team. Every trip includes a trained driver, fuel-clean vehicle and door-to-door pickup."
         />
         <div className="mt-10 grid gap-6 md:grid-cols-3">
@@ -203,16 +203,16 @@ function FleetShowcase() {
 
 function PopularTours() {
   const tours = [
-    { title: "Mumbai to Lonavala & Khandala", duration: "1-2 Days", img: lonavalaImg, alt: "Green Lonavala valley with winding road", to: "/tour-packages" },
-    { title: "Mumbai to Shirdi Sai Baba", duration: "1-2 Days", img: shirdiImg, alt: "Shirdi Sai Baba temple at sunset", to: "/tour-packages" },
-    { title: "Ahmedabad to Statue of Unity", duration: "1 Day", img: statueImg, alt: "Statue of Unity aerial view at golden hour", to: "/tour-packages" },
+    { title: "Mumbai to Lonavala & Khandala", duration: "1-2 Days", img: lonavalaImg, alt: "Green Lonavala valley with winding road", to: "/services/tour-packages" },
+    { title: "Mumbai to Shirdi Sai Baba", duration: "1-2 Days", img: shirdiImg, alt: "Shirdi Sai Baba temple at sunset", to: "/services/tour-packages" },
+    { title: "Ahmedabad to Statue of Unity", duration: "1 Day", img: statueImg, alt: "Statue of Unity aerial view at golden hour", to: "/services/tour-packages" },
   ];
   return (
     <section className="py-16 md:py-20">
       <div className="container-x">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <SectionHeader eyebrow="Popular Tour Packages" title="Handpicked getaways across India" />
-          <Link href="/tour-packages" className="btn-outline-gold text-sm">All packages</Link>
+          <Link href="/services/tour-packages" className="btn-outline-gold text-sm">All packages</Link>
         </div>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {tours.map((t) => (
@@ -246,14 +246,14 @@ function CitySections() {
       name: "Mumbai",
       img: mumbaiImg,
       alt: "Mumbai Marine Drive skyline at night",
-      to: "/mumbai-travel-services",
+      to: "/mumbai-cab-rentals",
       text: "Our Mumbai office coordinates airport transfers, outstation cabs, Tempo Travellers and pan-India tour movements.",
     },
     {
       name: "Ahmedabad",
       img: ahmedabadImg,
       alt: "Ahmedabad Sabarmati riverfront illuminated at dusk",
-      to: "/ahmedabad-travel-services",
+      to: "/ahmedabad-cab-rentals",
       text: "Our Ahmedabad office supports Gujarat routes, corporate travel, group tours and long-distance cab rentals across India.",
     },
   ];
@@ -300,7 +300,7 @@ function WhyChoose() {
   const items = [
     { icon: ShieldCheck, title: "Verified, uniformed drivers", desc: "Background-checked, well-trained, courteous chauffeurs on every ride." },
     { icon: Sparkles, title: "Sanitised, well-kept vehicles", desc: "Every car and Tempo Traveller is cleaned, serviced and inspected before dispatch." },
-    { icon: IndianRupee, title: "Transparent, upfront pricing", desc: "Itemised quotes with no hidden charges — pay only for what you booked." },
+    { icon: IndianRupee, title: "Transparent, upfront pricing", desc: "Itemised quotes with no hidden charges - pay only for what you booked." },
     { icon: Clock, title: "On-time, 24 × 7 availability", desc: "Round-the-clock booking desk and airport pickups on the dot." },
   ];
   return (
@@ -340,7 +340,7 @@ function Reviews() {
               </div>
               <blockquote className="mt-3 text-sm text-navy-deep leading-relaxed">"{r.text}"</blockquote>
               <figcaption className="mt-4 text-xs font-semibold text-muted-foreground">
-                — {r.name}, {r.city}
+                - {r.name}, {r.city}
               </figcaption>
             </figure>
           ))}

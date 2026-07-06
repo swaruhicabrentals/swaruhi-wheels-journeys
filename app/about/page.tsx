@@ -10,7 +10,7 @@ const familyImg = "/assets/family-travel.jpg";
 import { makeMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = makeMetadata({
-title: "About Swaruhi Travels — Pan-India Travel Partner",
+title: "About Swaruhi Travels - Pan-India Travel Partner",
       description:
         "Swaruhi Travels is a professional cab rental and tour operator serving travellers across India from offices in Mumbai and Ahmedabad. Learn about our mission, drivers and fleet.",
       path: "/about",
@@ -42,7 +42,7 @@ export default function About() {
             <SectionHeader eyebrow="Our Story" title="Built on trust, driven by service" />
             <div className="mt-5 space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                Swaruhi Travels was founded to solve a simple problem — travellers deserve
+                Swaruhi Travels was founded to solve a simple problem - travellers deserve
                 reliable, safe and premium chauffeur-driven vehicles without inflated pricing.
                 What began as a small local fleet has grown into a trusted travel partner
                 for families, tourists, corporate teams and wedding groups.
@@ -55,10 +55,10 @@ export default function About() {
               </p>
               <p>
                 We're proud to be one of the most dependable choices for
-                <Link href="/cab-rentals" className="text-gold-deep hover:underline mx-1">cab rentals</Link>,
-                <Link href="/tempo-traveller-rentals" className="text-gold-deep hover:underline mx-1">Tempo Traveller rentals</Link>
+                <Link href="/services/cab-rentals" className="text-gold-deep hover:underline mx-1">cab rentals</Link>,
+                <Link href="/services/tempo-traveller-rentals" className="text-gold-deep hover:underline mx-1">Tempo Traveller rentals</Link>
                 and
-                <Link href="/tour-packages" className="text-gold-deep hover:underline mx-1">tour packages</Link>
+                <Link href="/services/tour-packages" className="text-gold-deep hover:underline mx-1">tour packages</Link>
                 from our Mumbai and Ahmedabad offices.
               </p>
             </div>

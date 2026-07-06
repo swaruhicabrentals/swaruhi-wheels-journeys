@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Breadcrumbs, CtaBand, SectionHeader } from "@/components/Section";
 import { FAQList } from "@/components/FAQ";
+import { JsonLd } from "@/components/JsonLd";
 import { HOMEPAGE_FAQS } from "@/lib/content";
 import { pageMeta, breadcrumbJsonLd, faqJsonLd } from "@/lib/seo";
 
@@ -10,7 +11,7 @@ const extra = [
   { q: "What is your cancellation policy?",
     a: "Cancellations made 24+ hours before pickup are free. Late cancellations may incur a small fee depending on vehicle type." },
   { q: "Do you accept online payments?",
-    a: "Yes — UPI, bank transfer, cards and cash are accepted. For corporate clients we offer monthly invoicing." },
+    a: "Yes - UPI, bank transfer, cards and cash are accepted. For corporate clients we offer monthly invoicing." },
   { q: "Can I request a specific driver?",
     a: "Regular clients often have preferred drivers. Mention your preference at booking and we'll assign them if available." },
   { q: "Are your drivers familiar with outstation routes?",
@@ -22,15 +23,24 @@ const ALL = [...HOMEPAGE_FAQS, ...extra];
 import { makeMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = makeMetadata({
-title: "FAQs — Cab Rental, Tempo Traveller & Tour Package Questions",
+title: "FAQs - Cab Rental, Tempo Traveller & Tour Package Questions",
       description:
-        "Answers to common questions about Swaruhi Travels — pricing, drivers, cancellation, outstation routes, corporate cabs and pan-India travel support.",
+        "Answers to common questions about Swaruhi Travels - pricing, drivers, cancellation, outstation routes, corporate cabs and pan-India travel support.",
       path: "/faq",
 });
 
 export default function FaqPage() {
   return (
     <>
+      <JsonLd
+        data={[
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "FAQ", path: "/faq" },
+          ]),
+          faqJsonLd(ALL),
+        ]}
+      />
       <section className="section-navy py-14">
         <div className="container-x">
           <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "FAQ", path: "/faq" }]} />

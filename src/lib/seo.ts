@@ -6,6 +6,14 @@ type MetaEntry =
   | { property: string; content: string }
   | { charSet: string };
 
+export function absoluteUrl(path: string) {
+  if (path.startsWith("http://") || path.startsWith("https://")) {
+    return path;
+  }
+
+  return `${SITE.url}${path.startsWith("/") ? path : `/${path}`}`;
+}
+
 export function pageMeta(opts: {
   title: string;
   description: string;
@@ -21,14 +29,14 @@ export function pageMeta(opts: {
     { property: "og:title", content: fullTitle },
     { property: "og:description", content: description },
     { property: "og:type", content: type },
-    { property: "og:url", content: path },
+    { property: "og:url", content: absoluteUrl(path) },
     { name: "twitter:card", content: "summary_large_image" },
     { name: "twitter:title", content: fullTitle },
     { name: "twitter:description", content: description },
   ];
   if (image) {
-    meta.push({ property: "og:image", content: image });
-    meta.push({ name: "twitter:image", content: image });
+    meta.push({ property: "og:image", content: absoluteUrl(image) });
+    meta.push({ name: "twitter:image", content: absoluteUrl(image) });
   }
   return meta;
 }
@@ -36,12 +44,13 @@ export function pageMeta(opts: {
 export function localBusinessJsonLd() {
   return {
     "@context": "https://schema.org",
-    "@type": ["TravelAgency", "LocalBusiness"],
+    "@type": ["AutoRental", "TravelAgency", "LocalBusiness"],
+    "@id": `${SITE.url}/#business`,
     name: SITE.name,
     description: SITE.description,
     telephone: SITE.phone,
     email: SITE.email,
-    url: "/",
+    url: SITE.url,
     areaServed: [
       { "@type": "Country", name: "India" },
       { "@type": "City", name: "Mumbai" },
@@ -64,7 +73,7 @@ export function localBusinessJsonLd() {
       },
     ],
     openingHours: "Mo-Su 00:00-23:59",
-    priceRange: "₹₹",
+    priceRange: "INR",
     sameAs: [],
   };
 }
@@ -77,7 +86,7 @@ export function breadcrumbJsonLd(items: { name: string; path: string }[]) {
       "@type": "ListItem",
       position: i + 1,
       name: it.name,
-      item: it.path,
+      item: absoluteUrl(it.path),
     })),
   };
 }
@@ -103,7 +112,12 @@ export function serviceJsonLd(opts: {
     "@context": "https://schema.org",
     "@type": "Service",
     serviceType: opts.name,
-    provider: { "@type": "TravelAgency", name: SITE.name, telephone: SITE.phone },
+    provider: {
+      "@type": ["AutoRental", "TravelAgency"],
+      "@id": `${SITE.url}/#business`,
+      name: SITE.name,
+      telephone: SITE.phone,
+    },
     areaServed: (opts.areaServed ?? ["India", "Mumbai", "Ahmedabad"]).map((c) => ({
       "@type": c === "India" ? "Country" : "City",
       name: c,

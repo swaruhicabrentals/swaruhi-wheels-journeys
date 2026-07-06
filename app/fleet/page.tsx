@@ -17,7 +17,7 @@ const IMG: Record<string, string> = {
 import { makeMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = makeMetadata({
-title: "Our Fleet — Hatchback, Sedan, SUV & Tempo Traveller Rentals",
+title: "Our Fleet - Hatchback, Sedan, SUV & Tempo Traveller Rentals",
       description:
         "Explore Swaruhi Travels' clean, well-maintained fleet: hatchbacks, premium sedans, Innova SUVs and 12/17-seater Tempo Travellers for city, outstation and tour travel.",
       path: "/fleet",
@@ -31,7 +31,7 @@ export default function Fleet() {
           <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Fleet", path: "/fleet" }]} />
           <h1 className="mt-3 font-display text-4xl md:text-5xl text-cream">Our Fleet</h1>
           <p className="mt-4 max-w-2xl text-cream/80">
-            A curated line-up of hatchbacks, sedans, SUVs and Tempo Travellers — all
+            A curated line-up of hatchbacks, sedans, SUVs and Tempo Travellers - all
             regularly serviced, deep-cleaned and ready for city or outstation travel.
           </p>
         </div>
@@ -45,7 +45,7 @@ export default function Fleet() {
               <article key={f.slug} className="card-elegant p-0 overflow-hidden">
                 <Image
                   src={IMG[f.image] ?? sedanImg}
-                  alt={`${f.name} — ${f.ideal}`}
+                  alt={`${f.name} - ${f.ideal}`}
                   loading="lazy" width={1024} height={704}
                   className="aspect-[4/3] w-full object-cover"
                 />
@@ -68,7 +68,7 @@ export default function Fleet() {
         </div>
       </section>
 
-      <CtaBand title="Not sure which vehicle you need?" subtitle="Tell us your route and group size — we'll recommend the best fit." />
+      <CtaBand title="Not sure which vehicle you need?" subtitle="Tell us your route and group size - we'll recommend the best fit." />
     </>
   );
 }

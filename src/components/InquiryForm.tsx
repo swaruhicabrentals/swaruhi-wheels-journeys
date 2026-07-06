@@ -45,7 +45,7 @@ export function InquiryForm({ compact = false }: { compact?: boolean }) {
     setErrors({});
     // Route the inquiry to WhatsApp as a well-formed message.
     const d = parsed.data;
-    const text = `New Inquiry — Swaruhi Travels%0A
+    const text = `New Inquiry - Swaruhi Travels%0A
 Name: ${d.name}%0A
 Phone: ${d.phone}%0A
 Pickup: ${d.pickup}%0A

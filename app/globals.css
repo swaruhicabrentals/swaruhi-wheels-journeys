@@ -5,7 +5,7 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* Swaruhi Travels — navy & gold premium travel design system */
+/* Swaruhi Travels - navy & gold premium travel design system */
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);

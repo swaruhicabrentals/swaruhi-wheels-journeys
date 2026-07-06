@@ -6,17 +6,17 @@ const cols = [
   {
     title: "Services",
     links: [
-      { to: "/cab-rentals", label: "Cab Rentals" },
-      { to: "/tempo-traveller-rentals", label: "Tempo Traveller Rentals" },
-      { to: "/tour-packages", label: "Tour Packages" },
+      { to: "/services/cab-rentals", label: "Cab Rentals" },
+      { to: "/services/tempo-traveller-rentals", label: "Tempo Traveller Rentals" },
+      { to: "/services/tour-packages", label: "Tour Packages" },
       { to: "/fleet", label: "Our Fleet" },
     ],
   },
   {
     title: "Offices",
     links: [
-      { to: "/mumbai-travel-services", label: "Mumbai Office" },
-      { to: "/ahmedabad-travel-services", label: "Ahmedabad Office" },
+      { to: "/mumbai-cab-rentals", label: "Mumbai Office" },
+      { to: "/ahmedabad-cab-rentals", label: "Ahmedabad Office" },
     ],
   },
   {

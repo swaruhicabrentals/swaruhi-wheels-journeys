@@ -6,9 +6,9 @@ import { pageMeta, breadcrumbJsonLd } from "@/lib/seo";
 import { makeMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = makeMetadata({
-title: "Why Choose Swaruhi Travels — Safe, Reliable & Premium Travel",
+title: "Why Choose Swaruhi Travels - Safe, Reliable & Premium Travel",
       description:
-        "Verified drivers, well-maintained vehicles, transparent pricing and 24×7 support — see why families, tourists and corporates choose Swaruhi Travels for pan-India travel.",
+        "Verified drivers, well-maintained vehicles, transparent pricing and 24×7 support - see why families, tourists and corporates choose Swaruhi Travels for pan-India travel.",
       path: "/why-choose-us",
 });
 
@@ -32,7 +32,7 @@ export default function Why() {
           <h1 className="mt-3 font-display text-4xl md:text-5xl text-cream">Why Choose Swaruhi Travels</h1>
           <p className="mt-4 max-w-2xl text-cream/80">
             We combine premium service with dependable operations so your family, guests
-            and team travel safely — every single time.
+            and team travel safely - every single time.
           </p>
         </div>
       </section>

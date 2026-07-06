@@ -7,7 +7,7 @@ export const HOMEPAGE_FAQS = [
   },
   {
     q: "Do your cars come with a driver?",
-    a: "Yes. All bookings include an experienced, verified, uniformed driver. We do not offer self-drive rentals — this ensures safety and consistent service quality.",
+    a: "Yes. All bookings include an experienced, verified, uniformed driver. We do not offer self-drive rentals - this ensures safety and consistent service quality.",
   },
   {
     q: "How are your prices calculated?",

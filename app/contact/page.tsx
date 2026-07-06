@@ -8,7 +8,7 @@ import { pageMeta, breadcrumbJsonLd } from "@/lib/seo";
 import { makeMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = makeMetadata({
-title: "Contact Swaruhi Travels — Call, WhatsApp or Book Online",
+title: "Contact Swaruhi Travels - Call, WhatsApp or Book Online",
       description:
         "Reach Swaruhi Travels for pan-India cab rental, Tempo Traveller and tour package bookings from our Mumbai and Ahmedabad offices. Call, WhatsApp or fill our quick inquiry form.",
       path: "/contact",

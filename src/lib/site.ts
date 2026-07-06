@@ -1,6 +1,7 @@
 // Central place for business info. Update phone/email/address before launch.
 export const SITE = {
   name: "Swaruhi Travels",
+  url: "https://swaruhitravels.in",
   tagline: "Premium Cab Rentals, Tempo Traveller & Tour Packages",
   description:
     "Swaruhi Travels offers reliable cab rentals, Tempo Traveller rentals and curated tour packages across India, with offices in Mumbai and Ahmedabad. Clean vehicles, experienced drivers, transparent pricing.",
@@ -14,16 +15,16 @@ export const SITE = {
   offices: ["Mumbai", "Ahmedabad"],
   addressMumbai: "3 Dashrath Sadan, Gavanpada, Mulund East, Mumbai 400081",
   addressAhmedabad: "SG Highway, Ahmedabad, Gujarat 380015",
-  hours: "Open 24 × 7",
+  hours: "Open 24 x 7",
 } as const;
 
 export const NAV = [
   { to: "/", label: "Home" },
   { to: "/services", label: "Services" },
   { to: "/fleet", label: "Fleet" },
-  { to: "/tour-packages", label: "Tour Packages" },
-  { to: "/mumbai-travel-services", label: "Mumbai Office" },
-  { to: "/ahmedabad-travel-services", label: "Ahmedabad Office" },
+  { to: "/services/tour-packages", label: "Tour Packages" },
+  { to: "/mumbai-cab-rentals", label: "Mumbai Office" },
+  { to: "/ahmedabad-cab-rentals", label: "Ahmedabad Office" },
   { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
 ] as const;
