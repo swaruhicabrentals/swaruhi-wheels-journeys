@@ -6,17 +6,17 @@ const cols = [
   {
     title: "Services",
     links: [
-      { to: "/car-rentals", label: "Car Rentals" },
+      { to: "/cab-rentals", label: "Cab Rentals" },
       { to: "/tempo-traveller-rentals", label: "Tempo Traveller Rentals" },
       { to: "/tour-packages", label: "Tour Packages" },
       { to: "/fleet", label: "Our Fleet" },
     ],
   },
   {
-    title: "Cities",
+    title: "Offices",
     links: [
-      { to: "/mumbai-travel-services", label: "Mumbai Travel Services" },
-      { to: "/ahmedabad-travel-services", label: "Ahmedabad Travel Services" },
+      { to: "/mumbai-travel-services", label: "Mumbai Office" },
+      { to: "/ahmedabad-travel-services", label: "Ahmedabad Office" },
     ],
   },
   {
@@ -44,8 +44,8 @@ export function Footer() {
             </span>
           </div>
           <p className="mt-4 text-sm text-cream/75 leading-relaxed">
-            Reliable car rentals, Tempo Traveller rentals and tour packages across
-            Mumbai and Ahmedabad. Clean vehicles, trained drivers, transparent pricing.
+            Reliable cab rentals, Tempo Traveller rentals and tour packages across
+            India, coordinated from our Mumbai and Ahmedabad offices.
           </p>
           <div className="mt-5 space-y-2 text-sm">
             <a href={SITE.phoneHref} className="flex items-center gap-2 hover:text-gold">
@@ -79,7 +79,7 @@ export function Footer() {
 
       <div className="container-x mt-12 border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between gap-3 text-xs text-cream/60">
         <p>© {new Date().getFullYear()} Swaruhi Travels. All rights reserved.</p>
-        <p>{SITE.hours} · Serving Mumbai & Ahmedabad</p>
+        <p>{SITE.hours} · Pan-India service from Mumbai & Ahmedabad offices</p>
       </div>
     </footer>
   );

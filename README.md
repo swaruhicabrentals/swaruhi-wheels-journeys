@@ -1,8 +1,8 @@
-# Swaruhi Travels
+﻿# Swaruhi Travels
 
 Premium travel website for Swaruhi Travels, built with Next.js App Router, TypeScript, Tailwind CSS, TanStack Query, and Radix UI components.
 
-The site promotes chauffeur-driven car rentals, Tempo Traveller rentals, fleet options, city travel services, and tour packages for Mumbai and Ahmedabad.
+The site promotes chauffeur-driven cab rentals, Tempo Traveller rentals, fleet options, office pages, and tour packages across India from Mumbai and Ahmedabad offices.
 
 ## Features
 
@@ -101,7 +101,7 @@ app/
   sitemap.xml/route.ts            # Sitemap XML route
   about/page.tsx
   services/page.tsx
-  car-rentals/page.tsx
+  cab-rentals/page.tsx
   tempo-traveller-rentals/page.tsx
   tour-packages/page.tsx
   fleet/page.tsx

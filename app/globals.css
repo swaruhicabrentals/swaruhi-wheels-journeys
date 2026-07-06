@@ -44,8 +44,8 @@
   --color-gold-deep: var(--gold-deep);
   --color-cream: var(--cream);
 
-  --font-display: var(--font-playfair), ui-serif, Georgia, serif;
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: Georgia, "Times New Roman", ui-serif, serif;
+  --font-sans: Arial, Helvetica, ui-sans-serif, system-ui, sans-serif;
 
   --shadow-elegant: 0 20px 60px -20px color-mix(in oklab, var(--navy) 45%, transparent);
   --shadow-gold: 0 12px 40px -12px color-mix(in oklab, var(--gold) 55%, transparent);

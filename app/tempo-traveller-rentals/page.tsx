@@ -22,9 +22,9 @@ const faqs = [
 import { makeMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = makeMetadata({
-title: "Tempo Traveller Rental in Mumbai & Ahmedabad — 12 & 17 Seater",
+title: "Tempo Traveller Rental Across India — 12 & 17 Seater",
       description:
-        "Book 12-seater and 17-seater Tempo Traveller rental in Mumbai and Ahmedabad for family tours, weddings, corporate groups and outstation trips. AC, pushback seats, experienced drivers.",
+        "Book 12-seater and 17-seater Tempo Traveller rental across India for family tours, weddings, corporate groups and outstation trips. AC, pushback seats, experienced drivers.",
       path: "/tempo-traveller-rentals",
 });
 
@@ -38,7 +38,7 @@ export default function Tempo() {
             { name: "Tempo Traveller Rentals", path: "/tempo-traveller-rentals" },
           ]} />
           <h1 className="mt-3 font-display text-4xl md:text-5xl text-cream">
-            Tempo Traveller Rental in Mumbai & Ahmedabad
+            Tempo Traveller Rental Across India
           </h1>
           <p className="mt-4 max-w-2xl text-cream/80">
             12- and 17-seater Tempo Travellers for families, wedding groups, corporate

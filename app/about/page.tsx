@@ -10,9 +10,9 @@ const familyImg = "/assets/family-travel.jpg";
 import { makeMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = makeMetadata({
-title: "About Swaruhi Travels — Trusted Travel Partner in Mumbai & Ahmedabad",
+title: "About Swaruhi Travels — Pan-India Travel Partner",
       description:
-        "Swaruhi Travels is a professional car rental and tour operator serving Mumbai and Ahmedabad. Learn about our mission, drivers, fleet and commitment to safe, premium travel.",
+        "Swaruhi Travels is a professional cab rental and tour operator serving travellers across India from offices in Mumbai and Ahmedabad. Learn about our mission, drivers and fleet.",
       path: "/about",
 });
 
@@ -25,7 +25,7 @@ export default function About() {
           <h1 className="mt-3 font-display text-4xl md:text-5xl text-cream">About Swaruhi Travels</h1>
           <p className="mt-4 max-w-2xl text-cream/80">
             A modern travel service built on reliability, safety and warmth. We help families,
-            tourists and companies move confidently across Mumbai, Ahmedabad and beyond.
+            tourists and companies move confidently across India.
           </p>
         </div>
       </section>
@@ -55,11 +55,11 @@ export default function About() {
               </p>
               <p>
                 We're proud to be one of the most dependable choices for
-                <Link href="/car-rentals" className="text-gold-deep hover:underline mx-1">car rentals</Link>,
+                <Link href="/cab-rentals" className="text-gold-deep hover:underline mx-1">cab rentals</Link>,
                 <Link href="/tempo-traveller-rentals" className="text-gold-deep hover:underline mx-1">Tempo Traveller rentals</Link>
                 and
                 <Link href="/tour-packages" className="text-gold-deep hover:underline mx-1">tour packages</Link>
-                in our cities.
+                from our Mumbai and Ahmedabad offices.
               </p>
             </div>
           </div>
@@ -93,7 +93,7 @@ export default function About() {
           {[
             { k: "5,000+", v: "Happy travellers" },
             { k: "50+", v: "Vehicles in operation" },
-            { k: "2", v: "Cities · Mumbai & Ahmedabad" },
+            { k: "2", v: "Offices · Mumbai & Ahmedabad" },
           ].map((s) => (
             <div key={s.v} className="card-elegant">
               <div className="font-display text-4xl text-gold-deep">{s.k}</div>

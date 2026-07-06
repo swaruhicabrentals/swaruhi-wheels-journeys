@@ -15,16 +15,16 @@ const faqs = [
     a: "Yes, we offer 24×7 airport transfers with meet-and-greet on request. Book in advance for guaranteed on-time pickup." },
   { q: "What outstation trips are popular from Mumbai?",
     a: "Pune, Lonavala, Khandala, Nashik, Shirdi, Mahabaleshwar, Alibaug and Goa are our most requested outstation trips from Mumbai." },
-  { q: "Can I book a car rental near me in Mumbai for immediate travel?",
+  { q: "Can I book a cab rental near me in Mumbai for immediate travel?",
     a: "Yes, subject to availability. Call or WhatsApp us with your pickup location and time — most requests are confirmed within minutes." },
 ];
 
 import { makeMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = makeMetadata({
-title: "Car Rental & Travel Services in Mumbai — Airport, Outstation, Tours",
+title: "Mumbai Office — Cab Rental, Airport, Outstation & Tours",
       description:
-        "Swaruhi Travels offers car rental, Tempo Traveller rental, airport transfers and outstation cabs across Mumbai. Serving Andheri, Bandra, South Mumbai, Thane and Navi Mumbai. 24×7 booking.",
+        "Swaruhi Travels offers cab rental, Tempo Traveller rental, airport transfers and outstation cabs across Mumbai. Serving Andheri, Bandra, South Mumbai, Thane and Navi Mumbai. 24×7 booking.",
       path: "/mumbai-travel-services",
 });
 
@@ -38,10 +38,10 @@ export default function Mumbai() {
           <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/95 to-navy/60" />
         </div>
         <div className="container-x py-16 md:py-20 text-cream">
-          <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Mumbai Travel Services", path: "/mumbai-travel-services" }]} />
-          <h1 className="mt-3 font-display text-4xl md:text-5xl">Mumbai Travel Services</h1>
+          <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Mumbai Office", path: "/mumbai-travel-services" }]} />
+          <h1 className="mt-3 font-display text-4xl md:text-5xl">Mumbai Office</h1>
           <p className="mt-4 max-w-2xl text-cream/85">
-            Reliable car rentals, Tempo Traveller rentals, airport transfers and outstation
+            Reliable cab rentals, Tempo Traveller rentals, airport transfers and outstation
             cabs across Mumbai — from South Mumbai and Bandra to Andheri, Thane and Navi Mumbai.
           </p>
         </div>
@@ -50,10 +50,10 @@ export default function Mumbai() {
       <section className="py-16">
         <div className="container-x grid gap-10 lg:grid-cols-[1.1fr_1fr] items-start">
           <div>
-            <SectionHeader eyebrow="Mumbai" title="Your local travel partner in Mumbai" />
+            <SectionHeader eyebrow="Mumbai" title="Your local base for pan-India travel" />
             <p className="mt-5 text-muted-foreground leading-relaxed">
               Mumbai runs on time — and so do we. Whether it's an early-morning
-              <Link href="/car-rentals" className="text-gold-deep hover:underline mx-1">car rental in Mumbai</Link>
+              <Link href="/cab-rentals" className="text-gold-deep hover:underline mx-1">cab rental in Mumbai</Link>
               for a client meeting, a family weekend to Lonavala, or a
               <Link href="/tempo-traveller-rentals" className="text-gold-deep hover:underline mx-1">Tempo Traveller</Link>
               for a wedding baraat, our fleet and drivers are ready across the city.

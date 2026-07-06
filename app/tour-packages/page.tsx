@@ -16,9 +16,9 @@ const IMG: Record<string, string> = {
 import { makeMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = makeMetadata({
-title: "Tour Packages from Mumbai & Ahmedabad — Family, Weekend & Pilgrimage Tours",
+title: "Tour Packages Across India — Family, Weekend & Pilgrimage Tours",
       description:
-        "Curated tour packages from Mumbai and Ahmedabad by Swaruhi Travels. Lonavala, Shirdi, Mahabaleshwar, Statue of Unity, Saputara, Dwarka & more — with vehicle, driver and itinerary planning.",
+        "Curated tour packages across India by Swaruhi Travels. Lonavala, Shirdi, Mahabaleshwar, Statue of Unity, Saputara, Dwarka & more — with vehicle, driver and itinerary planning.",
       path: "/tour-packages",
 });
 
@@ -32,7 +32,7 @@ export default function Tours() {
         <div className="container-x">
           <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Tour Packages", path: "/tour-packages" }]} />
           <h1 className="mt-3 font-display text-4xl md:text-5xl text-cream">
-            Tour Packages from Mumbai & Ahmedabad
+            Tour Packages Across India
           </h1>
           <p className="mt-4 max-w-2xl text-cream/80">
             Weekend getaways, pilgrimage tours and family holidays — designed and driven

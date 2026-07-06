@@ -18,7 +18,7 @@ const schema = z.object({
 });
 
 const services = [
-  "Car Rental",
+  "Cab Rental",
   "Tempo Traveller Rental",
   "Outstation Cab",
   "Airport Transfer",

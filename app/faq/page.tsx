@@ -22,9 +22,9 @@ const ALL = [...HOMEPAGE_FAQS, ...extra];
 import { makeMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = makeMetadata({
-title: "FAQs — Car Rental, Tempo Traveller & Tour Package Questions",
+title: "FAQs — Cab Rental, Tempo Traveller & Tour Package Questions",
       description:
-        "Answers to common questions about Swaruhi Travels — pricing, drivers, cancellation, outstation routes, corporate cabs and more for Mumbai and Ahmedabad travellers.",
+        "Answers to common questions about Swaruhi Travels — pricing, drivers, cancellation, outstation routes, corporate cabs and pan-India travel support.",
       path: "/faq",
 });
 

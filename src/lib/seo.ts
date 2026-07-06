@@ -43,6 +43,7 @@ export function localBusinessJsonLd() {
     email: SITE.email,
     url: "/",
     areaServed: [
+      { "@type": "Country", name: "India" },
       { "@type": "City", name: "Mumbai" },
       { "@type": "City", name: "Ahmedabad" },
     ],
@@ -103,8 +104,8 @@ export function serviceJsonLd(opts: {
     "@type": "Service",
     serviceType: opts.name,
     provider: { "@type": "TravelAgency", name: SITE.name, telephone: SITE.phone },
-    areaServed: (opts.areaServed ?? ["Mumbai", "Ahmedabad"]).map((c) => ({
-      "@type": "City",
+    areaServed: (opts.areaServed ?? ["India", "Mumbai", "Ahmedabad"]).map((c) => ({
+      "@type": c === "India" ? "Country" : "City",
       name: c,
     })),
     description: opts.description,

@@ -22,9 +22,9 @@ const faqs = [
 import { makeMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = makeMetadata({
-title: "Car Rental & Travel Services in Ahmedabad — Airport, Outstation, Tours",
+title: "Ahmedabad Office — Cab Rental, Airport, Outstation & Tours",
       description:
-        "Swaruhi Travels offers car rental, Tempo Traveller rental, airport transfers and outstation cabs across Ahmedabad. Statue of Unity, Somnath, Dwarka & Saputara tours. 24×7 booking.",
+        "Swaruhi Travels offers cab rental, Tempo Traveller rental, airport transfers and outstation cabs across Ahmedabad. Statue of Unity, Somnath, Dwarka & Saputara tours. 24×7 booking.",
       path: "/ahmedabad-travel-services",
 });
 
@@ -38,10 +38,10 @@ export default function Ahmedabad() {
           <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/95 to-navy/60" />
         </div>
         <div className="container-x py-16 md:py-20 text-cream">
-          <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Ahmedabad Travel Services", path: "/ahmedabad-travel-services" }]} />
-          <h1 className="mt-3 font-display text-4xl md:text-5xl">Ahmedabad Travel Services</h1>
+          <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Ahmedabad Office", path: "/ahmedabad-travel-services" }]} />
+          <h1 className="mt-3 font-display text-4xl md:text-5xl">Ahmedabad Office</h1>
           <p className="mt-4 max-w-2xl text-cream/85">
-            Chauffeur-driven car rentals, Tempo Travellers and curated tour packages
+            Chauffeur-driven cab rentals, Tempo Travellers and curated tour packages
             across Ahmedabad — SG Highway to Sabarmati, plus outstation trips to
             Statue of Unity, Somnath and Dwarka.
           </p>
@@ -51,13 +51,13 @@ export default function Ahmedabad() {
       <section className="py-16">
         <div className="container-x grid gap-10 lg:grid-cols-[1.1fr_1fr] items-start">
           <div>
-            <SectionHeader eyebrow="Ahmedabad" title="Trusted travel partner across Ahmedabad" />
+            <SectionHeader eyebrow="Ahmedabad" title="Trusted Gujarat base for pan-India travel" />
             <p className="mt-5 text-muted-foreground leading-relaxed">
               For business travel across SG Highway and Prahlad Nagar, family day-trips
               to the Statue of Unity, or multi-day
               <Link href="/tour-packages" className="text-gold-deep hover:underline mx-1">Gujarat tour packages</Link>,
               Swaruhi Travels offers a fleet and drivers you can rely on. Book a
-              <Link href="/car-rentals" className="text-gold-deep hover:underline mx-1">car rental in Ahmedabad</Link>
+              <Link href="/cab-rentals" className="text-gold-deep hover:underline mx-1">cab rental in Ahmedabad</Link>
               or a group
               <Link href="/tempo-traveller-rentals" className="text-gold-deep hover:underline mx-1">Tempo Traveller</Link>
               in a few taps.

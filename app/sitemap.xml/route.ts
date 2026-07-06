@@ -4,7 +4,7 @@ const ENTRIES = [
   { path: "/", changefreq: "weekly", priority: "1.0" },
   { path: "/about", changefreq: "monthly", priority: "0.6" },
   { path: "/services", changefreq: "monthly", priority: "0.8" },
-  { path: "/car-rentals", changefreq: "monthly", priority: "0.9" },
+  { path: "/cab-rentals", changefreq: "monthly", priority: "0.9" },
   { path: "/tempo-traveller-rentals", changefreq: "monthly", priority: "0.9" },
   { path: "/tour-packages", changefreq: "weekly", priority: "0.9" },
   { path: "/mumbai-travel-services", changefreq: "monthly", priority: "0.95" },

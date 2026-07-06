@@ -10,7 +10,7 @@ import { makeMetadata } from "@/lib/metadata";
 export const metadata: Metadata = makeMetadata({
 title: "Contact Swaruhi Travels — Call, WhatsApp or Book Online",
       description:
-        "Reach Swaruhi Travels for car rental, Tempo Traveller and tour package bookings in Mumbai and Ahmedabad. Call, WhatsApp or fill our quick inquiry form for a fast quote.",
+        "Reach Swaruhi Travels for pan-India cab rental, Tempo Traveller and tour package bookings from our Mumbai and Ahmedabad offices. Call, WhatsApp or fill our quick inquiry form.",
       path: "/contact",
 });
 
@@ -22,7 +22,7 @@ export default function Contact() {
           <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Contact", path: "/contact" }]} />
           <h1 className="mt-3 font-display text-4xl md:text-5xl text-cream">Contact Swaruhi Travels</h1>
           <p className="mt-4 max-w-2xl text-cream/80">
-            We reply on WhatsApp within minutes. Prefer talking? Call our 24 × 7 booking desk.
+            We reply on WhatsApp within minutes for pan-India travel bookings. Prefer talking? Call our 24 × 7 booking desk.
           </p>
         </div>
       </section>
@@ -54,14 +54,14 @@ export default function Contact() {
                   <MapPin size={16} /> <span className="text-xs font-semibold uppercase tracking-widest">Mumbai</span>
                 </div>
                 <p className="mt-2 text-sm text-navy-deep">{SITE.addressMumbai}</p>
-                <p className="mt-1 text-xs text-muted-foreground">Serving MMR & outstation</p>
+                <p className="mt-1 text-xs text-muted-foreground">Serving MMR, Maharashtra & pan-India trips</p>
               </div>
               <div className="card-elegant">
                 <div className="flex items-center gap-2 text-gold-deep">
                   <MapPin size={16} /> <span className="text-xs font-semibold uppercase tracking-widest">Ahmedabad</span>
                 </div>
                 <p className="mt-2 text-sm text-navy-deep">{SITE.addressAhmedabad}</p>
-                <p className="mt-1 text-xs text-muted-foreground">Serving city & outstation Gujarat</p>
+                <p className="mt-1 text-xs text-muted-foreground">Serving Gujarat routes & pan-India trips</p>
               </div>
             </div>
           </aside>

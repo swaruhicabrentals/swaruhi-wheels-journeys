@@ -8,7 +8,7 @@ import { makeMetadata } from "@/lib/metadata";
 export const metadata: Metadata = makeMetadata({
 title: "Why Choose Swaruhi Travels — Safe, Reliable & Premium Travel",
       description:
-        "Verified drivers, well-maintained vehicles, transparent pricing and 24×7 support — see why families, tourists and corporates in Mumbai and Ahmedabad choose Swaruhi Travels.",
+        "Verified drivers, well-maintained vehicles, transparent pricing and 24×7 support — see why families, tourists and corporates choose Swaruhi Travels for pan-India travel.",
       path: "/why-choose-us",
 });
 

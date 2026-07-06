@@ -7,19 +7,19 @@ import { pageMeta, breadcrumbJsonLd } from "@/lib/seo";
 import { makeMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = makeMetadata({
-title: "Travel Services — Car & Tempo Rentals, Tours, Airport & Corporate Cabs",
+title: "Travel Services — Cab & Tempo Rentals, Tours, Airport & Corporate Cabs",
       description:
-        "Full-service travel from Swaruhi Travels: local & outstation car rentals, Tempo Traveller rentals, curated tour packages, airport transfers, corporate cabs and wedding fleets in Mumbai and Ahmedabad.",
+        "Full-service pan-India travel from Swaruhi Travels: local & outstation cab rentals, Tempo Traveller rentals, curated tour packages, airport transfers, corporate cabs and wedding fleets.",
       path: "/services",
 });
 
 const services = [
-  { icon: Car, title: "Car Rentals", to: "/car-rentals",
+  { icon: Car, title: "Cab Rentals", to: "/cab-rentals",
     desc: "Hourly, daily, and outstation chauffeur-driven cars — hatchbacks, sedans and SUVs." },
   { icon: Bus, title: "Tempo Traveller Rentals", to: "/tempo-traveller-rentals",
     desc: "12- and 17-seater Tempo Travellers for groups, weddings and long-distance tours." },
   { icon: Map, title: "Tour Packages", to: "/tour-packages",
-    desc: "Handcrafted single-day and multi-day tour packages from Mumbai and Ahmedabad." },
+    desc: "Handcrafted single-day and multi-day tour packages across India." },
   { icon: Plane, title: "Airport Transfers", to: "/contact",
     desc: "On-time BOM and AMD airport pickups and drops — meet & greet on request." },
   { icon: Briefcase, title: "Corporate Travel", to: "/contact",

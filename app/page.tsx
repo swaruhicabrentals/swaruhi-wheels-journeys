@@ -31,9 +31,9 @@ import {
 import { makeMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = makeMetadata({
-title: `${SITE.name} — Car Rentals, Tempo Traveller & Tour Packages in Mumbai & Ahmedabad`,
+title: `${SITE.name} — Pan-India Cab Rentals, Tempo Traveller & Tour Packages`,
       description:
-        "Book reliable car rentals, Tempo Traveller rentals and curated tour packages in Mumbai and Ahmedabad. Clean vehicles, experienced drivers, transparent pricing. Call or WhatsApp for a quick quote.",
+        "Book reliable cab rentals, Tempo Traveller rentals and curated tour packages across India, coordinated from our Mumbai and Ahmedabad offices. Clean vehicles, experienced drivers, transparent pricing.",
       path: "/",
 });
 
@@ -76,11 +76,11 @@ function Hero() {
             <Sparkles size={14} /> Trusted travel partner since day one
           </p>
           <h1 className="mt-5 font-display text-4xl leading-[1.1] md:text-5xl lg:text-6xl">
-            Premium <span className="text-gold">Car Rentals</span>,
+            Premium <span className="text-gold">Cab Rentals</span>,
             Tempo Travellers & Tour Packages
           </h1>
           <p className="mt-5 max-w-xl text-base md:text-lg text-cream/85 leading-relaxed">
-            Chauffeur-driven journeys across Mumbai and Ahmedabad. Clean vehicles,
+            Chauffeur-driven journeys across India, coordinated from our Mumbai and Ahmedabad offices. Clean vehicles,
             experienced drivers, transparent pricing — every single ride.
           </p>
 
@@ -118,9 +118,9 @@ function ServicesOverview() {
   const services = [
     {
       icon: Car,
-      title: "Car Rentals",
+      title: "Cab Rentals",
       desc: "Hatchbacks, sedans and SUVs on hourly, daily and outstation packages with a driver.",
-      to: "/car-rentals",
+      to: "/cab-rentals",
     },
     {
       icon: Bus,
@@ -131,7 +131,7 @@ function ServicesOverview() {
     {
       icon: Map,
       title: "Tour Packages",
-      desc: "Curated single-day and multi-day packages from Mumbai and Ahmedabad.",
+      desc: "Curated single-day and multi-day packages across India, with strong Mumbai and Ahmedabad coverage.",
       to: "/tour-packages",
     },
   ];
@@ -211,7 +211,7 @@ function PopularTours() {
     <section className="py-16 md:py-20">
       <div className="container-x">
         <div className="flex flex-wrap items-end justify-between gap-4">
-          <SectionHeader eyebrow="Popular Tour Packages" title="Handpicked getaways from Mumbai & Ahmedabad" />
+          <SectionHeader eyebrow="Popular Tour Packages" title="Handpicked getaways across India" />
           <Link href="/tour-packages" className="btn-outline-gold text-sm">All packages</Link>
         </div>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
@@ -247,23 +247,23 @@ function CitySections() {
       img: mumbaiImg,
       alt: "Mumbai Marine Drive skyline at night",
       to: "/mumbai-travel-services",
-      text: "From Andheri and Bandra to Navi Mumbai, book airport transfers, outstation cabs and Tempo Travellers across MMR.",
+      text: "Our Mumbai office coordinates airport transfers, outstation cabs, Tempo Travellers and pan-India tour movements.",
     },
     {
       name: "Ahmedabad",
       img: ahmedabadImg,
       alt: "Ahmedabad Sabarmati riverfront illuminated at dusk",
       to: "/ahmedabad-travel-services",
-      text: "SG Highway to Sabarmati, corporate cabs, city-day rentals and outstation tours to Statue of Unity, Somnath and Dwarka.",
+      text: "Our Ahmedabad office supports Gujarat routes, corporate travel, group tours and long-distance cab rentals across India.",
     },
   ];
   return (
     <section className="section-navy py-16 md:py-20">
       <div className="container-x">
         <div className="max-w-2xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Where We Operate</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Our Offices</p>
           <h2 className="mt-2 font-display text-3xl md:text-4xl text-cream gold-underline">
-            Deep local expertise in Mumbai & Ahmedabad
+            Pan-India service from Mumbai & Ahmedabad offices
           </h2>
         </div>
         <div className="mt-10 grid gap-6 md:grid-cols-2">
@@ -282,7 +282,7 @@ function CitySections() {
                 <div className="flex items-center gap-2 text-gold text-xs font-semibold uppercase tracking-widest">
                   <MapPin size={14} /> {c.name}
                 </div>
-                <h3 className="mt-1 font-display text-2xl text-cream">{c.name} Travel Services</h3>
+                <h3 className="mt-1 font-display text-2xl text-cream">{c.name} Office</h3>
                 <p className="mt-2 text-sm text-cream/80 max-w-md">{c.text}</p>
                 <span className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-gold">
                   Explore {c.name} services <ArrowRight size={14} />

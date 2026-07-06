@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
 import type { ReactNode } from "react";
 
 import "./globals.css";
@@ -9,18 +8,6 @@ import { StickyCTAs } from "@/components/StickyCTAs";
 import { SITE } from "@/lib/site";
 import { localBusinessJsonLd } from "@/lib/seo";
 import { Providers } from "./providers";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-});
-
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-playfair",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: {
@@ -50,7 +37,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
+    <html lang="en">
       <body>
         <Providers>
           <div className="flex min-h-screen flex-col">

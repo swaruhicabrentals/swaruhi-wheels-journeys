@@ -2,8 +2,8 @@
 
 export const HOMEPAGE_FAQS = [
   {
-    q: "Which cities do you operate in?",
-    a: "Swaruhi Travels operates primarily in Mumbai and Ahmedabad, with outstation cabs and tour packages across Maharashtra, Gujarat, Goa and beyond.",
+    q: "Where do you operate?",
+    a: "Swaruhi Travels provides cab rentals, Tempo Travellers and tour support across India, with offices in Mumbai and Ahmedabad for local coordination.",
   },
   {
     q: "Do your cars come with a driver?",
@@ -15,7 +15,7 @@ export const HOMEPAGE_FAQS = [
   },
   {
     q: "Can I book a Tempo Traveller for a wedding or group tour?",
-    a: "Absolutely. Our 12- and 17-seater Tempo Travellers are ideal for weddings, family functions, corporate offsites and group temple tours from Mumbai and Ahmedabad.",
+    a: "Absolutely. Our 12- and 17-seater Tempo Travellers are ideal for weddings, family functions, corporate offsites and group temple tours across India.",
   },
   {
     q: "How do I request a booking?",
