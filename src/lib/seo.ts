@@ -74,7 +74,7 @@ export function localBusinessJsonLd() {
     ],
     openingHours: "Mo-Su 00:00-23:59",
     priceRange: "INR",
-    sameAs: [],
+    sameAs: [SITE.googleBusinessHref],
   };
 }
 

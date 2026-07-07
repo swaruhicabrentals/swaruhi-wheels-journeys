@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight, Car, Bus, Map, ShieldCheck, Clock, IndianRupee,
-  Sparkles, Users, Star, Phone, MapPin,
+  Sparkles, Users, Star, Phone, MapPin, ExternalLink,
 } from "lucide-react";
 
 const heroCar = "/assets/hero-car.jpg";
@@ -47,6 +47,7 @@ export default function Home() {
       <CitySections />
       <WhyChoose />
       <Reviews />
+      <GoogleBusinessTrust />
       <SafetyComfort />
       <FAQSection />
       <CtaBand />
@@ -344,6 +345,88 @@ function Reviews() {
               </figcaption>
             </figure>
           ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function GoogleBusinessTrust() {
+  const gallery = [
+    { src: innovaImg, alt: "Innova cab for family and outstation travel", label: "SUV / Innova" },
+    { src: tempoImg, alt: "Tempo Traveller for group tours and events", label: "Tempo Traveller" },
+    { src: interiorImg, alt: "Clean vehicle interior for comfortable travel", label: "Clean interiors" },
+    { src: familyImg, alt: "Family preparing for a chauffeur-driven trip", label: "Family trips" },
+  ];
+
+  return (
+    <section className="py-16 md:py-20">
+      <div className="container-x">
+        <div className="grid gap-8 lg:grid-cols-[0.95fr_1.35fr] lg:items-start">
+          <div>
+            <SectionHeader
+              eyebrow="Google Reviews"
+              title="Read customer reviews on Google"
+              description="Our Google Business Profile has the live rating, latest reviews, customer photos and directions. Open it to verify current review count before booking."
+            />
+            <div className="mt-6 rounded-2xl border border-border bg-card p-6 shadow-elegant">
+              <div className="flex items-center gap-1 text-gold-deep" aria-label="Google review rating">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <Star key={i} size={20} fill="currentColor" />
+                ))}
+              </div>
+              <h3 className="mt-3 font-display text-2xl text-navy-deep">Live Google rating</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                See the current rating and real customer reviews directly on our Google Business Profile.
+              </p>
+              <div className="mt-5 flex flex-wrap gap-3">
+                <a href={SITE.googleBusinessHref} target="_blank" rel="noopener" className="btn-navy">
+                  Read Google reviews <ExternalLink size={16} />
+                </a>
+              </div>
+            </div>
+
+            <div className="mt-6 grid gap-4 sm:grid-cols-2">
+              <div className="card-elegant">
+                <div className="flex items-center gap-2 text-gold-deep">
+                  <MapPin size={16} />
+                  <span className="text-xs font-semibold uppercase tracking-widest">Mumbai Office</span>
+                </div>
+                <p className="mt-2 text-sm text-navy-deep">{SITE.addressMumbai}</p>
+                <a href={SITE.phoneHref} className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-gold-deep">
+                  <Phone size={14} /> {SITE.phone}
+                </a>
+              </div>
+              <div className="card-elegant">
+                <div className="flex items-center gap-2 text-gold-deep">
+                  <MapPin size={16} />
+                  <span className="text-xs font-semibold uppercase tracking-widest">Ahmedabad Office</span>
+                </div>
+                <p className="mt-2 text-sm text-navy-deep">{SITE.addressAhmedabad}</p>
+                <p className="mt-3 text-sm font-semibold text-gold-deep">{SITE.hours}</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {gallery.map((item) => (
+                <figure key={item.label} className="overflow-hidden rounded-2xl border border-border bg-card shadow-elegant">
+                  <Image
+                    src={item.src}
+                    alt={item.alt}
+                    width={900}
+                    height={640}
+                    loading="lazy"
+                    className="aspect-[4/3] w-full object-cover"
+                  />
+                  <figcaption className="px-4 py-3 text-sm font-semibold text-navy-deep">
+                    {item.label}
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

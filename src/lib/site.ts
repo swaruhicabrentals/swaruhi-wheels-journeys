@@ -10,6 +10,7 @@ export const SITE = {
   whatsapp: "918080464469",
   whatsappHref:
     "https://wa.me/918080464469?text=Hi%20Swaruhi%20Travels%2C%20I%27d%20like%20a%20quote.",
+  googleBusinessHref: "https://share.google/bfThgug8GVyzJ2FU8",
   email: "bookings@swaruhitravels.com",
   emailHref: "mailto:bookings@swaruhitravels.com",
   offices: ["Mumbai", "Ahmedabad"],
