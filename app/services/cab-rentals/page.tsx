@@ -25,7 +25,7 @@ import { makeMetadata } from "@/lib/metadata";
 export const metadata: Metadata = makeMetadata({
 title: "Cab Rental Across India: Local and Outstation Cabs",
       description:
-        "Book cab rental with chauffeurs across India from Swaruhi Travels. Hatchback, sedan and SUV options for local, airport, outstation and corporate travel. Transparent pricing, 24×7 support.",
+        "Book cab rental with chauffeurs across India from Swaruhi Travels. Hatchback, sedan and SUV options for local, airport, outstation and corporate travel. Transparent pricing, 24x7 support.",
       path: "/services/cab-rentals",
 });
 

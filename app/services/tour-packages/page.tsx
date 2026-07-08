@@ -5,7 +5,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs, CtaBand, SectionHeader } from "@/components/Section";
 import { TOUR_PACKAGES } from "@/lib/content";
 import { pageMeta, breadcrumbJsonLd, serviceJsonLd } from "@/lib/seo";
-const lonavalaImg = "/assets/tour-lonavala.jpg";
+const lonavalaImg = "/assets/swaruhi-travels-tour-package-lonavala.webp";
 const shirdiImg = "/assets/tour-shirdi.jpg";
 const statueImg = "/assets/tour-statue-unity.jpg";
 import { InquiryForm } from "@/components/InquiryForm";
@@ -19,7 +19,7 @@ import { makeMetadata } from "@/lib/metadata";
 export const metadata: Metadata = makeMetadata({
 title: "Tour Packages Across India: Family, Weekend and Pilgrimage Tours",
       description:
-        "Curated tour packages across India by Swaruhi Travels. Lonavala, Shirdi, Mahabaleshwar, Statue of Unity, Saputara, Dwarka and more, with vehicle, driver and itinerary planning.",
+        "Curated tour packages across India by Swaruhi Travels. Mumbai to Lonavala, Shirdi, Mahabaleshwar, Ratnagiri and Goa, plus Ahmedabad to Dwarka, Somnath, Statue of Unity, Girnar and Kutch.",
       path: "/services/tour-packages",
 });
 
@@ -100,9 +100,7 @@ function PackageGroup({
                 className="aspect-[16/10] w-full object-cover"
               />
               <div className="p-6">
-                <p className="text-xs font-semibold uppercase tracking-widest text-gold-deep">{t.duration}</p>
-                <h3 className="mt-1 font-display text-lg text-navy-deep">{t.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">Highlights: {t.highlights}</p>
+                <h3 className="font-display text-lg text-navy-deep">{t.title}</h3>
                 <Link href="/contact" className="mt-4 inline-flex btn-outline-gold text-sm">Get Quote</Link>
               </div>
             </article>

@@ -7,15 +7,16 @@ import {
 } from "lucide-react";
 
 const heroCar = "/assets/hero-car.jpg";
-const tempoImg = "/assets/tempo-traveller.jpg";
+const tempoImg = "/assets/swaruhi-travels-vehicle-fleet-tempo-traveller.webp";
 const familyImg = "/assets/family-travel.jpg";
 const interiorImg = "/assets/interior.jpg";
 const mumbaiImg = "/assets/mumbai.jpg";
 const ahmedabadImg = "/assets/ahmedabad.jpg";
-const innovaImg = "/assets/fleet-innova.jpg";
-const sedanImg = "/assets/fleet-sedan.jpg";
-const hatchImg = "/assets/fleet-hatchback.jpg";
-const lonavalaImg = "/assets/tour-lonavala.jpg";
+const innovaImg = "/assets/swaruhi-travels-vehicle-fleet-innova-crysta.webp";
+const dzireImg = "/assets/swaruhi-travels-vehicle-fleet-dzire.webp";
+const ertigaImg = "/assets/swaruhi-travels-vehicle-fleet-ertiga.webp";
+const urbaniaImg = "/assets/swaruhi-travels-vehicle-fleet-urbania.webp";
+const lonavalaImg = "/assets/swaruhi-travels-tour-package-lonavala.webp";
 const statueImg = "/assets/tour-statue-unity.jpg";
 const shirdiImg = "/assets/tour-shirdi.jpg";
 
@@ -99,7 +100,7 @@ function Hero() {
               { icon: ShieldCheck, label: "Verified drivers" },
               { icon: Clock, label: "24 x 7 support" },
               { icon: IndianRupee, label: "Transparent pricing" },
-              { icon: Sparkles, label: "Sanitised cars" },
+              { icon: Sparkles, label: "Well Maintained Cars" },
             ].map(({ icon: Icon, label }) => (
               <li key={label} className="flex items-center gap-2 text-cream/85">
                 <Icon size={18} className="text-gold" /> {label}
@@ -121,13 +122,13 @@ function ServicesOverview() {
     {
       icon: Car,
       title: "Cab Rentals",
-      desc: "Hatchbacks, sedans and SUVs on hourly, daily and outstation packages with a driver.",
+      desc: "Dzire, Ertiga and Innova Crysta for hourly, daily and outstation packages with a driver.",
       to: "/services/cab-rentals",
     },
     {
       icon: Bus,
       title: "Tempo Traveller Rentals",
-      desc: "12, 17, 21 and 23 seater Tempo Travellers for weddings, group tours and corporate travel.",
+      desc: "12 to 23 seater Tempo Travellers for weddings, group tours and corporate travel.",
       to: "/services/tempo-traveller-rentals",
     },
     {
@@ -166,10 +167,11 @@ function ServicesOverview() {
 
 function FleetShowcase() {
   const fleet = [
-    { name: "Hatchback", pax: "4", img: hatchImg, alt: "White hatchback rental car" },
-    { name: "Premium Sedan", pax: "4", img: sedanImg, alt: "White premium sedan for airport transfer" },
-    { name: "SUV / Innova", pax: "6 to 7", img: innovaImg, alt: "Silver Toyota Innova SUV for family trips" },
-    { name: "Tempo Traveller", pax: "12 to 23", img: tempoImg, alt: "White Tempo Traveller for group tours" },
+    { name: "Dzire", pax: "4", img: dzireImg, alt: "White Maruti Suzuki Dzire cab for city and outstation travel" },
+    { name: "Ertiga", pax: "6", img: ertigaImg, alt: "White Maruti Suzuki Ertiga cab for family trips" },
+    { name: "Innova Crysta", pax: "6 to 7", img: innovaImg, alt: "White Toyota Innova Crysta cab for family trips" },
+    { name: "Tempo Traveller", pax: "13 to 26", img: tempoImg, alt: "White Tempo Traveller for group tours" },
+    { name: "Urbania", pax: "9 to 17", img: urbaniaImg, alt: "Force Urbania premium traveller for group tours" },
   ];
   return (
     <section className="bg-muted/50 py-16 md:py-20">
@@ -178,7 +180,7 @@ function FleetShowcase() {
           <SectionHeader eyebrow="Our Fleet" title="Clean, comfortable and well maintained" />
           <Link href="/fleet" className="btn-outline-gold text-sm">View full fleet</Link>
         </div>
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
           {fleet.map((f) => (
             <article key={f.name} className="card-elegant p-0 overflow-hidden">
               <Image
@@ -205,9 +207,9 @@ function FleetShowcase() {
 
 function PopularTours() {
   const tours = [
-    { title: "Mumbai to Lonavala & Khandala", duration: "1 to 2 Days", img: lonavalaImg, alt: "Green Lonavala valley with winding road", to: "/services/tour-packages" },
-    { title: "Mumbai to Shirdi Sai Baba", duration: "1 to 2 Days", img: shirdiImg, alt: "Shirdi Sai Baba temple at sunset", to: "/services/tour-packages" },
-    { title: "Ahmedabad to Statue of Unity", duration: "1 Day", img: statueImg, alt: "Statue of Unity aerial view at golden hour", to: "/services/tour-packages" },
+    { title: "Mumbai to Lonavala", img: lonavalaImg, alt: "Green Lonavala valley with winding road", to: "/services/tour-packages" },
+    { title: "Ahmedabad to Somnath", img: shirdiImg, alt: "Somnath temple tour from Ahmedabad", to: "/services/tour-packages" },
+    { title: "Ahmedabad to Dwarka", img: statueImg, alt: "Dwarka tour from Ahmedabad", to: "/services/tour-packages" },
   ];
   return (
     <section className="py-16 md:py-20">
@@ -228,8 +230,7 @@ function PopularTours() {
                 className="aspect-[16/10] w-full object-cover"
               />
               <div className="p-6">
-                <p className="text-xs font-semibold uppercase tracking-widest text-gold-deep">{t.duration}</p>
-                <h3 className="mt-2 font-display text-xl text-navy-deep">{t.title}</h3>
+                <h3 className="font-display text-xl text-navy-deep">{t.title}</h3>
                 <Link href={t.to} className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-navy-deep hover:text-gold-deep">
                   View package <ArrowRight size={14} />
                 </Link>
@@ -300,8 +301,8 @@ function CitySections() {
 
 function WhyChoose() {
   const items = [
-    { icon: ShieldCheck, title: "Verified drivers", desc: "Background checked, trained and courteous chauffeurs on every ride." },
-    { icon: Sparkles, title: "Sanitised, well maintained vehicles", desc: "Every car and Tempo Traveller is cleaned, serviced and inspected before dispatch." },
+    { icon: ShieldCheck, title: "Verified Drivers", desc: "Background checked, trained and courteous chauffeurs on every ride." },
+    { icon: Sparkles, title: "Well Maintained Vehicles", desc: "Every car and Tempo Traveller is cleaned, serviced and inspected before dispatch." },
     { icon: IndianRupee, title: "Transparent, upfront pricing", desc: "Itemised quotes with no hidden charges, so you pay only for what you booked." },
     { icon: Clock, title: "Punctual, 24 × 7 availability", desc: "A booking desk available all day and airport pickups on the dot." },
   ];

@@ -17,7 +17,7 @@ const services = [
   { icon: Car, title: "Cab Rentals", to: "/services/cab-rentals",
     desc: "Hourly, daily, and outstation cars with chauffeurs, including hatchbacks, sedans and SUVs." },
   { icon: Bus, title: "Tempo Traveller Rentals", to: "/services/tempo-traveller-rentals",
-    desc: "12, 17, 21 and 23 seater Tempo Travellers for groups, weddings and long distance tours." },
+    desc: "12 to 23 seater Tempo Travellers for groups, weddings and long distance tours." },
   { icon: Map, title: "Tour Packages", to: "/services/tour-packages",
     desc: "Handcrafted one day and multi day tour packages across India." },
   { icon: Plane, title: "Airport Transfers", to: "/contact",

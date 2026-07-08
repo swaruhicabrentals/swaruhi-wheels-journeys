@@ -17,7 +17,7 @@ const faqs = [
   { q: "Do you offer Ahmedabad airport cab service?",
     a: "Yes. We offer 24×7 pickup and drop from SVPI Airport with real-time flight tracking on request." },
   { q: "Is Tempo Traveller available for large family tours from Ahmedabad?",
-    a: "Absolutely. Our 12, 17, 21 and 23 seater Tempo Travellers are popular for Somnath to Dwarka circuits, Statue of Unity family trips and wedding transport." },
+    a: "Absolutely. Our 12 to 23 seater Tempo Travellers are popular for Somnath to Dwarka circuits, Statue of Unity family trips and wedding transport." },
 ];
 
 import { makeMetadata } from "@/lib/metadata";
@@ -83,7 +83,7 @@ export default function Ahmedabad() {
               {[
                 { icon: Plane, t: "SVPI Airport Transfers", d: "24×7 pickup with flight tracking." },
                 { icon: Landmark, t: "City Day Rentals", d: "Hourly and full day cabs with chauffeurs." },
-                { icon: MapPin, t: "Outstation Cabs", d: "Statue of Unity, Somnath, Dwarka, Mount Abu." },
+                { icon: MapPin, t: "Outstation Cabs", d: "Statue of Unity, Somnath, Dwarka, Mount Abu and many more." },
                 { icon: Building2, t: "Corporate Travel", d: "Employee transport & executive rides." },
               ].map(({ icon: Icon, t, d }) => (
                 <div key={t} className="card-elegant">
@@ -94,11 +94,6 @@ export default function Ahmedabad() {
               ))}
             </div>
 
-            <h2 className="mt-10 font-display text-2xl text-navy-deep">Areas we serve in Ahmedabad</h2>
-            <p className="mt-2 text-sm text-muted-foreground">
-              SG Highway · Bopal · Bodakdev · Thaltej · Prahlad Nagar · Vastrapur · Satellite ·
-              Navrangpura · Naranpura · CG Road · Ashram Road · Maninagar · Chandkheda · Gandhinagar
-            </p>
           </div>
 
           <InquiryForm compact />

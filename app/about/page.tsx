@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { ShieldCheck, Users, Award, HeartHandshake } from "lucide-react";
 import { SectionHeader, CtaBand, Breadcrumbs } from "@/components/Section";
 import { pageMeta, breadcrumbJsonLd } from "@/lib/seo";
@@ -12,7 +11,7 @@ import { makeMetadata } from "@/lib/metadata";
 export const metadata: Metadata = makeMetadata({
 title: "About Swaruhi Travels: Travel Partner Across India",
       description:
-        "Swaruhi Travels is a professional cab rental and tour operator serving travellers across India from offices in Mumbai and Ahmedabad. Learn about our mission, drivers and fleet.",
+        "Swaruhi Travels began in Mumbai and has grown into a trusted travel brand serving Mumbai, Ahmedabad and journeys across India with reliable vehicles and personal service.",
       path: "/about",
 });
 
@@ -42,24 +41,28 @@ export default function About() {
             <SectionHeader eyebrow="Our Story" title="Built on trust, driven by service" />
             <div className="mt-5 space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                Swaruhi Travels was founded to solve a simple problem: travellers deserve
-                reliable, safe and premium vehicles with chauffeurs, without inflated pricing.
-                What began as a small local fleet has grown into a trusted travel partner
-                for families, tourists, corporate teams and wedding groups.
+                Swaruhi Travels began in Mumbai with a single car and a simple belief
+                that every customer deserves a comfortable, reliable, and memorable
+                travel experience.
               </p>
               <p>
-                Today, we operate a curated fleet of hatchbacks, sedans, SUVs and Tempo
-                Travellers, along with thoughtfully crafted tour packages from both Mumbai and
-                Ahmedabad. Every trip is powered by trained drivers, clean vehicles
-                and a 24 × 7 support desk.
+                Founded by <span className="font-medium text-navy-deep">Nikhil Dhuri</span>,
+                our journey has been built on trust, consistency, and the relationships
+                we have formed with every traveller along the way. What started as a
+                small venture has grown into a trusted travel brand with an expanding
+                presence in Mumbai and Ahmedabad.
               </p>
               <p>
-                We're proud to be one of the most dependable choices for
-                <Link href="/services/cab-rentals" className="text-gold-deep hover:underline mx-1">cab rentals</Link>,
-                <Link href="/services/tempo-traveller-rentals" className="text-gold-deep hover:underline mx-1">Tempo Traveller rentals</Link>
-                and
-                <Link href="/services/tour-packages" className="text-gold-deep hover:underline mx-1">tour packages</Link>
-                from our Mumbai and Ahmedabad offices.
+                Today, we have a wide network of well maintained vehicles, including
+                sedans, SUVs, cabs, and Tempo Travellers, serving airport transfers,
+                corporate travel, weddings, local sightseeing, and outstation journeys.
+                We also curate personalised tour packages, thoughtfully designed to
+                match every traveller's interests, schedule, and budget.
+              </p>
+              <p>
+                As we continue to grow, our commitment remains the same: to deliver
+                exceptional service, genuine hospitality, and travel experiences our
+                customers can rely on, every time they choose Swaruhi Travels.
               </p>
             </div>
           </div>
@@ -71,7 +74,7 @@ export default function About() {
           <SectionHeader eyebrow="What We Stand For" title="Values that shape every ride" align="center" />
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { icon: ShieldCheck, t: "Safety First", d: "Verified drivers, serviced vehicles, GPS tracking." },
+              { icon: ShieldCheck, t: "Safety First", d: "Verified drivers and serviced vehicles." },
               { icon: Users, t: "People Centric", d: "Warm service for families, tourists and corporates." },
               { icon: Award, t: "Premium Standards", d: "Clean interiors, punctual pickups, courteous drivers." },
               { icon: HeartHandshake, t: "Transparent Pricing", d: "Itemised quotes, no hidden surcharges." },

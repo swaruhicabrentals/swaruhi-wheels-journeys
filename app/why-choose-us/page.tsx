@@ -14,7 +14,7 @@ title: "Why Choose Swaruhi Travels: Safe, Reliable and Premium Travel",
 
 const items = [
   { icon: ShieldCheck, t: "Verified & trained drivers", d: "Background checked, uniformed and courteous chauffeurs." },
-  { icon: Sparkles, t: "Sanitised, well maintained vehicles", d: "Deep cleaning and safety checks before every dispatch." },
+  { icon: Sparkles, t: "Well Maintained Vehicles", d: "Deep cleaning and safety checks before every dispatch." },
   { icon: IndianRupee, t: "Transparent pricing", d: "Itemised quotes with no last minute surcharges." },
   { icon: Clock, t: "24 × 7 availability", d: "Booking support all day and airport pickups." },
   { icon: Users, t: "Family & group friendly", d: "Child friendly seating and group sized Tempo Travellers." },

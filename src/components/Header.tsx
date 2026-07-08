@@ -1,9 +1,12 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { Menu, Phone, X } from "lucide-react";
 import { NAV, SITE } from "@/lib/site";
+
+const logoImg = "/assets/swaruhi-travels-logo-circular.png";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -12,9 +15,14 @@ export function Header() {
     <header className="sticky top-0 z-40 border-b border-border/70 bg-background/85 backdrop-blur-md">
       <div className="container-x flex h-16 items-center justify-between gap-4">
         <Link href="/" className="flex items-center gap-2" aria-label="Swaruhi Travels home">
-          <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-navy text-gold font-display text-lg">
-            S
-          </span>
+          <Image
+            src={logoImg}
+            alt="Swaruhi Travels"
+            width={128}
+            height={128}
+            priority
+            className="h-12 w-12 rounded-full object-cover"
+          />
           <span className="font-display text-lg font-semibold text-navy-deep">
             Swaruhi <span className="text-gold-deep">Travels</span>
           </span>

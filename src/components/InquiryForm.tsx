@@ -11,6 +11,7 @@ const schema = z.object({
     .trim()
     .regex(/^[+0-9 ()-]{7,20}$/, "Enter a valid phone number"),
   pickup: z.string().trim().min(2, "Enter pickup city").max(60),
+  destination: z.string().trim().min(2, "Enter destination").max(100),
   startDate: z.string().trim().min(1, "Select a start date"),
   endDate: z.string().trim().min(1, "Select an end date"),
   service: z.string().min(1, "Select a service"),
@@ -50,6 +51,7 @@ export function InquiryForm({ compact = false }: { compact?: boolean }) {
 Name: ${d.name}%0A
 Phone: ${d.phone}%0A
 Pickup: ${d.pickup}%0A
+Destination: ${d.destination}%0A
 Start Date: ${d.startDate}%0A
 End Date: ${d.endDate}%0A
 Service: ${d.service}%0A
@@ -77,6 +79,9 @@ Notes: ${d.message ?? "-"}`;
         <Field label="Phone" name="phone" placeholder="+91 ..." type="tel" error={errors.phone} />
         <div className={compact ? "sm:col-span-2" : "md:col-span-2 lg:col-span-3"}>
           <Field label="Pickup city" name="pickup" placeholder="Mumbai / Ahmedabad / Gandhinagar" error={errors.pickup} />
+        </div>
+        <div className={compact ? "sm:col-span-2" : "md:col-span-2 lg:col-span-3"}>
+          <Field label="Destination" name="destination" placeholder="Destination city or place" error={errors.destination} />
         </div>
         <div className={compact ? "grid grid-cols-2 gap-4 sm:col-span-2" : "grid grid-cols-2 gap-4 md:col-span-2 lg:col-span-3"}>
           <Field label="Start date" name="startDate" type="date" error={errors.startDate} />

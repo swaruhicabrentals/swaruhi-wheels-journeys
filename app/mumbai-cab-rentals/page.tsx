@@ -78,7 +78,7 @@ export default function Mumbai() {
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               {[
                 { icon: Plane, t: "Mumbai Airport Transfers", d: "T1 & T2 pickups and drops, 24×7." },
-                { icon: Landmark, t: "Local City Rentals", d: "4hr / 8hr / 12hr packages across MMR." },
+                { icon: Landmark, t: "Local City Rentals", d: "8hr / 10hr / 12hr packages across MMR." },
                 { icon: MapPin, t: "Outstation Cabs", d: "Pune, Lonavala, Nashik, Shirdi, Goa & more." },
                 { icon: Building2, t: "Corporate Travel", d: "Monthly billing for teams and executives." },
               ].map(({ icon: Icon, t, d }) => (
@@ -90,11 +90,6 @@ export default function Mumbai() {
               ))}
             </div>
 
-            <h2 className="mt-10 font-display text-2xl text-navy-deep">Areas we serve in Mumbai</h2>
-            <p className="mt-2 text-sm text-muted-foreground">
-              Colaba · Fort · Worli · Lower Parel · Bandra · Khar · Santacruz · Andheri (East/West) ·
-              Juhu · Powai · Malad · Borivali · Ghatkopar · Chembur · Thane · Navi Mumbai · Vashi · Panvel
-            </p>
           </div>
 
           <InquiryForm compact />

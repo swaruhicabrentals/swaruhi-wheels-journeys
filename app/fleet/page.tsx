@@ -5,21 +5,23 @@ import { Users } from "lucide-react";
 import { Breadcrumbs, CtaBand, SectionHeader } from "@/components/Section";
 import { FLEET } from "@/lib/content";
 import { pageMeta, breadcrumbJsonLd } from "@/lib/seo";
-const innovaImg = "/assets/fleet-innova.jpg";
+const innovaImg = "/assets/swaruhi-travels-vehicle-fleet-innova-crysta.webp";
+const dzireImg = "/assets/swaruhi-travels-vehicle-fleet-dzire.webp";
+const ertigaImg = "/assets/swaruhi-travels-vehicle-fleet-ertiga.webp";
+const urbaniaImg = "/assets/swaruhi-travels-vehicle-fleet-urbania.webp";
 const sedanImg = "/assets/fleet-sedan.jpg";
-const hatchImg = "/assets/fleet-hatchback.jpg";
-const tempoImg = "/assets/tempo-traveller.jpg";
+const tempoImg = "/assets/swaruhi-travels-vehicle-fleet-tempo-traveller.webp";
 
 const IMG: Record<string, string> = {
-  hatchback: hatchImg, sedan: sedanImg, innova: innovaImg, tempo: tempoImg,
+  dzire: dzireImg, ertiga: ertigaImg, urbania: urbaniaImg, sedan: sedanImg, innova: innovaImg, tempo: tempoImg,
 };
 
 import { makeMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = makeMetadata({
-title: "Our Fleet: Hatchback, Sedan, SUV and Tempo Traveller Rentals",
+title: "Our Fleet: Dzire, Ertiga, Innova Crysta, Tempo Traveller and Urbania",
       description:
-        "Explore Swaruhi Travels' clean, well maintained fleet: hatchbacks, premium sedans, Innova SUVs and 12, 17, 21 and 23 seater Tempo Travellers for city, outstation and tour travel.",
+        "Explore Swaruhi Travels' clean, well maintained fleet: Dzire, Ertiga, Innova Crysta, Tempo Traveller and Urbania for city, outstation and tour travel.",
       path: "/fleet",
 });
 
@@ -31,7 +33,7 @@ export default function Fleet() {
           <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Fleet", path: "/fleet" }]} />
           <h1 className="mt-3 font-display text-4xl md:text-5xl text-cream">Our Fleet</h1>
           <p className="mt-4 max-w-2xl text-cream/80">
-            A curated lineup of hatchbacks, sedans, SUVs and Tempo Travellers. Every
+            A curated lineup of Dzire, Ertiga, Innova Crysta, Tempo Traveller and Urbania. Every
             vehicle is regularly serviced, deep cleaned and ready for city or outstation travel.
           </p>
         </div>
@@ -56,9 +58,6 @@ export default function Fleet() {
                   </p>
                   <p className="mt-3 text-sm text-muted-foreground">
                     <span className="font-medium text-navy-deep">Ideal for:</span> {f.ideal}
-                  </p>
-                  <p className="mt-1 text-sm text-muted-foreground">
-                    <span className="font-medium text-navy-deep">Examples:</span> {f.examples}
                   </p>
                   <Link href="/contact" className="mt-5 inline-flex btn-outline-gold text-sm">Get Quote</Link>
                 </div>

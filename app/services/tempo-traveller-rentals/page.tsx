@@ -7,11 +7,11 @@ import { InquiryForm } from "@/components/InquiryForm";
 import { FAQList } from "@/components/FAQ";
 import { JsonLd } from "@/components/JsonLd";
 import { pageMeta, breadcrumbJsonLd, serviceJsonLd, faqJsonLd } from "@/lib/seo";
-const tempoImg = "/assets/tempo-traveller.jpg";
+const tempoImg = "/assets/swaruhi-travels-vehicle-fleet-tempo-traveller.webp";
 
 const faqs = [
   { q: "How many seaters do you offer in Tempo Traveller?",
-    a: "We offer 12, 17, 21 and 23 seater Tempo Travellers with pushback seats, AC and ample luggage space." },
+    a: "We offer 12 to 23 seater Tempo Travellers with pushback seats, AC and ample luggage space." },
   { q: "Is Tempo Traveller good for weddings?",
     a: "Yes. Tempo Travellers are ideal for baraat, guest pickups from railway stations and airports, and multi city wedding events." },
   { q: "Can we hire a Tempo Traveller for a Shirdi or Statue of Unity tour?",
@@ -23,9 +23,9 @@ const faqs = [
 import { makeMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = makeMetadata({
-title: "Tempo Traveller Rental Across India: 12, 17, 21 and 23 Seater",
+title: "Tempo Traveller Rental Across India: 12 to 23 Seater",
       description:
-        "Book 12, 17, 21 and 23 seater Tempo Traveller rental across India for family tours, weddings, corporate groups and outstation trips. AC, pushback seats, experienced drivers.",
+        "Book 12 to 23 seater Tempo Traveller rental across India for family tours, weddings, corporate groups and outstation trips. AC, pushback seats, experienced drivers.",
       path: "/services/tempo-traveller-rentals",
 });
 
@@ -42,7 +42,7 @@ export default function Tempo() {
           serviceJsonLd({
             name: "Tempo Traveller Rentals",
             description:
-              "12, 17, 21 and 23 seater Tempo Traveller rentals across India for family tours, weddings, corporate groups and outstation trips.",
+              "12 to 23 seater Tempo Traveller rentals across India for family tours, weddings, corporate groups and outstation trips.",
           }),
           faqJsonLd(faqs),
         ]}
@@ -57,7 +57,7 @@ export default function Tempo() {
             Tempo Traveller Rental Across India
           </h1>
           <p className="mt-4 max-w-2xl text-cream/80">
-            12, 17, 21 and 23 seater Tempo Travellers for families, wedding groups, corporate
+            12 to 23 seater Tempo Travellers for families, wedding groups, corporate
             offsites and temple tours with AC, pushback seats and experienced drivers.
           </p>
         </div>

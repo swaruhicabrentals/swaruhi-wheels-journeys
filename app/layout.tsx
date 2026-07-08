@@ -17,6 +17,14 @@ export const metadata: Metadata = {
   },
   description: SITE.description,
   authors: [{ name: SITE.name }],
+  icons: {
+    icon: [
+      { url: "/assets/swaruhi-travels-favicon-circular-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/assets/swaruhi-travels-logo-circular.png", sizes: "512x512", type: "image/png" },
+    ],
+    shortcut: "/assets/swaruhi-travels-favicon-circular-32.png",
+    apple: [{ url: "/assets/swaruhi-travels-logo-circular.png", sizes: "512x512", type: "image/png" }],
+  },
   openGraph: {
     siteName: SITE.name,
     title: `${SITE.name}: ${SITE.tagline}`,

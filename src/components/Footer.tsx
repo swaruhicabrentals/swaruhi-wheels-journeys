@@ -1,6 +1,9 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { SITE } from "@/lib/site";
+
+const logoImg = "/assets/swaruhi-travels-logo-circular.png";
 
 const cols = [
   {
@@ -9,14 +12,13 @@ const cols = [
       { to: "/services/cab-rentals", label: "Cab Rentals" },
       { to: "/services/tempo-traveller-rentals", label: "Tempo Traveller Rentals" },
       { to: "/services/tour-packages", label: "Tour Packages" },
-      { to: "/fleet", label: "Our Fleet" },
     ],
   },
   {
     title: "Offices",
     links: [
-      { to: "/mumbai-cab-rentals", label: "Mumbai Office" },
-      { to: "/ahmedabad-cab-rentals", label: "Ahmedabad Office" },
+      { to: "/mumbai-cab-rentals", label: "Mumbai" },
+      { to: "/ahmedabad-cab-rentals", label: "Ahmedabad" },
     ],
   },
   {
@@ -35,14 +37,13 @@ export function Footer() {
     <footer className="section-navy mt-20 pt-16 pb-8">
       <div className="container-x grid gap-10 lg:grid-cols-4">
         <div>
-          <div className="flex items-center gap-2">
-            <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-gold text-navy-deep font-display text-lg">
-              S
-            </span>
-            <span className="font-display text-xl">
-              Swaruhi <span className="text-gold">Travels</span>
-            </span>
-          </div>
+          <Image
+            src={logoImg}
+            alt="Swaruhi Travels"
+            width={160}
+            height={160}
+            className="h-20 w-20 rounded-full object-cover"
+          />
           <p className="mt-4 text-sm text-cream/75 leading-relaxed">
             Reliable cab rentals, Tempo Traveller rentals and tour packages across
             India, coordinated from our Mumbai and Ahmedabad offices.
@@ -56,7 +57,7 @@ export function Footer() {
             </a>
             <div className="flex items-start gap-2 text-cream/80">
               <MapPin size={16} className="text-gold mt-0.5" />
-              <span>{SITE.addressMumbai} · {SITE.addressAhmedabad}</span>
+              <span>{SITE.addressMumbai} - {SITE.addressAhmedabad}</span>
             </div>
           </div>
         </div>
@@ -78,8 +79,8 @@ export function Footer() {
       </div>
 
       <div className="container-x mt-12 border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between gap-3 text-xs text-cream/60">
-        <p>© {new Date().getFullYear()} Swaruhi Travels. All rights reserved.</p>
-        <p>{SITE.hours} · Service across India from Mumbai & Ahmedabad offices</p>
+        <p>Copyright {new Date().getFullYear()} Swaruhi Travels. All rights reserved.</p>
+        <p>{SITE.hours} - Service across India from Mumbai & Ahmedabad offices</p>
       </div>
     </footer>
   );
