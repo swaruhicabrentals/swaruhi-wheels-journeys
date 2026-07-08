@@ -7,25 +7,25 @@ import { pageMeta, breadcrumbJsonLd } from "@/lib/seo";
 import { makeMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = makeMetadata({
-title: "Travel Services - Cab & Tempo Rentals, Tours, Airport & Corporate Cabs",
+title: "Travel Services: Cab and Tempo Rentals, Tours, Airport and Corporate Cabs",
       description:
-        "Full-service pan-India travel from Swaruhi Travels: local & outstation cab rentals, Tempo Traveller rentals, curated tour packages, airport transfers, corporate cabs and wedding fleets.",
+        "Full service travel across India from Swaruhi Travels: local and outstation cab rentals, Tempo Traveller rentals, curated tour packages, airport transfers, corporate cabs and wedding fleets.",
       path: "/services",
 });
 
 const services = [
   { icon: Car, title: "Cab Rentals", to: "/services/cab-rentals",
-    desc: "Hourly, daily, and outstation chauffeur-driven cars - hatchbacks, sedans and SUVs." },
+    desc: "Hourly, daily, and outstation cars with chauffeurs, including hatchbacks, sedans and SUVs." },
   { icon: Bus, title: "Tempo Traveller Rentals", to: "/services/tempo-traveller-rentals",
-    desc: "12- and 17-seater Tempo Travellers for groups, weddings and long-distance tours." },
+    desc: "12, 17, 21 and 23 seater Tempo Travellers for groups, weddings and long distance tours." },
   { icon: Map, title: "Tour Packages", to: "/services/tour-packages",
-    desc: "Handcrafted single-day and multi-day tour packages across India." },
+    desc: "Handcrafted one day and multi day tour packages across India." },
   { icon: Plane, title: "Airport Transfers", to: "/contact",
-    desc: "On-time BOM and AMD airport pickups and drops - meet & greet on request." },
+    desc: "Punctual BOM and AMD airport pickups and drops, with meet and greet on request." },
   { icon: Briefcase, title: "Corporate Travel", to: "/contact",
     desc: "Monthly billing, dedicated cabs, employee transport and executive travel programs." },
   { icon: Heart, title: "Wedding & Event Fleets", to: "/contact",
-    desc: "Decorated cars, guest transport and multi-vehicle fleets for weddings and events." },
+    desc: "Decorated cars, guest transport and multiple vehicle fleets for weddings and events." },
 ];
 
 export default function Services() {
@@ -36,8 +36,8 @@ export default function Services() {
           <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Services", path: "/services" }]} />
           <h1 className="mt-3 font-display text-4xl md:text-5xl text-cream">Our Travel Services</h1>
           <p className="mt-4 max-w-2xl text-cream/80">
-            Whatever your travel need - city commute, outstation trip, wedding fleet or
-            complete tour - we have a service and vehicle tailored for it.
+            Whatever your travel need, from city commute and outstation trip to wedding
+            fleet or complete tour, we have a service and vehicle tailored for it.
           </p>
         </div>
       </section>

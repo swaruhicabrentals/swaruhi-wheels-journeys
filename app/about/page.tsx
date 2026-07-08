@@ -10,7 +10,7 @@ const familyImg = "/assets/family-travel.jpg";
 import { makeMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = makeMetadata({
-title: "About Swaruhi Travels - Pan-India Travel Partner",
+title: "About Swaruhi Travels: Travel Partner Across India",
       description:
         "Swaruhi Travels is a professional cab rental and tour operator serving travellers across India from offices in Mumbai and Ahmedabad. Learn about our mission, drivers and fleet.",
       path: "/about",
@@ -42,15 +42,15 @@ export default function About() {
             <SectionHeader eyebrow="Our Story" title="Built on trust, driven by service" />
             <div className="mt-5 space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                Swaruhi Travels was founded to solve a simple problem - travellers deserve
-                reliable, safe and premium chauffeur-driven vehicles without inflated pricing.
+                Swaruhi Travels was founded to solve a simple problem: travellers deserve
+                reliable, safe and premium vehicles with chauffeurs, without inflated pricing.
                 What began as a small local fleet has grown into a trusted travel partner
                 for families, tourists, corporate teams and wedding groups.
               </p>
               <p>
                 Today, we operate a curated fleet of hatchbacks, sedans, SUVs and Tempo
-                Travellers, along with hand-crafted tour packages from both Mumbai and
-                Ahmedabad. Every trip is powered by trained drivers, well-kept vehicles
+                Travellers, along with thoughtfully crafted tour packages from both Mumbai and
+                Ahmedabad. Every trip is powered by trained drivers, clean vehicles
                 and a 24 × 7 support desk.
               </p>
               <p>
@@ -72,7 +72,7 @@ export default function About() {
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {[
               { icon: ShieldCheck, t: "Safety First", d: "Verified drivers, serviced vehicles, GPS tracking." },
-              { icon: Users, t: "People-Centric", d: "Warm service for families, tourists and corporates." },
+              { icon: Users, t: "People Centric", d: "Warm service for families, tourists and corporates." },
               { icon: Award, t: "Premium Standards", d: "Clean interiors, punctual pickups, courteous drivers." },
               { icon: HeartHandshake, t: "Transparent Pricing", d: "Itemised quotes, no hidden surcharges." },
             ].map(({ icon: Icon, t, d }) => (

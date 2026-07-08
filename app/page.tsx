@@ -31,7 +31,7 @@ import {
 import { makeMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = makeMetadata({
-title: `${SITE.name} - Pan-India Cab Rentals, Tempo Traveller & Tour Packages`,
+title: `${SITE.name}: Cab Rentals, Tempo Traveller and Tour Packages Across India`,
       description:
         "Book reliable cab rentals, Tempo Traveller rentals and curated tour packages across India, coordinated from our Mumbai and Ahmedabad offices. Clean vehicles, experienced drivers, transparent pricing.",
       path: "/",
@@ -81,8 +81,8 @@ function Hero() {
             Tempo Travellers & Tour Packages
           </h1>
           <p className="mt-5 max-w-xl text-base md:text-lg text-cream/85 leading-relaxed">
-            Chauffeur-driven journeys across India, coordinated from our Mumbai and Ahmedabad offices. Clean vehicles,
-            experienced drivers, transparent pricing - every single ride.
+            Chauffeur driven journeys across India, coordinated from our Mumbai and Ahmedabad offices. Clean vehicles,
+            experienced drivers, transparent pricing for every single ride.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
@@ -94,11 +94,12 @@ function Hero() {
             </a>
           </div>
 
-          <ul className="mt-10 grid grid-cols-2 md:grid-cols-3 gap-4 text-sm">
+          <ul className="mt-10 grid grid-cols-2 md:grid-cols-2 gap-4 text-sm">
             {[
               { icon: ShieldCheck, label: "Verified drivers" },
-              { icon: Clock, label: "24 × 7 support" },
+              { icon: Clock, label: "24 x 7 support" },
               { icon: IndianRupee, label: "Transparent pricing" },
+              { icon: Sparkles, label: "Sanitised cars" },
             ].map(({ icon: Icon, label }) => (
               <li key={label} className="flex items-center gap-2 text-cream/85">
                 <Icon size={18} className="text-gold" /> {label}
@@ -126,13 +127,13 @@ function ServicesOverview() {
     {
       icon: Bus,
       title: "Tempo Traveller Rentals",
-      desc: "12- and 17-seater Tempo Travellers for weddings, group tours and corporate travel.",
+      desc: "12, 17, 21 and 23 seater Tempo Travellers for weddings, group tours and corporate travel.",
       to: "/services/tempo-traveller-rentals",
     },
     {
       icon: Map,
       title: "Tour Packages",
-      desc: "Curated single-day and multi-day packages across India, with strong Mumbai and Ahmedabad coverage.",
+      desc: "Curated one day and multi day packages across India, with strong Mumbai and Ahmedabad coverage.",
       to: "/services/tour-packages",
     },
   ];
@@ -141,8 +142,8 @@ function ServicesOverview() {
       <div className="container-x">
         <SectionHeader
           eyebrow="Our Services"
-          title="Travel your way - city, outstation or full tour"
-          description="Three focused services, one dependable team. Every trip includes a trained driver, fuel-clean vehicle and door-to-door pickup."
+          title="Travel your way across city, outstation or full tour routes"
+          description="Three focused services, one dependable team. Every trip includes a trained driver, clean vehicle and pickup from your doorstep."
         />
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {services.map(({ icon: Icon, title, desc, to }) => (
@@ -167,14 +168,14 @@ function FleetShowcase() {
   const fleet = [
     { name: "Hatchback", pax: "4", img: hatchImg, alt: "White hatchback rental car" },
     { name: "Premium Sedan", pax: "4", img: sedanImg, alt: "White premium sedan for airport transfer" },
-    { name: "SUV / Innova", pax: "6-7", img: innovaImg, alt: "Silver Toyota Innova SUV for family trips" },
-    { name: "Tempo Traveller", pax: "12-17", img: tempoImg, alt: "White Tempo Traveller for group tours" },
+    { name: "SUV / Innova", pax: "6 to 7", img: innovaImg, alt: "Silver Toyota Innova SUV for family trips" },
+    { name: "Tempo Traveller", pax: "12 to 23", img: tempoImg, alt: "White Tempo Traveller for group tours" },
   ];
   return (
     <section className="bg-muted/50 py-16 md:py-20">
       <div className="container-x">
         <div className="flex flex-wrap items-end justify-between gap-4">
-          <SectionHeader eyebrow="Our Fleet" title="Clean, comfortable, well-maintained" />
+          <SectionHeader eyebrow="Our Fleet" title="Clean, comfortable and well maintained" />
           <Link href="/fleet" className="btn-outline-gold text-sm">View full fleet</Link>
         </div>
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -204,8 +205,8 @@ function FleetShowcase() {
 
 function PopularTours() {
   const tours = [
-    { title: "Mumbai to Lonavala & Khandala", duration: "1-2 Days", img: lonavalaImg, alt: "Green Lonavala valley with winding road", to: "/services/tour-packages" },
-    { title: "Mumbai to Shirdi Sai Baba", duration: "1-2 Days", img: shirdiImg, alt: "Shirdi Sai Baba temple at sunset", to: "/services/tour-packages" },
+    { title: "Mumbai to Lonavala & Khandala", duration: "1 to 2 Days", img: lonavalaImg, alt: "Green Lonavala valley with winding road", to: "/services/tour-packages" },
+    { title: "Mumbai to Shirdi Sai Baba", duration: "1 to 2 Days", img: shirdiImg, alt: "Shirdi Sai Baba temple at sunset", to: "/services/tour-packages" },
     { title: "Ahmedabad to Statue of Unity", duration: "1 Day", img: statueImg, alt: "Statue of Unity aerial view at golden hour", to: "/services/tour-packages" },
   ];
   return (
@@ -248,14 +249,14 @@ function CitySections() {
       img: mumbaiImg,
       alt: "Mumbai Marine Drive skyline at night",
       to: "/mumbai-cab-rentals",
-      text: "Our Mumbai office coordinates airport transfers, outstation cabs, Tempo Travellers and pan-India tour movements.",
+      text: "Our Mumbai office coordinates airport transfers, outstation cabs, Tempo Travellers and tour movements across India.",
     },
     {
       name: "Ahmedabad",
       img: ahmedabadImg,
       alt: "Ahmedabad Sabarmati riverfront illuminated at dusk",
       to: "/ahmedabad-cab-rentals",
-      text: "Our Ahmedabad office supports Gujarat routes, corporate travel, group tours and long-distance cab rentals across India.",
+      text: "Our Ahmedabad office supports Gujarat routes, corporate travel, group tours and long distance cab rentals across India.",
     },
   ];
   return (
@@ -264,7 +265,7 @@ function CitySections() {
         <div className="max-w-2xl">
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Our Offices</p>
           <h2 className="mt-2 font-display text-3xl md:text-4xl text-cream gold-underline">
-            Pan-India service from Mumbai & Ahmedabad offices
+            Service across India from Mumbai & Ahmedabad offices
           </h2>
         </div>
         <div className="mt-10 grid gap-6 md:grid-cols-2">
@@ -299,10 +300,10 @@ function CitySections() {
 
 function WhyChoose() {
   const items = [
-    { icon: ShieldCheck, title: "Verified, uniformed drivers", desc: "Background-checked, well-trained, courteous chauffeurs on every ride." },
-    { icon: Sparkles, title: "Sanitised, well-kept vehicles", desc: "Every car and Tempo Traveller is cleaned, serviced and inspected before dispatch." },
-    { icon: IndianRupee, title: "Transparent, upfront pricing", desc: "Itemised quotes with no hidden charges - pay only for what you booked." },
-    { icon: Clock, title: "On-time, 24 × 7 availability", desc: "Round-the-clock booking desk and airport pickups on the dot." },
+    { icon: ShieldCheck, title: "Verified drivers", desc: "Background checked, trained and courteous chauffeurs on every ride." },
+    { icon: Sparkles, title: "Sanitised, well maintained vehicles", desc: "Every car and Tempo Traveller is cleaned, serviced and inspected before dispatch." },
+    { icon: IndianRupee, title: "Transparent, upfront pricing", desc: "Itemised quotes with no hidden charges, so you pay only for what you booked." },
+    { icon: Clock, title: "Punctual, 24 × 7 availability", desc: "A booking desk available all day and airport pickups on the dot." },
   ];
   return (
     <section className="py-16 md:py-20">
@@ -341,7 +342,7 @@ function Reviews() {
               </div>
               <blockquote className="mt-3 text-sm text-navy-deep leading-relaxed">"{r.text}"</blockquote>
               <figcaption className="mt-4 text-xs font-semibold text-muted-foreground">
-                - {r.name}, {r.city}
+                {r.name}, {r.city}
               </figcaption>
             </figure>
           ))}
@@ -356,7 +357,7 @@ function GoogleBusinessTrust() {
     { src: innovaImg, alt: "Innova cab for family and outstation travel", label: "SUV / Innova" },
     { src: tempoImg, alt: "Tempo Traveller for group tours and events", label: "Tempo Traveller" },
     { src: interiorImg, alt: "Clean vehicle interior for comfortable travel", label: "Clean interiors" },
-    { src: familyImg, alt: "Family preparing for a chauffeur-driven trip", label: "Family trips" },
+    { src: familyImg, alt: "Family preparing for a trip with a chauffeur", label: "Family trips" },
   ];
 
   return (
@@ -463,10 +464,9 @@ function SafetyComfort() {
           />
           <ul className="mt-6 space-y-3 text-sm text-navy-deep">
             {[
-              "GPS-tracked vehicles with 24 × 7 backend monitoring",
-              "First-aid kit, seat belts and child-friendly seating on request",
-              "Trained, well-rested drivers with local & outstation experience",
-              "Regular vehicle service, deep-cleaning and safety inspections",
+              "First aid kit, seat belts and child friendly seating on request",
+              "Trained and rested drivers with local & outstation experience",
+              "Regular vehicle service, deep cleaning and safety inspections",
             ].map((t) => (
               <li key={t} className="flex items-start gap-2">
                 <ShieldCheck size={18} className="text-gold-deep mt-0.5" /> {t}

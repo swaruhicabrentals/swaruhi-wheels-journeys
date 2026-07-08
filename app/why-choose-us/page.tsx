@@ -6,18 +6,18 @@ import { pageMeta, breadcrumbJsonLd } from "@/lib/seo";
 import { makeMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = makeMetadata({
-title: "Why Choose Swaruhi Travels - Safe, Reliable & Premium Travel",
+title: "Why Choose Swaruhi Travels: Safe, Reliable and Premium Travel",
       description:
-        "Verified drivers, well-maintained vehicles, transparent pricing and 24×7 support - see why families, tourists and corporates choose Swaruhi Travels for pan-India travel.",
+        "Verified drivers, well maintained vehicles, transparent pricing and 24×7 support. See why families, tourists and corporates choose Swaruhi Travels for travel across India.",
       path: "/why-choose-us",
 });
 
 const items = [
-  { icon: ShieldCheck, t: "Verified & trained drivers", d: "Background-checked, uniformed and courteous chauffeurs." },
-  { icon: Sparkles, t: "Sanitised, well-kept vehicles", d: "Deep-cleaning and safety checks before every dispatch." },
-  { icon: IndianRupee, t: "Transparent pricing", d: "Itemised quotes with no last-minute surcharges." },
-  { icon: Clock, t: "24 × 7 availability", d: "Round-the-clock booking and airport pickups." },
-  { icon: Users, t: "Family & group friendly", d: "Child-friendly seating, group-sized Tempo Travellers." },
+  { icon: ShieldCheck, t: "Verified & trained drivers", d: "Background checked, uniformed and courteous chauffeurs." },
+  { icon: Sparkles, t: "Sanitised, well maintained vehicles", d: "Deep cleaning and safety checks before every dispatch." },
+  { icon: IndianRupee, t: "Transparent pricing", d: "Itemised quotes with no last minute surcharges." },
+  { icon: Clock, t: "24 × 7 availability", d: "Booking support all day and airport pickups." },
+  { icon: Users, t: "Family & group friendly", d: "Child friendly seating and group sized Tempo Travellers." },
   { icon: Award, t: "Premium experience", d: "Clean interiors, punctuality, service you can trust." },
   { icon: HeartHandshake, t: "Personal support", d: "Real people on WhatsApp and phone, not chatbots." },
   { icon: MapPin, t: "Deep local expertise", d: "Native knowledge of Mumbai, Ahmedabad and top routes." },
@@ -32,7 +32,7 @@ export default function Why() {
           <h1 className="mt-3 font-display text-4xl md:text-5xl text-cream">Why Choose Swaruhi Travels</h1>
           <p className="mt-4 max-w-2xl text-cream/80">
             We combine premium service with dependable operations so your family, guests
-            and team travel safely - every single time.
+            and team travel safely every single time.
           </p>
         </div>
       </section>

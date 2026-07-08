@@ -11,9 +11,9 @@ const heroCar = "/assets/hero-car.jpg";
 
 const faqs = [
   { q: "What's the difference between local and outstation cab rental?",
-    a: "Local rentals are billed by hours and kilometres inside city limits. Outstation rentals cover intercity or return trips with per-day and per-km pricing plus driver allowance." },
-  { q: "Do you offer one-way cab rentals?",
-    a: "Yes, we offer one-way outstation cabs between popular routes like Mumbai-Pune, Ahmedabad-Vadodara, Mumbai-Nashik and more." },
+    a: "Local rentals are billed by hours and kilometres inside city limits. Outstation rentals cover intercity or return trips with per day and per kilometre pricing plus driver allowance." },
+  { q: "Do you offer one way cab rentals?",
+    a: "Yes, we offer one way outstation cabs between popular routes like Mumbai to Pune, Ahmedabad to Vadodara, Mumbai to Nashik and more." },
   { q: "Is fuel included in the cab rental price?",
     a: "Standard packages include fuel within a defined kilometre limit. Toll, parking and state permit charges are billed extra as applicable." },
   { q: "Can I book a cab near me for immediate travel?",
@@ -23,9 +23,9 @@ const faqs = [
 import { makeMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = makeMetadata({
-title: "Cab Rental Across India - Local & Outstation Cabs",
+title: "Cab Rental Across India: Local and Outstation Cabs",
       description:
-        "Book chauffeur-driven cab rental across India from Swaruhi Travels. Hatchback, sedan and SUV options for local, airport, outstation and corporate travel. Transparent pricing, 24×7 support.",
+        "Book cab rental with chauffeurs across India from Swaruhi Travels. Hatchback, sedan and SUV options for local, airport, outstation and corporate travel. Transparent pricing, 24×7 support.",
       path: "/services/cab-rentals",
 });
 
@@ -42,7 +42,7 @@ export default function CarRentals() {
           serviceJsonLd({
             name: "Cab Rentals",
             description:
-              "Chauffeur-driven cab rentals across India for local, airport, outstation and corporate travel.",
+              "Cab rentals with chauffeurs across India for local, airport, outstation and corporate travel.",
           }),
           faqJsonLd(faqs),
         ]}
@@ -62,8 +62,8 @@ export default function CarRentals() {
             Cab Rental Across India
           </h1>
           <p className="mt-4 max-w-2xl text-cream/85">
-            Chauffeur-driven hatchbacks, sedans and SUVs for local runs, airport transfers,
-            outstation trips and corporate travel - all at transparent, upfront prices.
+            Hatchbacks, sedans and SUVs with chauffeurs for local runs, airport transfers,
+            outstation trips and corporate travel, all at transparent, upfront prices.
           </p>
         </div>
       </section>
@@ -76,12 +76,12 @@ export default function CarRentals() {
               <p>
                 Whether you need a quick hatchback for a Mumbai airport transfer or a
                 comfortable Innova for a Pune weekend trip, Swaruhi Travels offers
-                dependable chauffeur-driven cab rental across India, coordinated from our Mumbai and Ahmedabad offices.
+                dependable cab rental with chauffeurs across India, coordinated from our Mumbai and Ahmedabad offices.
               </p>
               <p>
-                Our fleet is regularly serviced and deep-cleaned. Every driver is
+                Our fleet is regularly serviced and deep cleaned. Every driver is
                 verified, uniformed and experienced on local city routes as well as
-                popular outstation highways - so you sit back and enjoy the ride.
+                popular outstation highways, so you sit back and enjoy the ride.
               </p>
             </div>
 
@@ -90,10 +90,10 @@ export default function CarRentals() {
               {[
                 "4 hours / 40 km local",
                 "8 hours / 80 km local",
-                "Full-day 12 hours / 120 km",
+                "Full day 12 hours / 120 km",
                 "Airport pickup & drop",
-                "Outstation one-way",
-                "Outstation round-trip",
+                "Outstation one way",
+                "Outstation round trip",
                 "Monthly corporate cab",
                 "Wedding day car",
               ].map((p) => (
@@ -121,7 +121,7 @@ export default function CarRentals() {
 
       <section className="bg-muted/50 py-16">
         <div className="container-x">
-          <SectionHeader eyebrow="FAQs" title="Cab rental - common questions" />
+          <SectionHeader eyebrow="FAQs" title="Cab rental common questions" />
           <div className="mt-8"><FAQList items={faqs} /></div>
         </div>
       </section>

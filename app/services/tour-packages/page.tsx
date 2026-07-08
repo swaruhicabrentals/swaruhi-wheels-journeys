@@ -17,9 +17,9 @@ const IMG: Record<string, string> = {
 import { makeMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = makeMetadata({
-title: "Tour Packages Across India - Family, Weekend & Pilgrimage Tours",
+title: "Tour Packages Across India: Family, Weekend and Pilgrimage Tours",
       description:
-        "Curated tour packages across India by Swaruhi Travels. Lonavala, Shirdi, Mahabaleshwar, Statue of Unity, Saputara, Dwarka & more - with vehicle, driver and itinerary planning.",
+        "Curated tour packages across India by Swaruhi Travels. Lonavala, Shirdi, Mahabaleshwar, Statue of Unity, Saputara, Dwarka and more, with vehicle, driver and itinerary planning.",
       path: "/services/tour-packages",
 });
 
@@ -50,7 +50,7 @@ export default function Tours() {
             Tour Packages Across India
           </h1>
           <p className="mt-4 max-w-2xl text-cream/80">
-            Weekend getaways, pilgrimage tours and family holidays - designed and driven
+            Weekend getaways, pilgrimage tours and family holidays, designed and driven
             by our local team. Every package includes vehicle, driver, fuel and itinerary help.
           </p>
         </div>
@@ -64,10 +64,10 @@ export default function Tours() {
           <div>
             <SectionHeader eyebrow="Custom Tours" title="Don't see your dream trip? We'll design it." />
             <p className="mt-4 text-muted-foreground leading-relaxed">
-              Tell us the destination, dates and group size - we'll craft a custom itinerary
+              Tell us the destination, dates and group size, and we'll craft a custom itinerary
               with the right vehicle, comfortable stops and transparent pricing. Popular
               custom requests include Konkan beaches, Rajasthan road trips, Kerala circuits
-              and multi-city Gujarat tours.
+              and multi city Gujarat tours.
             </p>
             <div className="mt-6 flex gap-3">
               <Link href="/contact" className="btn-navy">Plan my tour</Link>

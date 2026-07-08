@@ -79,7 +79,7 @@ export function Footer() {
 
       <div className="container-x mt-12 border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between gap-3 text-xs text-cream/60">
         <p>© {new Date().getFullYear()} Swaruhi Travels. All rights reserved.</p>
-        <p>{SITE.hours} · Pan-India service from Mumbai & Ahmedabad offices</p>
+        <p>{SITE.hours} · Service across India from Mumbai & Ahmedabad offices</p>
       </div>
     </footer>
   );

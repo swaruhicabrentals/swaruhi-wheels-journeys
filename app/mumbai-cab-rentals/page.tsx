@@ -11,19 +11,19 @@ const mumbaiImg = "/assets/mumbai.jpg";
 
 const faqs = [
   { q: "Which areas in Mumbai do you cover?",
-    a: "We cover the entire Mumbai Metropolitan Region - South Mumbai, Bandra, Andheri, Powai, Malad, Borivali, Thane, Navi Mumbai, and airport pickups from Terminal 1 and Terminal 2." },
+    a: "We cover the entire Mumbai Metropolitan Region, including South Mumbai, Bandra, Andheri, Powai, Malad, Borivali, Thane, Navi Mumbai, and airport pickups from Terminal 1 and Terminal 2." },
   { q: "Do you offer Mumbai airport cab service?",
-    a: "Yes, we offer 24×7 airport transfers with meet-and-greet on request. Book in advance for guaranteed on-time pickup." },
+    a: "Yes, we offer 24×7 airport transfers with meet and greet on request. Book in advance for guaranteed punctual pickup." },
   { q: "What outstation trips are popular from Mumbai?",
     a: "Pune, Lonavala, Khandala, Nashik, Shirdi, Mahabaleshwar, Alibaug and Goa are our most requested outstation trips from Mumbai." },
   { q: "Can I book a cab rental near me in Mumbai for immediate travel?",
-    a: "Yes, subject to availability. Call or WhatsApp us with your pickup location and time - most requests are confirmed within minutes." },
+    a: "Yes, subject to availability. Call or WhatsApp us with your pickup location and time, and most requests are confirmed within minutes." },
 ];
 
 import { makeMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = makeMetadata({
-title: "Mumbai Office - Cab Rental, Airport, Outstation & Tours",
+title: "Mumbai Office: Cab Rental, Airport, Outstation and Tours",
       description:
         "Swaruhi Travels offers cab rental, Tempo Traveller rental, airport transfers and outstation cabs across Mumbai. Serving Andheri, Bandra, South Mumbai, Thane and Navi Mumbai. 24×7 booking.",
       path: "/mumbai-cab-rentals",
@@ -58,7 +58,7 @@ export default function Mumbai() {
           <h1 className="mt-3 font-display text-4xl md:text-5xl">Mumbai Office</h1>
           <p className="mt-4 max-w-2xl text-cream/85">
             Reliable cab rentals, Tempo Traveller rentals, airport transfers and outstation
-            cabs across Mumbai - from South Mumbai and Bandra to Andheri, Thane and Navi Mumbai.
+            cabs across Mumbai, from South Mumbai and Bandra to Andheri, Thane and Navi Mumbai.
           </p>
         </div>
       </section>
@@ -66,9 +66,9 @@ export default function Mumbai() {
       <section className="py-16">
         <div className="container-x grid gap-10 lg:grid-cols-[1.1fr_1fr] items-start">
           <div>
-            <SectionHeader eyebrow="Mumbai" title="Your local base for pan-India travel" />
+            <SectionHeader eyebrow="Mumbai" title="Your local base for travel across India" />
             <p className="mt-5 text-muted-foreground leading-relaxed">
-              Mumbai runs on time - and so do we. Whether it's an early-morning
+              Mumbai runs on time, and so do we. Whether it's an early morning
               <Link href="/services/cab-rentals" className="text-gold-deep hover:underline mx-1">cab rental in Mumbai</Link>
               for a client meeting, a family weekend to Lonavala, or a
               <Link href="/services/tempo-traveller-rentals" className="text-gold-deep hover:underline mx-1">Tempo Traveller</Link>

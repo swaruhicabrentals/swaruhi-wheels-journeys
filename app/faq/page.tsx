@@ -7,15 +7,15 @@ import { pageMeta, breadcrumbJsonLd, faqJsonLd } from "@/lib/seo";
 
 const extra = [
   { q: "Do you charge extra for night driving?",
-    a: "Outstation trips include a small night-driving allowance for trips extending past 10 PM, always shared upfront in the quote." },
+    a: "Outstation trips include a small night driving allowance for trips extending past 10 PM, always shared upfront in the quote." },
   { q: "What is your cancellation policy?",
     a: "Cancellations made 24+ hours before pickup are free. Late cancellations may incur a small fee depending on vehicle type." },
   { q: "Do you accept online payments?",
-    a: "Yes - UPI, bank transfer, cards and cash are accepted. For corporate clients we offer monthly invoicing." },
+    a: "Yes. UPI, bank transfer, cards and cash are accepted. For corporate clients we offer monthly invoicing." },
   { q: "Can I request a specific driver?",
     a: "Regular clients often have preferred drivers. Mention your preference at booking and we'll assign them if available." },
   { q: "Are your drivers familiar with outstation routes?",
-    a: "Yes. Our drivers regularly cover Mumbai-Pune, Mumbai-Shirdi, Ahmedabad-Statue of Unity, Ahmedabad-Dwarka and other popular routes." },
+    a: "Yes. Our drivers regularly cover Mumbai to Pune, Mumbai to Shirdi, Ahmedabad to Statue of Unity, Ahmedabad to Dwarka and other popular routes." },
 ];
 
 const ALL = [...HOMEPAGE_FAQS, ...extra];
@@ -23,9 +23,9 @@ const ALL = [...HOMEPAGE_FAQS, ...extra];
 import { makeMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = makeMetadata({
-title: "FAQs - Cab Rental, Tempo Traveller & Tour Package Questions",
+title: "FAQs: Cab Rental, Tempo Traveller and Tour Package Questions",
       description:
-        "Answers to common questions about Swaruhi Travels - pricing, drivers, cancellation, outstation routes, corporate cabs and pan-India travel support.",
+        "Answers to common questions about Swaruhi Travels, including pricing, drivers, cancellation, outstation routes, corporate cabs and travel support across India.",
       path: "/faq",
 });
 

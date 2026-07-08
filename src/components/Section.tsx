@@ -21,7 +21,7 @@ export function SectionHeader({
 
 export function CtaBand({
   title = "Ready to plan your next journey?",
-  subtitle = "Get a transparent quote in minutes - no obligation, no hidden charges.",
+  subtitle = "Get a transparent quote in minutes with no obligation and no hidden charges.",
 }: { title?: string; subtitle?: string }) {
   return (
     <section className="section-navy py-16">

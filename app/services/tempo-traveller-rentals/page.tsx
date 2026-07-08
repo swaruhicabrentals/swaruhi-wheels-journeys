@@ -11,21 +11,21 @@ const tempoImg = "/assets/tempo-traveller.jpg";
 
 const faqs = [
   { q: "How many seaters do you offer in Tempo Traveller?",
-    a: "We offer 12-seater and 17-seater Tempo Travellers, both with pushback seats, AC and ample luggage space." },
+    a: "We offer 12, 17, 21 and 23 seater Tempo Travellers with pushback seats, AC and ample luggage space." },
   { q: "Is Tempo Traveller good for weddings?",
-    a: "Yes. Tempo Travellers are ideal for baraat, guest pickups from railway stations and airports, and multi-city wedding events." },
+    a: "Yes. Tempo Travellers are ideal for baraat, guest pickups from railway stations and airports, and multi city wedding events." },
   { q: "Can we hire a Tempo Traveller for a Shirdi or Statue of Unity tour?",
     a: "Absolutely. We run regular group tours from Mumbai to Shirdi, and from Ahmedabad to Statue of Unity, Somnath and Dwarka." },
   { q: "Is the driver allowance separate?",
-    a: "For outstation Tempo Traveller trips, a standard driver allowance is charged in addition to per-km pricing and shared upfront in the quote." },
+    a: "For outstation Tempo Traveller trips, a standard driver allowance is charged in addition to per kilometre pricing and shared upfront in the quote." },
 ];
 
 import { makeMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = makeMetadata({
-title: "Tempo Traveller Rental Across India - 12 & 17 Seater",
+title: "Tempo Traveller Rental Across India: 12, 17, 21 and 23 Seater",
       description:
-        "Book 12-seater and 17-seater Tempo Traveller rental across India for family tours, weddings, corporate groups and outstation trips. AC, pushback seats, experienced drivers.",
+        "Book 12, 17, 21 and 23 seater Tempo Traveller rental across India for family tours, weddings, corporate groups and outstation trips. AC, pushback seats, experienced drivers.",
       path: "/services/tempo-traveller-rentals",
 });
 
@@ -42,7 +42,7 @@ export default function Tempo() {
           serviceJsonLd({
             name: "Tempo Traveller Rentals",
             description:
-              "12 and 17-seater Tempo Traveller rentals across India for family tours, weddings, corporate groups and outstation trips.",
+              "12, 17, 21 and 23 seater Tempo Traveller rentals across India for family tours, weddings, corporate groups and outstation trips.",
           }),
           faqJsonLd(faqs),
         ]}
@@ -57,8 +57,8 @@ export default function Tempo() {
             Tempo Traveller Rental Across India
           </h1>
           <p className="mt-4 max-w-2xl text-cream/80">
-            12- and 17-seater Tempo Travellers for families, wedding groups, corporate
-            offsites and temple tours - with AC, pushback seats and experienced drivers.
+            12, 17, 21 and 23 seater Tempo Travellers for families, wedding groups, corporate
+            offsites and temple tours with AC, pushback seats and experienced drivers.
           </p>
         </div>
       </section>
@@ -66,14 +66,14 @@ export default function Tempo() {
       <section className="py-16">
         <div className="container-x grid gap-10 lg:grid-cols-[1.1fr_1fr] items-start">
           <div>
-            <Image src={tempoImg} alt="White 12-seater Tempo Traveller parked at a scenic viewpoint"
+            <Image src={tempoImg} alt="White 12 seater Tempo Traveller parked at a scenic viewpoint"
               width={1280} height={800} loading="lazy"
               className="rounded-2xl object-cover shadow-elegant" />
 
             <h2 className="mt-10 font-display text-2xl text-navy-deep">Perfect for every group</h2>
             <ul className="mt-4 grid gap-3 sm:grid-cols-2">
               {[
-                "Family & multi-generational trips",
+                "Family and multi generation trips",
                 "Wedding baraat and guest transport",
                 "Temple & pilgrimage tours",
                 "Corporate offsites & team outings",
@@ -86,12 +86,12 @@ export default function Tempo() {
               ))}
             </ul>
 
-            <h2 className="mt-10 font-display text-2xl text-navy-deep">On-board comfort</h2>
+            <h2 className="mt-10 font-display text-2xl text-navy-deep">Onboard comfort</h2>
             <ul className="mt-4 grid gap-3 sm:grid-cols-2 text-sm text-muted-foreground">
               {[
                 "AC with adjustable vents", "Pushback reclining seats",
                 "Ample luggage space", "Music system & charging points",
-                "Reading lights & curtains", "First-aid kit on board",
+                "Reading lights & curtains", "First aid kit on board",
               ].map((p) => <li key={p} className="flex items-center gap-2"><Check size={16} className="text-gold-deep" /> {p}</li>)}
             </ul>
 
@@ -107,7 +107,7 @@ export default function Tempo() {
 
       <section className="bg-muted/50 py-16">
         <div className="container-x">
-          <SectionHeader eyebrow="FAQs" title="Tempo Traveller - common questions" />
+          <SectionHeader eyebrow="FAQs" title="Tempo Traveller common questions" />
           <div className="mt-8"><FAQList items={faqs} /></div>
         </div>
       </section>
