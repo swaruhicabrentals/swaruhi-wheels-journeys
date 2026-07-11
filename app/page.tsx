@@ -10,14 +10,16 @@ const heroCar = "/assets/hero-car.jpg";
 const tempoImg = "/assets/swaruhi-travels-vehicle-fleet-tempo-traveller.webp";
 const familyImg = "/assets/family-travel.jpg";
 const interiorImg = "/assets/interior.jpg";
-const mumbaiImg = "/assets/mumbai.jpg";
-const ahmedabadImg = "/assets/ahmedabad.jpg";
+const mumbaiImg = "/assets/swaruhi-travels-mumbai-office-bandra-worli-sea-link.webp";
+const ahmedabadImg = "/assets/swaruhi-travels-ahmedabad-office-riverfront.webp";
 const innovaImg = "/assets/swaruhi-travels-vehicle-fleet-innova-crysta.webp";
 const dzireImg = "/assets/swaruhi-travels-vehicle-fleet-dzire.webp";
 const ertigaImg = "/assets/swaruhi-travels-vehicle-fleet-ertiga.webp";
 const urbaniaImg = "/assets/swaruhi-travels-vehicle-fleet-urbania.webp";
 const lonavalaImg = "/assets/swaruhi-travels-tour-package-lonavala.webp";
-const statueImg = "/assets/tour-statue-unity.jpg";
+const statueImg = "/assets/swaruhi-travels-tour-package-statue-of-unity.webp";
+const dwarkaImg = "/assets/swaruhi-travels-tour-package-dwarka.webp";
+const somnathImg = "/assets/swaruhi-travels-tour-package-somnath.webp";
 const shirdiImg = "/assets/tour-shirdi.jpg";
 
 import { InquiryForm } from "@/components/InquiryForm";
@@ -127,8 +129,8 @@ function ServicesOverview() {
     },
     {
       icon: Bus,
-      title: "Tempo Traveller Rentals",
-      desc: "12 to 23 seater Tempo Travellers for weddings, group tours and corporate travel.",
+      title: "Tempo Traveller / Urbania Rentals",
+      desc: "Tempo Travellers and Urbania for weddings, group tours and corporate travel.",
       to: "/services/tempo-traveller-rentals",
     },
     {
@@ -170,15 +172,15 @@ function FleetShowcase() {
     { name: "Dzire", pax: "4", img: dzireImg, alt: "White Maruti Suzuki Dzire cab for city and outstation travel" },
     { name: "Ertiga", pax: "6", img: ertigaImg, alt: "White Maruti Suzuki Ertiga cab for family trips" },
     { name: "Innova Crysta", pax: "6 to 7", img: innovaImg, alt: "White Toyota Innova Crysta cab for family trips" },
-    { name: "Tempo Traveller", pax: "13 to 26", img: tempoImg, alt: "White Tempo Traveller for group tours" },
-    { name: "Urbania", pax: "9 to 17", img: urbaniaImg, alt: "Force Urbania premium traveller for group tours" },
+    { name: "Tempo Traveller", pax: "13-26", img: tempoImg, alt: "White Tempo Traveller for group tours" },
+    { name: "Urbania", pax: "9-17", img: urbaniaImg, alt: "Force Urbania premium traveller for group tours" },
   ];
   return (
     <section className="bg-muted/50 py-16 md:py-20">
       <div className="container-x">
         <div className="flex flex-wrap items-end justify-between gap-4">
-          <SectionHeader eyebrow="Our Fleet" title="Clean, comfortable and well maintained" />
-          <Link href="/fleet" className="btn-outline-gold text-sm">View full fleet</Link>
+          <SectionHeader eyebrow="Vehicle Category" title="Clean, comfortable and well maintained" />
+          <Link href="/fleet" className="btn-outline-gold text-sm">View vehicle category</Link>
         </div>
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
           {fleet.map((f) => (
@@ -194,7 +196,7 @@ function FleetShowcase() {
               <div className="p-5">
                 <h3 className="font-display text-lg text-navy-deep">{f.name}</h3>
                 <p className="mt-1 flex items-center gap-1.5 text-sm text-muted-foreground">
-                  <Users size={14} /> Up to {f.pax} passengers
+                  <Users size={14} /> Upto {f.pax} passengers
                 </p>
               </div>
             </article>
@@ -208,8 +210,8 @@ function FleetShowcase() {
 function PopularTours() {
   const tours = [
     { title: "Mumbai to Lonavala", img: lonavalaImg, alt: "Green Lonavala valley with winding road", to: "/services/tour-packages" },
-    { title: "Ahmedabad to Somnath", img: shirdiImg, alt: "Somnath temple tour from Ahmedabad", to: "/services/tour-packages" },
-    { title: "Ahmedabad to Dwarka", img: statueImg, alt: "Dwarka tour from Ahmedabad", to: "/services/tour-packages" },
+    { title: "Ahmedabad to Somnath", img: somnathImg, alt: "Somnath temple tour from Ahmedabad", to: "/services/tour-packages" },
+    { title: "Ahmedabad to Dwarka", img: dwarkaImg, alt: "Dwarka tour from Ahmedabad", to: "/services/tour-packages" },
   ];
   return (
     <section className="py-16 md:py-20">
@@ -248,14 +250,14 @@ function CitySections() {
     {
       name: "Mumbai",
       img: mumbaiImg,
-      alt: "Mumbai Marine Drive skyline at night",
+      alt: "Mumbai Bandra Worli Sea Link and skyline",
       to: "/mumbai-cab-rentals",
       text: "Our Mumbai office coordinates airport transfers, outstation cabs, Tempo Travellers and tour movements across India.",
     },
     {
       name: "Ahmedabad",
       img: ahmedabadImg,
-      alt: "Ahmedabad Sabarmati riverfront illuminated at dusk",
+      alt: "Ahmedabad Sabarmati riverfront at night",
       to: "/ahmedabad-cab-rentals",
       text: "Our Ahmedabad office supports Gujarat routes, corporate travel, group tours and long distance cab rentals across India.",
     },
@@ -447,14 +449,6 @@ function SafetyComfort() {
             width={1280}
             height={800}
             className="rounded-2xl object-cover shadow-elegant"
-          />
-          <Image
-            src={familyImg}
-            alt="Family loading luggage for a road trip"
-            loading="lazy"
-            width={1280}
-            height={800}
-            className="absolute -bottom-8 -right-4 hidden md:block h-40 w-56 rounded-2xl object-cover shadow-elegant border-4 border-background"
           />
         </div>
         <div>

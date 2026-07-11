@@ -22,7 +22,7 @@ export const SITE = {
 export const NAV = [
   { to: "/", label: "Home" },
   { to: "/services", label: "Services" },
-  { to: "/fleet", label: "Fleet" },
+  { to: "/fleet", label: "Vehicle Category" },
   { to: "/services/tour-packages", label: "Tour Packages" },
   { to: "/mumbai-cab-rentals", label: "Mumbai Office" },
   { to: "/ahmedabad-cab-rentals", label: "Ahmedabad Office" },

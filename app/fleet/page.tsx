@@ -19,9 +19,9 @@ const IMG: Record<string, string> = {
 import { makeMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = makeMetadata({
-title: "Our Fleet: Dzire, Ertiga, Innova Crysta, Tempo Traveller and Urbania",
+title: "Vehicle Category: Dzire, Ertiga, Innova Crysta, Tempo Traveller and Urbania",
       description:
-        "Explore Swaruhi Travels' clean, well maintained fleet: Dzire, Ertiga, Innova Crysta, Tempo Traveller and Urbania for city, outstation and tour travel.",
+        "Explore Swaruhi Travels' clean, well maintained vehicle categories: Dzire, Ertiga, Innova Crysta, Tempo Traveller and Urbania for city, outstation and tour travel.",
       path: "/fleet",
 });
 
@@ -30,8 +30,8 @@ export default function Fleet() {
     <>
       <section className="section-navy py-14">
         <div className="container-x">
-          <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Fleet", path: "/fleet" }]} />
-          <h1 className="mt-3 font-display text-4xl md:text-5xl text-cream">Our Fleet</h1>
+          <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Vehicle Category", path: "/fleet" }]} />
+          <h1 className="mt-3 font-display text-4xl md:text-5xl text-cream">Vehicle Category</h1>
           <p className="mt-4 max-w-2xl text-cream/80">
             A curated lineup of Dzire, Ertiga, Innova Crysta, Tempo Traveller and Urbania. Every
             vehicle is regularly serviced, deep cleaned and ready for city or outstation travel.

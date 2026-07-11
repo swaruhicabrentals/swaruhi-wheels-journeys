@@ -7,17 +7,17 @@ import { InquiryForm } from "@/components/InquiryForm";
 import { FAQList } from "@/components/FAQ";
 import { JsonLd } from "@/components/JsonLd";
 import { pageMeta, breadcrumbJsonLd, faqJsonLd, serviceJsonLd } from "@/lib/seo";
-const ahmedabadImg = "/assets/ahmedabad.jpg";
+const ahmedabadImg = "/assets/swaruhi-travels-ahmedabad-office-riverfront.webp";
 
 const faqs = [
   { q: "Which areas in Ahmedabad do you cover?",
-    a: "We cover all of Ahmedabad including SG Highway, Bopal, Bodakdev, Prahlad Nagar, Vastrapur, Maninagar, Naranpura, and Sardar Vallabhbhai Patel International Airport pickups." },
+    a: "We provide travel services across the entire Ahmedabad city along with Gandhinagar." },
   { q: "What tours are popular from Ahmedabad?",
     a: "Statue of Unity, Saputara, Dwarka, Somnath, Mount Abu, Udaipur and Kutch are the most booked tours from Ahmedabad." },
   { q: "Do you offer Ahmedabad airport cab service?",
     a: "Yes. We offer 24×7 pickup and drop from SVPI Airport with real-time flight tracking on request." },
   { q: "Is Tempo Traveller available for large family tours from Ahmedabad?",
-    a: "Absolutely. Our 12 to 23 seater Tempo Travellers are popular for Somnath to Dwarka circuits, Statue of Unity family trips and wedding transport." },
+    a: "Absolutely. You can book Tempo Traveller for family tours, wedding transport and group trips from Ahmedabad. For a more spacious and premium group travel option, Urbania is also available." },
 ];
 
 import { makeMetadata } from "@/lib/metadata";
@@ -49,7 +49,7 @@ export default function Ahmedabad() {
       />
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 -z-10">
-          <Image src={ahmedabadImg} alt="Ahmedabad Sabarmati riverfront at dusk"
+          <Image src={ahmedabadImg} alt="Ahmedabad Sabarmati riverfront at night"
             width={1280} height={720} className="h-full w-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/95 to-navy/60" />
         </div>

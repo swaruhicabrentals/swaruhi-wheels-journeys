@@ -3,11 +3,11 @@
 export const HOMEPAGE_FAQS = [
   {
     q: "Where do you operate?",
-    a: "Swaruhi Travels provides cab rentals, Tempo Travellers and tour support across India, with offices in Mumbai and Ahmedabad for local coordination.",
+    a: "Swaruhi Travels provides Cab rentals, Tempo Travellers and Tour support across India, with offices in Mumbai and Ahmedabad for local coordination.",
   },
   {
     q: "Do your cars come with a driver?",
-    a: "Yes. All bookings include an experienced, verified, uniformed driver. We do not offer self drive rentals because this ensures safety and consistent service quality.",
+    a: "Yes. All bookings include an experienced, verified driver. We do not offer self drive rentals because this ensures safety and consistent service quality.",
   },
   {
     q: "How are your prices calculated?",
@@ -15,7 +15,7 @@ export const HOMEPAGE_FAQS = [
   },
   {
     q: "Can I book a Tempo Traveller for a wedding or group tour?",
-    a: "Absolutely. Our 12 to 23 seater Tempo Travellers are ideal for weddings, family functions, corporate offsites and group temple tours across India.",
+    a: "Absolutely. You can book a Tempo Traveller for weddings, family functions, corporate offsites and group tours. For a more spacious and premium group vehicle, you can also book an Urbania.",
   },
   {
     q: "How do I request a booking?",
@@ -111,16 +111,22 @@ export const TOUR_PACKAGES = [
     image: "lonavala",
   },
   {
+    slug: "mumbai-tarkarli-konkan",
+    title: "Mumbai to Tarkarli (Konkan)",
+    from: "Mumbai",
+    image: "lonavala",
+  },
+  {
     slug: "ahmedabad-dwarka",
     title: "Ahmedabad to Dwarka",
     from: "Ahmedabad",
-    image: "shirdi",
+    image: "dwarka",
   },
   {
     slug: "ahmedabad-somnath",
     title: "Ahmedabad to Somnath",
     from: "Ahmedabad",
-    image: "shirdi",
+    image: "somnath",
   },
   {
     slug: "ahmedabad-statue-of-unity",
@@ -132,12 +138,12 @@ export const TOUR_PACKAGES = [
     slug: "ahmedabad-girnar",
     title: "Ahmedabad to Girnar",
     from: "Ahmedabad",
-    image: "statue-unity",
+    image: "girnar",
   },
   {
     slug: "ahmedabad-kutch",
     title: "Ahmedabad to Kutch",
     from: "Ahmedabad",
-    image: "statue-unity",
+    image: "kutch",
   },
 ];

@@ -7,11 +7,11 @@ import { InquiryForm } from "@/components/InquiryForm";
 import { FAQList } from "@/components/FAQ";
 import { JsonLd } from "@/components/JsonLd";
 import { pageMeta, breadcrumbJsonLd, faqJsonLd, serviceJsonLd } from "@/lib/seo";
-const mumbaiImg = "/assets/mumbai.jpg";
+const mumbaiImg = "/assets/swaruhi-travels-mumbai-office-bandra-worli-sea-link.webp";
 
 const faqs = [
   { q: "Which areas in Mumbai do you cover?",
-    a: "We cover the entire Mumbai Metropolitan Region, including South Mumbai, Bandra, Andheri, Powai, Malad, Borivali, Thane, Navi Mumbai, and airport pickups from Terminal 1 and Terminal 2." },
+    a: "We provide travel services across the entire Mumbai city, Navi Mumbai and Thane." },
   { q: "Do you offer Mumbai airport cab service?",
     a: "Yes, we offer 24×7 airport transfers with meet and greet on request. Book in advance for guaranteed punctual pickup." },
   { q: "What outstation trips are popular from Mumbai?",
@@ -49,7 +49,7 @@ export default function Mumbai() {
       />
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 -z-10">
-          <Image src={mumbaiImg} alt="Mumbai Marine Drive skyline at night"
+          <Image src={mumbaiImg} alt="Mumbai Bandra Worli Sea Link and skyline"
             width={1280} height={720} className="h-full w-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/95 to-navy/60" />
         </div>

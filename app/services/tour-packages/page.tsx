@@ -7,12 +7,29 @@ import { TOUR_PACKAGES } from "@/lib/content";
 import { pageMeta, breadcrumbJsonLd, serviceJsonLd } from "@/lib/seo";
 const lonavalaImg = "/assets/swaruhi-travels-tour-package-lonavala.webp";
 const shirdiImg = "/assets/tour-shirdi.jpg";
-const statueImg = "/assets/tour-statue-unity.jpg";
+const statueImg = "/assets/swaruhi-travels-tour-package-statue-of-unity.webp";
+const dwarkaImg = "/assets/swaruhi-travels-tour-package-dwarka.webp";
+const somnathImg = "/assets/swaruhi-travels-tour-package-somnath.webp";
+const girnarImg = "/assets/swaruhi-travels-tour-package-girnar.webp";
+const kutchImg = "/assets/swaruhi-travels-tour-package-kutch.webp";
 import { InquiryForm } from "@/components/InquiryForm";
 
 const IMG: Record<string, string> = {
-  lonavala: lonavalaImg, shirdi: shirdiImg, "statue-unity": statueImg,
+  lonavala: lonavalaImg, shirdi: shirdiImg, "statue-unity": statueImg, dwarka: dwarkaImg, somnath: somnathImg, girnar: girnarImg, kutch: kutchImg,
 };
+
+const TOP_SELLING_PACKAGES = [
+  {
+    slug: "top-mumbai-tarkarli-konkan",
+    title: "Mumbai to Tarkarli (Konkan)",
+    image: "lonavala",
+  },
+  {
+    slug: "top-ahmedabad-dwarka-somnath",
+    title: "Ahmedabad to Dwarka-Somnath",
+    image: "dwarka",
+  },
+];
 
 import { makeMetadata } from "@/lib/metadata";
 
@@ -56,6 +73,7 @@ export default function Tours() {
         </div>
       </section>
 
+      <TopSellingPackages />
       <PackageGroup title="From Mumbai" items={mumbai} />
       <PackageGroup title="From Ahmedabad" items={ahmedabad} tone="alt" />
 
@@ -80,6 +98,32 @@ export default function Tours() {
 
       <CtaBand />
     </>
+  );
+}
+
+function TopSellingPackages() {
+  return (
+    <section className="py-16">
+      <div className="container-x">
+        <SectionHeader eyebrow="Top Selling Packages" title="Most booked tour packages" />
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
+          {TOP_SELLING_PACKAGES.map((t) => (
+            <article key={t.slug} className="card-elegant p-0 overflow-hidden">
+              <Image
+                src={IMG[t.image] ?? lonavalaImg}
+                alt={t.title}
+                loading="lazy" width={1024} height={704}
+                className="aspect-[16/10] w-full object-cover"
+              />
+              <div className="p-6">
+                <h3 className="font-display text-xl text-navy-deep">{t.title}</h3>
+                <Link href="/contact" className="mt-4 inline-flex btn-outline-gold text-sm">Get Quote</Link>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
 

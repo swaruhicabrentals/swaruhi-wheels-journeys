@@ -23,7 +23,7 @@ const services = [
   { icon: Plane, title: "Airport Transfers", to: "/contact",
     desc: "Punctual BOM and AMD airport pickups and drops, with meet and greet on request." },
   { icon: Briefcase, title: "Corporate Travel", to: "/contact",
-    desc: "Monthly billing, dedicated cabs, employee transport and executive travel programs." },
+    desc: "Dedicated cabs, employee transport and executive travel programs." },
   { icon: Heart, title: "Wedding & Event Fleets", to: "/contact",
     desc: "Decorated cars, guest transport and multiple vehicle fleets for weddings and events." },
 ];

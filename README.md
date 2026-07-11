@@ -181,7 +181,3 @@ npm install
 npm run lint
 npm run build
 ```
-
-## Lovable Note
-
-This project is connected to Lovable. Avoid rewriting published git history on the connected branch, including force pushes, rebases, amends, or squashed pushed commits.
