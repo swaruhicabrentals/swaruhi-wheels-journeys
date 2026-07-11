@@ -2,7 +2,7 @@
 
 Premium travel website for Swaruhi Travels, built with Next.js App Router, TypeScript, Tailwind CSS, TanStack Query, and Radix UI components.
 
-The site promotes chauffeur-driven cab rentals, Tempo Traveller rentals, fleet options, office pages, and tour packages across India from Mumbai and Ahmedabad offices.
+The site promotes driver driven cab rentals, Tempo Traveller rentals, fleet options, office pages, and tour packages across India from Mumbai and Ahmedabad offices.
 
 ## Features
 

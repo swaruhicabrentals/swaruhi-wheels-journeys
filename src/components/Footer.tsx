@@ -45,7 +45,7 @@ export function Footer() {
             className="h-20 w-20 rounded-full object-cover"
           />
           <p className="mt-4 text-sm text-cream/75 leading-relaxed">
-            Reliable cab rentals, Tempo Traveller rentals and tour packages across
+            Reliable Cab rentals, Tempo Traveller rentals and Tour packages across
             India, coordinated from our Mumbai and Ahmedabad offices.
           </p>
           <div className="mt-5 space-y-2 text-sm">

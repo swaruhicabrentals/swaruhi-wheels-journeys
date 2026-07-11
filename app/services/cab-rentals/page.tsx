@@ -25,7 +25,7 @@ import { makeMetadata } from "@/lib/metadata";
 export const metadata: Metadata = makeMetadata({
 title: "Cab Rental Across India: Local and Outstation Cabs",
       description:
-        "Book cab rental with chauffeurs across India from Swaruhi Travels. Hatchback, sedan and SUV options for local, airport, outstation and corporate travel. Transparent pricing, 24x7 support.",
+        "Book cab rental with drivers across India from Swaruhi Travels. Hatchback, sedan and SUV options for local, airport, outstation and corporate travel. Transparent pricing, 24x7 support.",
       path: "/services/cab-rentals",
 });
 
@@ -42,7 +42,7 @@ export default function CarRentals() {
           serviceJsonLd({
             name: "Cab Rentals",
             description:
-              "Cab rentals with chauffeurs across India for local, airport, outstation and corporate travel.",
+              "Cab rentals with drivers across India for local, airport, outstation and corporate travel.",
           }),
           faqJsonLd(faqs),
         ]}
@@ -62,7 +62,7 @@ export default function CarRentals() {
             Cab Rental Across India
           </h1>
           <p className="mt-4 max-w-2xl text-cream/85">
-            Hatchbacks, sedans and SUVs with chauffeurs for local runs, airport transfers,
+            Hatchbacks, sedans and SUVs with drivers for local runs, airport transfers,
             outstation trips and corporate travel, all at transparent, upfront prices.
           </p>
         </div>
@@ -76,7 +76,7 @@ export default function CarRentals() {
               <p>
                 Whether you need a quick hatchback for a Mumbai airport transfer or a
                 comfortable Innova for a Pune weekend trip, Swaruhi Travels offers
-                dependable cab rental with chauffeurs across India, coordinated from our Mumbai and Ahmedabad offices.
+                dependable cab rental with drivers across India, coordinated from our Mumbai and Ahmedabad offices.
               </p>
               <p>
                 Our fleet is regularly serviced and deep cleaned. Every driver is

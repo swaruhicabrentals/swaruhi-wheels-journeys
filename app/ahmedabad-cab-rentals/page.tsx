@@ -57,7 +57,7 @@ export default function Ahmedabad() {
           <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Ahmedabad Office", path: "/ahmedabad-cab-rentals" }]} />
           <h1 className="mt-3 font-display text-4xl md:text-5xl">Ahmedabad Office</h1>
           <p className="mt-4 max-w-2xl text-cream/85">
-            Chauffeur-driven cab rentals, Tempo Travellers and curated tour packages
+            Driver driven cab rentals, Tempo Travellers and curated tour packages
             across Ahmedabad, from SG Highway to Sabarmati, plus outstation trips to
             Statue of Unity, Somnath and Dwarka.
           </p>
@@ -82,9 +82,9 @@ export default function Ahmedabad() {
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               {[
                 { icon: Plane, t: "SVPI Airport Transfers", d: "24×7 pickup with flight tracking." },
-                { icon: Landmark, t: "City Day Rentals", d: "Hourly and full day cabs with chauffeurs." },
-                { icon: MapPin, t: "Outstation Cabs", d: "Statue of Unity, Somnath, Dwarka, Mount Abu and many more." },
-                { icon: Building2, t: "Corporate Travel", d: "Employee transport & executive rides." },
+                { icon: Landmark, t: "City Day Rentals", d: "Hourly and full day cabs with drivers." },
+                { icon: MapPin, t: "Outstation Cabs/Tempo Travellers", d: "Statue of Unity, Somnath, Dwarka, Mount Abu and many more." },
+                { icon: Building2, t: "Corporate Travel", d: "Corporate meetings, site inspections, industrial visits, and executive travel." },
               ].map(({ icon: Icon, t, d }) => (
                 <div key={t} className="card-elegant">
                   <Icon className="text-gold-deep" />

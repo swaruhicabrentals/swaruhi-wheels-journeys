@@ -79,8 +79,8 @@ export default function Mumbai() {
               {[
                 { icon: Plane, t: "Mumbai Airport Transfers", d: "T1 & T2 pickups and drops, 24×7." },
                 { icon: Landmark, t: "Local City Rentals", d: "8hr / 10hr / 12hr packages across MMR." },
-                { icon: MapPin, t: "Outstation Cabs", d: "Pune, Lonavala, Nashik, Shirdi, Goa & more." },
-                { icon: Building2, t: "Corporate Travel", d: "Monthly billing for teams and executives." },
+                { icon: MapPin, t: "Outstation Cabs/Tempo Travellers", d: "Pune, Lonavala, Nashik, Shirdi, Goa & more." },
+                { icon: Building2, t: "Corporate Travel", d: "Corporate meetings, site inspections, industrial visits, and executive travel." },
               ].map(({ icon: Icon, t, d }) => (
                 <div key={t} className="card-elegant">
                   <Icon className="text-gold-deep" />

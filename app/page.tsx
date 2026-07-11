@@ -17,10 +17,10 @@ const dzireImg = "/assets/swaruhi-travels-vehicle-fleet-dzire.webp";
 const ertigaImg = "/assets/swaruhi-travels-vehicle-fleet-ertiga.webp";
 const urbaniaImg = "/assets/swaruhi-travels-vehicle-fleet-urbania.webp";
 const lonavalaImg = "/assets/swaruhi-travels-tour-package-lonavala.webp";
-const statueImg = "/assets/swaruhi-travels-tour-package-statue-of-unity.webp";
+const statueImg = "/assets/swaruhi-travels-tour-package-statue-of-unity-new.webp";
 const dwarkaImg = "/assets/swaruhi-travels-tour-package-dwarka.webp";
-const somnathImg = "/assets/swaruhi-travels-tour-package-somnath.webp";
-const shirdiImg = "/assets/tour-shirdi.jpg";
+const somnathImg = "/assets/swaruhi-travels-tour-package-somnath-new.webp";
+const shirdiImg = "/assets/swaruhi-travels-tour-package-shirdi.webp";
 
 import { InquiryForm } from "@/components/InquiryForm";
 import { CtaBand, SectionHeader } from "@/components/Section";
@@ -84,7 +84,7 @@ function Hero() {
             Tempo Travellers & Tour Packages
           </h1>
           <p className="mt-5 max-w-xl text-base md:text-lg text-cream/85 leading-relaxed">
-            Chauffeur driven journeys across India, coordinated from our Mumbai and Ahmedabad offices. Clean vehicles,
+            Driver driven journeys across India, coordinated from our Mumbai and Ahmedabad offices. Clean vehicles,
             experienced drivers, transparent pricing for every single ride.
           </p>
 
@@ -171,7 +171,7 @@ function FleetShowcase() {
   const fleet = [
     { name: "Dzire", pax: "4", img: dzireImg, alt: "White Maruti Suzuki Dzire cab for city and outstation travel" },
     { name: "Ertiga", pax: "6", img: ertigaImg, alt: "White Maruti Suzuki Ertiga cab for family trips" },
-    { name: "Innova Crysta", pax: "6 to 7", img: innovaImg, alt: "White Toyota Innova Crysta cab for family trips" },
+    { name: "Innova Crysta", pax: "7", img: innovaImg, alt: "White Toyota Innova Crysta cab for family trips" },
     { name: "Tempo Traveller", pax: "13-26", img: tempoImg, alt: "White Tempo Traveller for group tours" },
     { name: "Urbania", pax: "9-17", img: urbaniaImg, alt: "Force Urbania premium traveller for group tours" },
   ];
@@ -303,7 +303,7 @@ function CitySections() {
 
 function WhyChoose() {
   const items = [
-    { icon: ShieldCheck, title: "Verified Drivers", desc: "Background checked, trained and courteous chauffeurs on every ride." },
+    { icon: ShieldCheck, title: "Verified Drivers", desc: "Background checked, trained and courteous drivers on every ride." },
     { icon: Sparkles, title: "Well Maintained Vehicles", desc: "Every car and Tempo Traveller is cleaned, serviced and inspected before dispatch." },
     { icon: IndianRupee, title: "Transparent, upfront pricing", desc: "Itemised quotes with no hidden charges, so you pay only for what you booked." },
     { icon: Clock, title: "Punctual, 24 × 7 availability", desc: "A booking desk available all day and airport pickups on the dot." },
@@ -360,7 +360,7 @@ function GoogleBusinessTrust() {
     { src: innovaImg, alt: "Innova cab for family and outstation travel", label: "SUV / Innova" },
     { src: tempoImg, alt: "Tempo Traveller for group tours and events", label: "Tempo Traveller" },
     { src: interiorImg, alt: "Clean vehicle interior for comfortable travel", label: "Clean interiors" },
-    { src: familyImg, alt: "Family preparing for a trip with a chauffeur", label: "Family trips" },
+    { src: familyImg, alt: "Family preparing for a trip with a driver", label: "Family trips" },
   ];
 
   return (

@@ -6,23 +6,34 @@ import { Breadcrumbs, CtaBand, SectionHeader } from "@/components/Section";
 import { TOUR_PACKAGES } from "@/lib/content";
 import { pageMeta, breadcrumbJsonLd, serviceJsonLd } from "@/lib/seo";
 const lonavalaImg = "/assets/swaruhi-travels-tour-package-lonavala.webp";
-const shirdiImg = "/assets/tour-shirdi.jpg";
-const statueImg = "/assets/swaruhi-travels-tour-package-statue-of-unity.webp";
+const shirdiImg = "/assets/swaruhi-travels-tour-package-shirdi.webp";
+const statueImg = "/assets/swaruhi-travels-tour-package-statue-of-unity-new.webp";
 const dwarkaImg = "/assets/swaruhi-travels-tour-package-dwarka.webp";
-const somnathImg = "/assets/swaruhi-travels-tour-package-somnath.webp";
+const somnathImg = "/assets/swaruhi-travels-tour-package-somnath-new.webp";
 const girnarImg = "/assets/swaruhi-travels-tour-package-girnar.webp";
 const kutchImg = "/assets/swaruhi-travels-tour-package-kutch.webp";
+const goaImg = "/assets/swaruhi-travels-tour-package-goa.webp";
+const tarkarliImg = "/assets/swaruhi-travels-tour-package-tarkarli-konkan.webp";
+const mahabaleshwarImg = "/assets/swaruhi-travels-tour-package-mahabaleshwar.webp";
+const ratnagiriImg = "/assets/swaruhi-travels-tour-package-ratnagiri.webp";
 import { InquiryForm } from "@/components/InquiryForm";
 
 const IMG: Record<string, string> = {
-  lonavala: lonavalaImg, shirdi: shirdiImg, "statue-unity": statueImg, dwarka: dwarkaImg, somnath: somnathImg, girnar: girnarImg, kutch: kutchImg,
+  lonavala: lonavalaImg, shirdi: shirdiImg, "statue-unity": statueImg, dwarka: dwarkaImg, somnath: somnathImg, girnar: girnarImg, kutch: kutchImg, goa: goaImg, tarkarli: tarkarliImg, mahabaleshwar: mahabaleshwarImg, ratnagiri: ratnagiriImg,
 };
+
+const imagePosition = (image: string) =>
+  image === "shirdi"
+      ? "center 35%"
+    : image === "tarkarli"
+      ? "center 75%"
+      : "center";
 
 const TOP_SELLING_PACKAGES = [
   {
     slug: "top-mumbai-tarkarli-konkan",
     title: "Mumbai to Tarkarli (Konkan)",
-    image: "lonavala",
+    image: "tarkarli",
   },
   {
     slug: "top-ahmedabad-dwarka-somnath",
@@ -114,6 +125,7 @@ function TopSellingPackages() {
                 alt={t.title}
                 loading="lazy" width={1024} height={704}
                 className="aspect-[16/10] w-full object-cover"
+                style={{ objectPosition: imagePosition(t.image) }}
               />
               <div className="p-6">
                 <h3 className="font-display text-xl text-navy-deep">{t.title}</h3>
@@ -142,6 +154,7 @@ function PackageGroup({
                 alt={t.title}
                 loading="lazy" width={1024} height={704}
                 className="aspect-[16/10] w-full object-cover"
+                style={{ objectPosition: imagePosition(t.image) }}
               />
               <div className="p-6">
                 <h3 className="font-display text-lg text-navy-deep">{t.title}</h3>
