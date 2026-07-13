@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Facebook, Instagram, Mail, MapPin, Phone } from "lucide-react";
 import { SITE } from "@/lib/site";
 
 const logoImg = "/assets/swaruhi-travels-logo-circular.png";
@@ -56,9 +56,32 @@ export function Footer() {
               <Mail size={16} className="text-gold" /> {SITE.email}
             </a>
             <div className="flex items-start gap-2 text-cream/80">
-              <MapPin size={16} className="text-gold mt-0.5" />
-              <span>{SITE.addressMumbai} - {SITE.addressAhmedabad}</span>
+              <MapPin size={18} className="mt-0.5 shrink-0 text-gold" />
+              <span className="space-y-1">
+                <span className="block"><span className="text-cream font-semibold">Mumbai:</span> {SITE.addressMumbai}</span>
+                <span className="block"><span className="text-cream font-semibold">Ahmedabad:</span> {SITE.addressAhmedabad}</span>
+              </span>
             </div>
+          </div>
+          <div className="mt-5 flex items-center gap-3">
+            <a
+              href={SITE.instagramHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Swaruhi Travels on Instagram"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-cream/80 transition-colors hover:border-gold hover:text-gold"
+            >
+              <Instagram size={18} />
+            </a>
+            <a
+              href={SITE.facebookHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Swaruhi Travels on Facebook"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-cream/80 transition-colors hover:border-gold hover:text-gold"
+            >
+              <Facebook size={18} />
+            </a>
           </div>
         </div>
 

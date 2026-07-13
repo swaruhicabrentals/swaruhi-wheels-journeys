@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Phone, MessageCircle, Mail, MapPin, Clock } from "lucide-react";
+import { Clock, Facebook, Instagram, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { Breadcrumbs, SectionHeader } from "@/components/Section";
 import { InquiryForm } from "@/components/InquiryForm";
 import { SITE } from "@/lib/site";
@@ -42,6 +42,16 @@ export default function Contact() {
               </ContactRow>
               <ContactRow icon={Mail} label="Email">
                 <a href={SITE.emailHref} className="text-navy-deep font-semibold">{SITE.email}</a>
+              </ContactRow>
+              <ContactRow icon={Instagram} label="Instagram">
+                <a href={SITE.instagramHref} target="_blank" rel="noopener noreferrer" className="text-navy-deep font-semibold">
+                  @swaruhi_travels
+                </a>
+              </ContactRow>
+              <ContactRow icon={Facebook} label="Facebook">
+                <a href={SITE.facebookHref} target="_blank" rel="noopener noreferrer" className="text-navy-deep font-semibold">
+                  Swaruhi Travels
+                </a>
               </ContactRow>
               <ContactRow icon={Clock} label="Hours">
                 <span>{SITE.hours}</span>

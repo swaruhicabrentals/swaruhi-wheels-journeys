@@ -11,8 +11,10 @@ export const SITE = {
   whatsappHref:
     "https://wa.me/918080464469?text=Hi%20Swaruhi%20Travels%2C%20I%27d%20like%20a%20quote.",
   googleBusinessHref: "https://share.google/bfThgug8GVyzJ2FU8",
-  email: "bookings@swaruhitravels.com",
-  emailHref: "mailto:bookings@swaruhitravels.com",
+  instagramHref: "https://www.instagram.com/swaruhi_travels?igsh=NTBiNG1wZXlmdnh5&utm_source=qr",
+  facebookHref: "https://www.facebook.com/share/1Jkauk6Y8C/?mibextid=wwXIfr",
+  email: "swaruhitravels@gmail.com",
+  emailHref: "mailto:swaruhitravels@gmail.com",
   offices: ["Mumbai", "Ahmedabad"],
   addressMumbai: "3 Dashrath Sadan, Gavanpada, Mulund East, Mumbai 400081",
   addressAhmedabad: "SG Highway, Ahmedabad, Gujarat 380015",
