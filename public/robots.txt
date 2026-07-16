@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://swaruhitravels.in/sitemap.xml
+Sitemap: https://swaruhitravels.com/sitemap.xml

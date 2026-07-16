@@ -1,7 +1,7 @@
 // Central place for business info. Update phone/email/address before launch.
 export const SITE = {
   name: "Swaruhi Travels",
-  url: "https://swaruhitravels.in",
+  url: "https://swaruhitravels.com",
   tagline: "Premium Cab Rentals, Tempo Traveller & Tour Packages",
   description:
     "Swaruhi Travels offers reliable cab rentals, Tempo Traveller rentals and curated tour packages across India, with offices in Mumbai and Ahmedabad. Clean vehicles, experienced drivers, transparent pricing.",
