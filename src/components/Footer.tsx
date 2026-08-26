@@ -42,6 +42,7 @@ export function Footer() {
             alt="Swaruhi Travels"
             width={160}
             height={160}
+            unoptimized
             className="h-20 w-20 rounded-full object-cover"
           />
           <p className="mt-4 text-sm text-cream/75 leading-relaxed">

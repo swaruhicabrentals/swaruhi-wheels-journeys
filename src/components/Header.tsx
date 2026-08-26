@@ -21,6 +21,7 @@ export function Header() {
             width={128}
             height={128}
             priority
+            unoptimized
             className="h-12 w-12 rounded-full object-cover"
           />
           <span className="font-display text-lg font-semibold text-navy-deep">
