@@ -17,7 +17,10 @@ export const SITE = {
   emailHref: "mailto:swaruhitravels@gmail.com",
   offices: ["Mumbai", "Ahmedabad"],
   addressMumbai: "3 Dashrath Sadan, Gavanpada, Mulund East, Mumbai 400081",
-  addressAhmedabad: "SG Highway, Ahmedabad, Gujarat 380015",
+  addressAhmedabad:
+    "Sarkhej - Gandhinagar Hwy, near Palladium Ahmedabad, Thaltej, Ahmedabad, Gujarat 380054",
+  phoneAhmedabad: "+91 83569 23384",
+  phoneAhmedabadHref: "tel:+918356923384",
   hours: "Open 24 x 7",
 } as const;
 

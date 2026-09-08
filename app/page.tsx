@@ -69,6 +69,7 @@ function Hero() {
           alt="Premium sedan on a scenic Indian highway at golden hour"
           width={1920}
           height={1080}
+          loading="eager"
           className="h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/95 via-navy/80 to-navy/40" />
@@ -407,7 +408,9 @@ function GoogleBusinessTrust() {
                   <span className="text-xs font-semibold uppercase tracking-widest">Ahmedabad Office</span>
                 </div>
                 <p className="mt-2 text-sm text-navy-deep">{SITE.addressAhmedabad}</p>
-                <p className="mt-3 text-sm font-semibold text-gold-deep">{SITE.hours}</p>
+                <a href={SITE.phoneAhmedabadHref} className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-gold-deep">
+                  <Phone size={14} /> {SITE.phoneAhmedabad}
+                </a>
               </div>
             </div>
           </div>
